@@ -1,0 +1,47 @@
+# Java-specific files
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven-specific directories and files
+target/
+pom.xml.tag
+pom.xml.next
+pom.xml.bak
+release-pom.xml
+dependency-reduced-pom.xml
+
+# Gradle-specific directories and files
+build/
+.gradle/
+
+# IDE-specific directories and files
+# Eclipse
+.project
+.classpath
+.settings/
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+# VS Code
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Log files and temporary files
+log/
+logs/
+*.log
+*.tmp
+hs_err_pid*
+replay_pid*
+
+# Environment variables and secrets
+.env
+application.properties.example # Do not commit the actual application.properties with secrets
+application.yml.example
