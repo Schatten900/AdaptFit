@@ -1,4 +1,4 @@
 package com.AdaptFit.SistemaFitness.auth;
 
-public class AuthRequest {
+public record AuthRequest(String email, String password) {
 }

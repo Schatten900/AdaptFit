@@ -18,7 +18,7 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ./Backend
       dockerfile: Dockerfile
     container_name: adaptfit-backend
     restart: unless-stopped
@@ -34,4 +34,7 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - m
+      - mysql
+
+volumes:
+  mysql_data:

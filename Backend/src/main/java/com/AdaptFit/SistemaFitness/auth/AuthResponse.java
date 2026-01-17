@@ -1,4 +1,4 @@
 package com.AdaptFit.SistemaFitness.auth;
 
-public class AuthResponse {
+public record AuthResponse(String token) {
 }
