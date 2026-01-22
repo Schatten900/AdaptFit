@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts will be loaded via expo-font or manually added to assets */
+
+
+@layer base {
+  text {
+    @apply text-text-primary;
+  }
+}
