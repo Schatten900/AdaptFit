@@ -1,0 +1,20 @@
+agents:
+  code-review:
+    description: >
+      Agente responsável por revisão obrigatória de código.
+      Atua somente em modo leitura.
+    model: xai/grok-fast
+    permissions:
+      read: true
+      write: false
+      execute: false
+    behavior:
+      scope:
+        - arquivos modificados
+        - README.md
+        - TODO.md
+      rules:
+        - Não modificar código
+        - Não sugerir commits
+        - Não executar comandos
+        - Avaliar bugs, segurança, legibilidade e aderência ao plano
