@@ -4,7 +4,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🟢 FASE 1 — Fundação do Projeto (Pendente)
+## 🟢 FASE 1 — Fundação do Projeto (Concluida)
 
 ### Backend
 - [ ] Criar projeto no Spring Initializr
@@ -20,7 +20,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🟢 FASE 2 — Autenticação e Usuário (Pendente)
+## 🟢 FASE 2 — Autenticação e Usuário (Concluida)
 
 ### Auth
 - [ ] Criar entidade `User`
@@ -36,7 +36,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🟡 FASE 3 — Treinos (Core do Produto) (Pendente)
+## 🟢 FASE 3 — Treinos (Core do Produto) (Concluida)
 
 ### Workout
 - [ ] Criar entidades:
