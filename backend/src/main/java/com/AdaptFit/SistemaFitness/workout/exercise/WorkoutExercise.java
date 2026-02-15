@@ -34,7 +34,7 @@ public class Exercise {
     private Integer reps;
 
     @Column
-    private Double weight; // in kg or lbs
+    private Double weight;
 
     @Column(name = "rest_time_seconds")
     private Integer restTimeSeconds;
