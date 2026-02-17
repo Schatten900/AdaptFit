@@ -1,6 +1,9 @@
 package com.AdaptFit.SistemaFitness.user;
 
+import com.AdaptFit.SistemaFitness.common.exception.AuthenticationException;
+import com.AdaptFit.SistemaFitness.common.exception.ValidationException;
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -13,9 +16,18 @@ public class UserService {
 
     public User getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String email = authentication.getName();
-        return userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        if (authentication == null || !authentication.isAuthenticated())
+            throw new AuthenticationException("Usuario não autenticado");
+        Object principal = authentication.getPrincipal();
+
+        if (!(principal instanceof User))
+            throw new ValidationException("Autenticação invalida");
+        return (User) principal;
+    }
+
+    public Long getCurrentUserId() {
+        return getCurrentUser().getId();
     }
 
     public User updateUser(User user) {

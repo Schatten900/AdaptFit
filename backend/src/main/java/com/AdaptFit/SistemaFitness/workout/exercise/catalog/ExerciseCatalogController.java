@@ -1,4 +1,4 @@
-package com.AdaptFit.SistemaFitness.workout.exercise;
+package com.AdaptFit.SistemaFitness.workout.exercise.catalog;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -11,13 +11,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/exercises")
 @RequiredArgsConstructor
-public class ExerciseController {
+public class ExerciseCatalogController {
 
-    private final ExerciseCatalogRepository exerciseRepository;
+    private final ExerciseCatalogService exerciseCatalogService;
 
     @GetMapping
     public ResponseEntity<List<ExerciseCatalog>> getAllExercises() {
-        return ResponseEntity.ok(exerciseRepository.findAll());
+        return ResponseEntity.ok(exerciseCatalogService.getAllExercises());
     }
 }
 

@@ -2,7 +2,7 @@ package com.AdaptFit.SistemaFitness.workout.dto;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 public class WorkoutSessionResponse {
@@ -10,7 +10,7 @@ public class WorkoutSessionResponse {
     private Long id;
     private Long workoutId;
     private String workoutName;
-    private LocalDateTime sessionDate;
+    private Date sessionDate;
     private Integer durationMinutes;
     private String notes;
 }

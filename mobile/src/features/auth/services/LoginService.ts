@@ -1,9 +1,8 @@
-import axios from 'axios'; 
-import { API_BASE_URL } from "~/config/api"
+import api from '~/config/api';
+import { LoginRequest, LoginResponse } from '~/types';
 
 export const loginService = {
-    async login(email: string, password: string) {
-        const response = await axios.post(`${API_BASE_URL}/auth/login`, { email, password });
-        return response.data;
-    }
+  async login(credentials: LoginRequest): Promise<LoginResponse> {
+    return api.post('/auth/login', credentials);
+  },
 };

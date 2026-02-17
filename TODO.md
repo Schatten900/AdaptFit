@@ -52,20 +52,27 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ## 🟡 FASE 4 — Feedback e Progresso (Pendente)
 
-### Feedback
-- [ ] Feedback pós-treino
-- [ ] Nível de fadiga
+### Feedback (gerados pela IA, por meio da visualização e calculo de volume/fadiga/dor muscular/historico do usuario)
+- [ ] Pagina de feedback
+- [ ] Feedback pós-treino (incluso ja no endworkout)
+- [ ] Nível de fadiga   
 - [ ] Dor muscular
 - [ ] Observações livres
 
-### Progress
-- [ ] Snapshot semanal
-- [ ] Cálculo de evolução
-- [ ] Métricas básicas
+
+## 🟡 FASE 5 — Feedback e Progresso (Pendente)
+
+### Historico
+- [] Pagina com historico de treinos realizados pelo usuario
+- [] Dashboard presente na pagina de historico para evolução do usuario
+- [] Visualização de sessions
+- [] Filtragem para visualizar historico em semana, mes e ano.
+- [] Filtragem para visualizar dashboard por exercicio ou grupo muscular (por padrão, mostra todos os grupos musculares)
+- [] Tipo de dashboard a ser utilizado como grafico de pizza e grafico plano.
 
 ---
 
-## 🟠 FASE 5 — Inteligência Artificial (Inicial) (Pendente)
+## 🟠 FASE 6 — Inteligência Artificial (Inicial) (Pendente)
 
 ### IA Base
 - [ ] Criar `AIOrchestrator`
@@ -79,7 +86,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🟠 FASE 6 — IA Avançada (LLM) (Pendente)
+## 🟠 FASE 7 — IA Avançada (LLM) (Pendente)
 
 - [ ] Integração com LLM externo
 - [ ] Contexto histórico do usuário
@@ -88,7 +95,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🔵 FASE 7 — Assinaturas e Monetização (Pendente)
+## 🔵 FASE 8 — Assinaturas e Monetização (Pendente)
 
 ### Subscription
 - [ ] Planos Free / Premium
@@ -98,7 +105,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🔵 FASE 8 — Automação e Engajamento (Pendente)
+## 🔵 FASE 9 — Automação e Engajamento (Pendente)
 
 ### Scheduler
 - [ ] Revisão semanal automática
@@ -110,7 +117,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🟣 FASE 9 — Qualidade e Produção (Pendente)
+## 🟣 FASE 10 — Qualidade e Produção (Pendente)
 
 - [ ] Testes unitários
 - [ ] Testes de integração

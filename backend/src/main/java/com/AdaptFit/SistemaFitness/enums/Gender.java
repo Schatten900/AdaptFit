@@ -2,5 +2,6 @@ package com.AdaptFit.SistemaFitness.enums;
 
 public enum Gender {
     FEMININE,
-    MASCULINE
+    MASCULINE,
+    OTHER
 }

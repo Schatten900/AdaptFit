@@ -3,7 +3,9 @@ package com.AdaptFit.SistemaFitness.auth;
 import com.AdaptFit.SistemaFitness.auth.dto.AuthDTO;
 import com.AdaptFit.SistemaFitness.auth.dto.LoginDTO;
 import com.AdaptFit.SistemaFitness.auth.dto.RegisterDTO;
-import com.AdaptFit.SistemaFitness.common.BusinessException;
+import com.AdaptFit.SistemaFitness.common.exception.BusinessException;
+import com.AdaptFit.SistemaFitness.common.exception.NotFoundException;
+import com.AdaptFit.SistemaFitness.common.exception.ValidationException;
 import com.AdaptFit.SistemaFitness.jwt.JwtService;
 import com.AdaptFit.SistemaFitness.user.User;
 import com.AdaptFit.SistemaFitness.user.UserRepository;
@@ -27,10 +29,10 @@ public class AuthService {
 
     public void register(RegisterDTO req) {
         if (userRepository.findByEmail(req.getEmail()).isPresent()) {
-            throw new BusinessException("User already exists");
+            throw new ValidationException("Usuario já existe");
         }
         if (!req.getPassword().equals(req.getConfirmPassword())) {
-            throw new BusinessException("Passwords do not match");
+            throw new ValidationException("Senhas devem ser iguais");
         }
 
         User user = new User();
@@ -43,13 +45,12 @@ public class AuthService {
 
     public AuthDTO login(LoginDTO req) {
         User user = userRepository.findByEmail(req.getEmail())
-                .orElseThrow(() -> new BusinessException("Invalid credentials"));
+                .orElseThrow(() -> new NotFoundException("Usuário não existe"));
 
-        if (!encoder.matches(req.getPassword(), user.getPassword())) {
-            throw new BusinessException("Invalid credentials");
-        }
+        if (!encoder.matches(req.getPassword(), user.getPassword()))
+            throw new BusinessException("Dados inválidos");
 
-        String token = jwtService.generateToken(user.getId());
+        String token = jwtService.generateToken(user);
         return new AuthDTO(token, user.getId());
     }
 }

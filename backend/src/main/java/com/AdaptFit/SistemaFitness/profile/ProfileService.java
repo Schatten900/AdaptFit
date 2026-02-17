@@ -1,5 +1,6 @@
 package com.AdaptFit.SistemaFitness.profile;
 
+import com.AdaptFit.SistemaFitness.common.exception.NotFoundException;
 import com.AdaptFit.SistemaFitness.user.User;
 import com.AdaptFit.SistemaFitness.user.UserService;
 import lombok.RequiredArgsConstructor;
@@ -14,12 +15,25 @@ public class ProfileService {
 
     public Profile getCurrentUserProfile() {
         User user = userService.getCurrentUser();
-        return user.getProfile();
+        return profileRepository.findByUserId(user.getId())
+                .orElseThrow(() -> new NotFoundException("Perfil não encontrado"));
     }
 
-    public Profile createOrUpdateProfile(Profile profile) {
+    public Profile createOrUpdateProfile(Profile data) {
         User user = userService.getCurrentUser();
-        profile.setUser(user);
+
+        Profile profile = profileRepository
+                .findByUserId(user.getId())
+                .orElse(new Profile());
+
+        profile.setUserId(user.getId());
+        profile.setAge(data.getAge());
+        profile.setHeight(data.getHeight());
+        profile.setWeight(data.getWeight());
+        profile.setGoal(data.getGoal());
+        profile.setExperience(data.getExperience());
+        profile.setGender(data.getGender());
+
         return profileRepository.save(profile);
     }
 }

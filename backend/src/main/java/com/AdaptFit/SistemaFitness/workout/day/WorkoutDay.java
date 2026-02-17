@@ -1,17 +1,13 @@
 package com.AdaptFit.SistemaFitness.workout.day;
 
-import com.AdaptFit.SistemaFitness.workout.exercise.Exercise;
-import com.AdaptFit.SistemaFitness.workout.Workout;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Date;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
 @Table(name = "workout_days")
 public class WorkoutDay {
@@ -20,20 +16,38 @@ public class WorkoutDay {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "workout_id", nullable = false)
-    private Workout workout;
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
 
-    @Column(nullable = false)
-    private String name; // e.g., "Monday", "Day 1"
+    @Column(name = "workout_id")
+    private Long workoutId;
+
+    @Column(nullable = false, length = 255)
+    private String name;
+
+    @Column(length = 1000)
+    private String description;
 
     @Column(name = "day_of_week")
-    private Integer dayOfWeek; // 1=Monday, 7=Sunday, optional
+    private Integer dayOfWeek;
 
-    @OneToMany(mappedBy = "workoutDay", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Exercise> exercises;
-
-    // Order of the day in the workout
     @Column(name = "day_order")
     private Integer dayOrder;
+
+    @Column(name = "created_at")
+    private Date createdAt;
+
+    @Column(name = "updated_at")
+    private Date updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = new Date();
+        updatedAt = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = new Date();
+    }
 }

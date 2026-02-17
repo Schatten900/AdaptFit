@@ -1,10 +1,13 @@
-import axios from 'axios';
-import { API_BASE_URL } from '~/config/api';
-
+import api from '~/config/api';
+import { RegisterRequest, RegisterResponse } from '~/types';
 
 export const registerService = {
-    async register(email: string, username: string, password: string, confirmPassword: string) {
-        const response = await axios.post(`${API_BASE_URL}/auth/register`, { email, username, password, confirmPassword });
-        return response.data;
-    }
+  async register(credentials: RegisterRequest): Promise<RegisterResponse> {
+    return api.post('/auth/register', {
+      email: credentials.email,
+      username: credentials.username,
+      password: credentials.password,
+      confirmPassword: credentials.confirmPassword,
+    });
+  },
 };

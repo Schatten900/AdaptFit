@@ -1,15 +1,17 @@
-import axios from 'axios';
-import { API_BASE_URL } from "~/config/api";
-import { authStorage } from '~/commons/utils/authStorage';
+// services/ProfileService.ts
+import api from '~/config/api';
+import { ApiProfile, CreateProfileRequest, UpdateProfileRequest } from '~/types';
 
 export const profileService = {
-    async setProfile(profileData: any) {
-        const token = await authStorage.getToken();
-        const response = await axios.post(`${API_BASE_URL}/api/profile`, profileData, {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        });
-        return response.data;
-    }
+  getProfile(): Promise<ApiProfile> {
+    return api.get('/api/profile');
+  },
+
+  setProfile(profileData: CreateProfileRequest): Promise<ApiProfile> {
+    return api.post('/api/profile', profileData);
+  },
+
+  updateProfile(profileData: UpdateProfileRequest): Promise<ApiProfile> {
+    return api.put('/api/profile', profileData);
+  },
 };

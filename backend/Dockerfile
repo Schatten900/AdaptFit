@@ -1,11 +1,10 @@
 # =====================
 # BUILD STAGE
 # =====================
-FROM eclipse-temurin:21-jdk AS builder
+FROM eclipse-temurin:17-jdk AS builder
 
 WORKDIR /app
 
-# Copia apenas o necessário primeiro (cache)
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
@@ -13,7 +12,6 @@ COPY pom.xml .
 RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
-# Agora copia o código
 COPY src src
 
 RUN ./mvnw clean package -DskipTests
@@ -21,7 +19,7 @@ RUN ./mvnw clean package -DskipTests
 # =====================
 # RUNTIME STAGE
 # =====================
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 

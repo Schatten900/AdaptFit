@@ -16,11 +16,22 @@ export const authStorage = {
     },
 
     async getToken(): Promise<string | null> {
-        return await AsyncStorage.getItem('token');
+        return AsyncStorage.getItem('token');
+    },
+
+    async setHasProfile(value: boolean) {
+        await AsyncStorage.setItem('hasProfile', value ? 'true' : 'false');
+    },
+
+    async getHasProfile(): Promise<boolean> {
+        return (await AsyncStorage.getItem('hasProfile')) === 'true';
     },
 
     async clear() {
-        await AsyncStorage.removeItem('user_id');
-        await AsyncStorage.removeItem('token');
+        await AsyncStorage.multiRemove([
+            'user_id',
+            'token',
+            'hasProfile',
+        ]);
     }
 };

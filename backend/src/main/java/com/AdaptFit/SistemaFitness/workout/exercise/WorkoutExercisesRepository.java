@@ -6,7 +6,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ExerciseRepository extends JpaRepository<WorkoutExercise, Long> {
+public interface WorkoutExercisesRepository extends JpaRepository<WorkoutExercise, Long> {
 
     List<WorkoutExercise> findByWorkoutDayId(Long workoutDayId);
+
+    void deleteByWorkoutDayId(Long workoutDayId);
 }

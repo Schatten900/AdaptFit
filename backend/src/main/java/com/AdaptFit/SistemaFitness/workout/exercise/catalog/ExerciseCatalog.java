@@ -1,45 +1,41 @@
-package com.AdaptFit.SistemaFitness.workout.exercise;
+package com.AdaptFit.SistemaFitness.workout.exercise.catalog;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "exercise_catalog")
 @Getter
 @Setter
-@NoArgsConstructor
 public class ExerciseCatalog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length = 255)
     private String name;
 
     @Column(length = 500)
     private String description;
 
-    @Column(name = "muscle_group")
+    @Column(name = "muscle_group", length = 100)
     private String muscleGroup;
 
+    @Column(length = 255)
     private String equipment;
 
     @Column(name = "is_bodyweight")
     private Boolean isBodyweight;
 
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
+        createdAt = new Date();
     }
 }
-
-
-

@@ -8,7 +8,8 @@ import java.util.List;
 public class WorkoutDayRequest {
 
     private String name;
+    private String description;
     private Integer dayOfWeek;
     private Integer dayOrder;
-    private List<ExerciseRequest> exercises;
+    private List<WorkoutExerciseRequest> exercises;
 }

@@ -1,45 +1,36 @@
 package com.AdaptFit.SistemaFitness.workout.exercise;
 
-import com.AdaptFit.SistemaFitness.workout.day.WorkoutDay;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.math.BigDecimal;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
-@Table(name = "exercises")
-public class Exercise {
+@Table(name = "workout_exercises")
+public class WorkoutExercise {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "workout_day_id", nullable = false)
-    private WorkoutDay workoutDay;
+    @Column(name = "exercise_id", nullable = false)
+    private Long exerciseId;
 
-    @Column(nullable = false)
-    private String name;
+    @Column(name = "workout_day_id", nullable = false)
+    private Long workoutDayId;
 
-    @Column(length = 500)
-    private String description;
-
-    @Column
     private Integer sets;
-
-    @Column
     private Integer reps;
-
-    @Column
-    private Double weight;
 
     @Column(name = "rest_time_seconds")
     private Integer restTimeSeconds;
 
-    // Order in the day
+    @Column(precision = 8, scale = 2)
+    private BigDecimal weight;
+
     @Column(name = "exercise_order")
     private Integer exerciseOrder;
 }

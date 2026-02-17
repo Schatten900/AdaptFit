@@ -5,6 +5,11 @@ import { useFonts, Inter_400Regular, Inter_600SemiBold, Inter_700Bold } from "@e
 import { useEffect } from "react";
 import { View } from "react-native";
 
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "~/commons/libs/reactQuery";
+
+import { GlobalToast } from "~/commons/components/GlobalToast";
+
 // Impede que a Splash Screen feche automaticamente
 SplashScreen.preventAutoHideAsync();
 
@@ -25,11 +30,12 @@ export default function Layout() {
     return null;
   }
 
-  // Usamos uma View ocupando a tela toda com o fundo do seu tema
-  // para evitar o "flash branco" entre transições de rota.
   return (
-    <View className="flex-1 bg-background">
-      <Slot />
-    </View>
+    <QueryClientProvider client={queryClient}>
+      <View className="flex-1 bg-background">
+        <Slot />
+        <GlobalToast />
+      </View>
+    </QueryClientProvider>
   );
 }
