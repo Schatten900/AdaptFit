@@ -6,17 +6,20 @@ import com.AdaptFit.SistemaFitness.user.User;
 import com.AdaptFit.SistemaFitness.user.UserService;
 import com.AdaptFit.SistemaFitness.workout.day.WorkoutDay;
 import com.AdaptFit.SistemaFitness.workout.day.WorkoutDayRepository;
-import com.AdaptFit.SistemaFitness.workout.dto.CreateSplitRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.SplitResponse;
-import com.AdaptFit.SistemaFitness.workout.dto.UpdateSplitRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.SplitWorkoutDayRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.SplitWorkoutDayResponse;
-import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDayResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.CreateSplitRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.SplitResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.UpdateSplitRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.SplitWorkoutDayRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.SplitWorkoutDayResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.WorkoutDayResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Session.TodayStatusResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Session.NextWorkoutsResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Session.WorkoutSessionResponse;
 import com.AdaptFit.SistemaFitness.workout.day.WorkoutDayService;
-import com.AdaptFit.SistemaFitness.workout.exercise.WorkoutExercise;
 import com.AdaptFit.SistemaFitness.workout.exercise.WorkoutExercisesRepository;
-import com.AdaptFit.SistemaFitness.workout.exercise.catalog.ExerciseCatalog;
 import com.AdaptFit.SistemaFitness.workout.exercise.catalog.ExerciseCatalogRepository;
+import com.AdaptFit.SistemaFitness.workout.session.WorkoutSession;
+import com.AdaptFit.SistemaFitness.workout.session.WorkoutSessionRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
@@ -26,10 +29,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -44,6 +45,7 @@ public class SplitService {
     private final CircuitBreakerFactory circuitBreakerFactory;
     private final WorkoutExercisesRepository workoutExercisesRepository;
     private final ExerciseCatalogRepository exerciseCatalogRepository;
+    private final WorkoutSessionRepository workoutSessionRepository;
 
     @Transactional
     public SplitResponse createSplit(CreateSplitRequest request) {
@@ -192,6 +194,161 @@ public class SplitService {
         CircuitBreaker cb = circuitBreakerFactory.create("splitFind");
         return cb.run(() -> getWorkoutForDay(dayOfWeek),
                 this::handleCircuitBreakerFallback);
+    }
+
+    public TodayStatusResponse getTodayStatus() {
+        User user = userService.getCurrentUser();
+        LocalDate today = LocalDate.now();
+        int dayOfWeek = today.getDayOfWeek().getValue();
+
+        TodayStatusResponse response = new TodayStatusResponse();
+
+        CircuitBreaker cb = circuitBreakerFactory.create("splitFind");
+        List<Split> splits = cb.run(() -> splitRepository.findByUserIdAndActiveTrue(user.getId()),
+                this::handleCircuitBreakerFallback);
+
+        if (splits.isEmpty()) {
+            response.setStatus(TodayStatusResponse.STATUS_REST);
+            response.setMessage("Você não tem nenhum split ativo. Configure um split para começar!");
+            return response;
+        }
+
+        Split activeSplit = splits.get(0);
+
+        CircuitBreaker cbSplitWorkout = circuitBreakerFactory.create("splitWorkoutDayFind");
+        List<SplitWorkoutDay> splitWorkoutDays = cbSplitWorkout.run(
+                () -> splitWorkoutDayRepository.findBySplitId(activeSplit.getId()),
+                this::handleCircuitBreakerFallback
+        );
+
+        SplitWorkoutDay found = splitWorkoutDays.stream()
+                .filter(swd -> swd.getDayOfWeek().equals(dayOfWeek))
+                .findFirst()
+                .orElse(null);
+
+        if (found == null) {
+            response.setStatus(TodayStatusResponse.STATUS_REST);
+            response.setMessage("Hoje é dia de descanso! aproveite para recuperar.");
+            return response;
+        }
+
+        WorkoutDayResponse workoutDay = workoutDayService.getWorkoutDayById(found.getWorkoutDayId());
+        response.setWorkoutDay(workoutDay);
+
+        Optional<WorkoutSession> existingSession = workoutSessionRepository
+                .findByUserIdAndWorkoutDayIdAndLocalDate(user.getId(), found.getWorkoutDayId(), today);
+
+        if (existingSession.isPresent()) {
+            response.setStatus(TodayStatusResponse.STATUS_COMPLETED);
+            response.setCompletedSession(mapToSessionResponse(existingSession.get()));
+            response.setMessage("Treino concluído! See More details.");
+            return response;
+        }
+
+        response.setStatus(TodayStatusResponse.STATUS_WORKOUT);
+        response.setMessage(null);
+        return response;
+    }
+
+    public NextWorkoutsResponse getNextWorkouts() {
+        User user = userService.getCurrentUser();
+        LocalDate today = LocalDate.now();
+        int dayOfWeek = today.getDayOfWeek().getValue();
+
+        NextWorkoutsResponse response = new NextWorkoutsResponse();
+        response.setCurrentDayOfWeek(dayOfWeek);
+
+        CircuitBreaker cb = circuitBreakerFactory.create("splitFind");
+        List<Split> splits = cb.run(() -> splitRepository.findByUserIdAndActiveTrue(user.getId()),
+                this::handleCircuitBreakerFallback);
+
+        if (splits.isEmpty()) {
+            response.setTodayWorkout(null);
+            response.setTodayStatus(TodayStatusResponse.STATUS_REST);
+            response.setNextWorkouts(java.util.Collections.emptyList());
+            return response;
+        }
+
+        Split activeSplit = splits.get(0);
+
+        CircuitBreaker cbSplitWorkout = circuitBreakerFactory.create("splitWorkoutDayFind");
+        List<SplitWorkoutDay> splitWorkoutDays = cbSplitWorkout.run(
+                () -> splitWorkoutDayRepository.findBySplitId(activeSplit.getId()),
+                this::handleCircuitBreakerFallback
+        );
+
+        if (splitWorkoutDays.isEmpty()) {
+            response.setTodayWorkout(null);
+            response.setTodayStatus(TodayStatusResponse.STATUS_REST);
+            response.setNextWorkouts(java.util.Collections.emptyList());
+            return response;
+        }
+
+        List<SplitWorkoutDay> sortedDays = splitWorkoutDays.stream()
+                .sorted(Comparator.comparing(SplitWorkoutDay::getDayOrder))
+                .toList();
+
+        WorkoutDayResponse todayWorkout = null;
+        String todayStatus = TodayStatusResponse.STATUS_REST;
+
+        SplitWorkoutDay todaySwd = sortedDays.stream()
+                .filter(swd -> swd.getDayOfWeek().equals(dayOfWeek))
+                .findFirst()
+                .orElse(null);
+
+        if (todaySwd != null) {
+            todayWorkout = workoutDayService.getWorkoutDayById(todaySwd.getWorkoutDayId());
+            
+            Optional<WorkoutSession> existingSession = workoutSessionRepository
+                    .findByUserIdAndWorkoutDayIdAndLocalDate(user.getId(), todaySwd.getWorkoutDayId(), today);
+
+            if (existingSession.isPresent()) {
+                todayStatus = TodayStatusResponse.STATUS_COMPLETED;
+            } else {
+                todayStatus = TodayStatusResponse.STATUS_WORKOUT;
+            }
+        }
+
+        response.setTodayWorkout(todayWorkout);
+        response.setTodayStatus(todayStatus);
+
+        java.util.List<WorkoutDayResponse> nextWorkouts = new java.util.ArrayList<>();
+        
+        for (int i = 1; i <= 6; i++) {
+            int checkDay = ((dayOfWeek - 1 + i) % 7) + 1;
+            
+            final int targetDay = checkDay;
+            SplitWorkoutDay swd = sortedDays.stream()
+                    .filter(s -> s.getDayOfWeek().equals(targetDay))
+                    .findFirst()
+                    .orElse(null);
+            
+            if (swd != null) {
+                WorkoutDayResponse wd = workoutDayService.getWorkoutDayById(swd.getWorkoutDayId());
+                nextWorkouts.add(wd);
+            }
+        }
+
+        response.setNextWorkouts(nextWorkouts);
+        return response;
+    }
+
+    private WorkoutSessionResponse mapToSessionResponse(WorkoutSession session) {
+        WorkoutSessionResponse response = new WorkoutSessionResponse();
+        response.setId(session.getId());
+        response.setWorkoutDayId(session.getWorkoutDayId());
+        response.setSessionDate(session.getSessionDate());
+        response.setDurationMinutes(session.getDurationMinutes());
+        response.setNotes(session.getNotes());
+
+        if (session.getWorkoutDayId() != null) {
+            WorkoutDay workoutDay = workoutDayRepository.findById(session.getWorkoutDayId()).orElse(null);
+            if (workoutDay != null) {
+                response.setWorkoutName(workoutDay.getName());
+            }
+        }
+
+        return response;
     }
 
     private Split mapToSplitEntity(CreateSplitRequest request, User user) {

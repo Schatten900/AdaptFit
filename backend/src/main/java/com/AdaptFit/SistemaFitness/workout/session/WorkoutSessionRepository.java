@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +15,7 @@ public interface WorkoutSessionRepository extends JpaRepository<WorkoutSession, 
 
     List<WorkoutSession> findByUserIdOrderBySessionDateDesc(Long userId);
 
-    List<WorkoutSession> findByWorkoutIdOrderBySessionDateDesc(Long workoutId);
+    List<WorkoutSession> findByWorkoutDayIdOrderBySessionDateDesc(Long workoutDayId);
 
     Optional<WorkoutSession> findFirstByUserIdOrderBySessionDateDesc(Long userId);
 
@@ -29,4 +30,25 @@ public interface WorkoutSessionRepository extends JpaRepository<WorkoutSession, 
 
     @Query("SELECT COUNT(DISTINCT s.sessionDate) FROM WorkoutSession s WHERE s.userId = :userId AND s.sessionDate >= :weekStart")
     Long countSessionsInWeek(@Param("userId") Long userId, @Param("weekStart") Date weekStart);
+
+    @Query("SELECT s FROM WorkoutSession s WHERE s.userId = :userId AND s.sessionDate >= :startDate AND s.sessionDate <= :endDate ORDER BY s.sessionDate DESC")
+    List<WorkoutSession> findByUserIdAndDateRange(@Param("userId") Long userId, @Param("startDate") Date startDate, @Param("endDate") Date endDate);
+
+    @Query("SELECT COUNT(s) FROM WorkoutSession s WHERE s.userId = :userId AND s.sessionDate >= :startDate AND s.sessionDate <= :endDate")
+    Long countByUserIdAndDateRange(@Param("userId") Long userId, @Param("startDate") Date startDate, @Param("endDate") Date endDate);
+
+    @Query("SELECT SUM(s.durationMinutes) FROM WorkoutSession s WHERE s.userId = :userId AND s.sessionDate >= :startDate AND s.sessionDate <= :endDate")
+    Long sumDurationByUserIdAndDateRange(@Param("userId") Long userId, @Param("startDate") Date startDate, @Param("endDate") Date endDate);
+
+    @Query("SELECT s FROM WorkoutSession s WHERE s.userId = :userId AND s.workoutDayId = :workoutDayId AND s.localDate = :localDate")
+    Optional<WorkoutSession> findByUserIdAndWorkoutDayIdAndLocalDate(@Param("userId") Long userId, @Param("workoutDayId") Long workoutDayId, @Param("localDate") LocalDate localDate);
+
+    @Query("SELECT s FROM WorkoutSession s WHERE s.userId = :userId AND s.localDate = :localDate")
+    List<WorkoutSession> findByUserIdAndLocalDate(@Param("userId") Long userId, @Param("localDate") LocalDate localDate);
+
+    @Query("SELECT s FROM WorkoutSession s WHERE s.userId = :userId AND s.workoutDayId = :workoutDayId AND s.sessionDate >= :startDate AND s.sessionDate <= :endDate ORDER BY s.sessionDate DESC")
+    List<WorkoutSession> findByUserIdAndWorkoutDayIdAndDateRange(@Param("userId") Long userId, @Param("workoutDayId") Long workoutDayId, @Param("startDate") Date startDate, @Param("endDate") Date endDate);
+
+    @Query("SELECT s FROM WorkoutSession s WHERE s.userId = :userId AND s.workoutDayId = :workoutDayId ORDER BY s.sessionDate DESC LIMIT 1")
+    Optional<WorkoutSession> findLatestByUserIdAndWorkoutDayId(@Param("userId") Long userId, @Param("workoutDayId") Long workoutDayId);
 }

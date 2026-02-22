@@ -299,7 +299,7 @@ export default function CreateSplitScreen({ splitId, initialSplitData }: CreateS
               </View>
             ) : workoutDays.length === 0 ? (
               <View className="items-center py-8">
-                <MaterialCommunityIcons name="dumbbell" size={48} color="#334155" />
+                <MaterialCommunityIcons name="dumbbell" size={48} color="#00E0A4" />
                 <Text className="text-text-secondary mt-4 text-center px-4">
                   Nenhum treino criado ainda.
                 </Text>
@@ -353,8 +353,8 @@ export default function CreateSplitScreen({ splitId, initialSplitData }: CreateS
                 }}
                 className="bg-primary p-4 rounded-xl items-center border-thin border-primary/20"
               >
-                <Ionicons name="add" size={20} color="#020617" />
-                <Text className="text-background font-bold ml-2">
+                <Ionicons name="add" size={20} color="#00E0A4" />
+                <Text className="text-primary font-bold ml-2">
                   Criar Novo Treino
                 </Text>
               </TouchableOpacity>

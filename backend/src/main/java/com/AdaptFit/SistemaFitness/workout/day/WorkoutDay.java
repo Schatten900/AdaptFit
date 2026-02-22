@@ -19,9 +19,6 @@ public class WorkoutDay {
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
-    @Column(name = "workout_id")
-    private Long workoutId;
-
     @Column(nullable = false, length = 255)
     private String name;
 

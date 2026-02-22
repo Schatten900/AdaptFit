@@ -19,6 +19,10 @@ export const workoutSessionService = {
     return api.get('/workout-sessions/latest');
   },
 
+  getLatestByWorkoutDayId(workoutDayId: number): Promise<WorkoutSessionResponse | null> {
+    return api.get(`/workout-sessions/latest/${workoutDayId}`);
+  },
+
   delete(id: number): Promise<void> {
     return api.delete(`/workout-sessions/${id}`);
   },

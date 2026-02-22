@@ -1,10 +1,12 @@
 package com.AdaptFit.SistemaFitness.workout.split;
 
 import com.AdaptFit.SistemaFitness.common.api.ApiResponse;
-import com.AdaptFit.SistemaFitness.workout.dto.CreateSplitRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.SplitResponse;
-import com.AdaptFit.SistemaFitness.workout.dto.UpdateSplitRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDayResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.CreateSplitRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.SplitResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Split.UpdateSplitRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.WorkoutDayResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Session.TodayStatusResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Session.NextWorkoutsResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -65,6 +67,18 @@ public class SplitController {
     @GetMapping("/today")
     public ResponseEntity<ApiResponse<WorkoutDayResponse>> getWorkoutForToday() {
         WorkoutDayResponse response = splitService.getWorkoutForToday();
+        return ResponseEntity.ok(new ApiResponse<>(response));
+    }
+
+    @GetMapping("/today-status")
+    public ResponseEntity<ApiResponse<TodayStatusResponse>> getTodayStatus() {
+        TodayStatusResponse response = splitService.getTodayStatus();
+        return ResponseEntity.ok(new ApiResponse<>(response));
+    }
+
+    @GetMapping("/next-workouts")
+    public ResponseEntity<ApiResponse<NextWorkoutsResponse>> getNextWorkouts() {
+        NextWorkoutsResponse response = splitService.getNextWorkouts();
         return ResponseEntity.ok(new ApiResponse<>(response));
     }
 }

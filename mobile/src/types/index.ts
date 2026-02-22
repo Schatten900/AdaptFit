@@ -4,6 +4,8 @@ export * from './exercises/workoutExercise/types'
 export * from './workoutDay/types';
 export * from './workoutSession/types';
 export * from './workoutSplit/types';
+export * from './workoutSplit/todayStatus';
+export * from './workoutSplit/nextWorkouts';
 export * from './profile/apiTypes';
 export * from './profile/types';
 export * from './auth/types';

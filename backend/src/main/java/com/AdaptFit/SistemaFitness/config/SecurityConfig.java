@@ -60,29 +60,30 @@ public class SecurityConfig {
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOriginPatterns(List.of(
-                "http://localhost:*",
-                "http://127.0.0.1:*",
-                "exp://*"
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:8081",
+                "http://localhost:19000",
+                "http://localhost:19001",
+                "http://localhost:19006"
         ));
 
         configuration.setAllowedMethods(List.of(
-                "GET", "POST", "PUT", "DELETE", "OPTIONS"
+                "GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"
         ));
 
         configuration.setAllowedHeaders(List.of(
-                "Authorization",
-                "Content-Type"
-        ));
+                "Authorization", "Content-Type", "X-Requested-With", "Accept", "Origin"));
 
         configuration.setExposedHeaders(List.of(
                 "Authorization"
         ));
 
         configuration.setAllowCredentials(true);
-
+        configuration.setMaxAge(3600L);
+        
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
+
 
         source.registerCorsConfiguration("/**", configuration);
         return source;

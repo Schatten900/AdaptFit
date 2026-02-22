@@ -1,8 +1,10 @@
 package com.AdaptFit.SistemaFitness.workout.session;
 
 import com.AdaptFit.SistemaFitness.common.api.ApiResponse;
-import com.AdaptFit.SistemaFitness.workout.dto.CreateWorkoutSessionRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.WorkoutSessionResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Evolution.DashboardResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.History.HistoricoResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Session.CreateWorkoutSessionRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.Session.WorkoutSessionResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,11 +21,7 @@ public class WorkoutSessionController {
 
     @PostMapping
     public ResponseEntity<ApiResponse<WorkoutSessionResponse>> createWorkoutSession(@RequestBody CreateWorkoutSessionRequest request) {
-        System.out.println(">>> WorkoutSessionController.createWorkoutSession() called");
-        System.out.println(">>> Request: " + request);
-
         WorkoutSessionResponse response = workoutSessionService.createWorkoutSession(request);
-        System.out.println(">>> WorkoutSession created successfully");
         return ResponseEntity.ok(new ApiResponse<>(response));
     }
 
@@ -41,7 +39,7 @@ public class WorkoutSessionController {
 
     @GetMapping("/day/{workoutDayId}")
     public ResponseEntity<ApiResponse<List<WorkoutSessionResponse>>> getSessionsByWorkoutDay(@PathVariable Long workoutDayId) {
-        List<WorkoutSessionResponse> responses = workoutSessionService.getWorkoutSessionsByWorkoutId(workoutDayId);
+        List<WorkoutSessionResponse> responses = workoutSessionService.getWorkoutSessionsByWorkoutDayId(workoutDayId);
         return ResponseEntity.ok(new ApiResponse<>(responses));
     }
 
@@ -51,10 +49,36 @@ public class WorkoutSessionController {
         return ResponseEntity.ok(new ApiResponse<>(response));
     }
 
+    @GetMapping("/latest/{workoutDayId}")
+    public ResponseEntity<ApiResponse<WorkoutSessionResponse>> getLatestSessionByWorkoutDayId(@PathVariable Long workoutDayId) {
+        WorkoutSessionResponse response = workoutSessionService.getLatestSessionByWorkoutDayId(workoutDayId);
+        return ResponseEntity.ok(new ApiResponse<>(response));
+    }
+
     @GetMapping("/stats")
     public ResponseEntity<ApiResponse<Map<String, Object>>> getSessionStats() {
         Map<String, Object> stats = workoutSessionService.getSessionStatsForCurrentUser();
         return ResponseEntity.ok(new ApiResponse<>(stats));
+    }
+
+    @GetMapping("/history")
+    public ResponseEntity<ApiResponse<List<HistoricoResponse>>> getHistory(
+            @RequestParam(required = false, defaultValue = "month") String period,
+            @RequestParam(required = false) String muscleGroup,
+            @RequestParam(required = false) Long exerciseId,
+            @RequestParam(required = false) Long workoutId) {
+        List<HistoricoResponse> history = workoutSessionService.getHistory(period, muscleGroup, exerciseId, workoutId);
+        return ResponseEntity.ok(new ApiResponse<>(history));
+    }
+
+    @GetMapping("/dashboard")
+    public ResponseEntity<ApiResponse<DashboardResponse>> getDashboard(
+            @RequestParam(required = false, defaultValue = "month") String period,
+            @RequestParam(required = false) String muscleGroup,
+            @RequestParam(required = false) Long exerciseId,
+            @RequestParam(required = false) Long workoutId) {
+        DashboardResponse dashboard = workoutSessionService.getDashboard(period, muscleGroup, exerciseId, workoutId);
+        return ResponseEntity.ok(new ApiResponse<>(dashboard));
     }
 
     @DeleteMapping("/{id}")

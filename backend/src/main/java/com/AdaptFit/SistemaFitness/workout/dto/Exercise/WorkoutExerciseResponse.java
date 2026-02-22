@@ -1,4 +1,4 @@
-package com.AdaptFit.SistemaFitness.workout.dto;
+package com.AdaptFit.SistemaFitness.workout.dto.Exercise;
 
 import lombok.Data;
 

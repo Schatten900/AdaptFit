@@ -1,9 +1,9 @@
 package com.AdaptFit.SistemaFitness.workout.day;
 
 import com.AdaptFit.SistemaFitness.common.api.ApiResponse;
-import com.AdaptFit.SistemaFitness.workout.dto.CreateWorkoutDayRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.UpdateWorkoutDayRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDayResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.CreateWorkoutDayRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.UpdateWorkoutDayRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.WorkoutDayResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

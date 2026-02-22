@@ -50,7 +50,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 
 ---
 
-## 🟡 FASE 4 — Feedback e Progresso (Pendente)
+## 🟢 FASE 4 — Feedback e Progresso (Concluido)
 
 ### Feedback (gerados pela IA, por meio da visualização e calculo de volume/fadiga/dor muscular/historico do usuario)
 - [ ] Pagina de feedback
@@ -60,7 +60,7 @@ Este documento descreve as tarefas necessárias para implementar o projeto Coach
 - [ ] Observações livres
 
 
-## 🟡 FASE 5 — Feedback e Progresso (Pendente)
+## 🟢 FASE 5 — Feedback e Progresso (Concluida)
 
 ### Historico
 - [] Pagina com historico de treinos realizados pelo usuario

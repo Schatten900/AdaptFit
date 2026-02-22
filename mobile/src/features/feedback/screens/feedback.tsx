@@ -67,8 +67,8 @@ export default function FeedbackScreen() {
       Alert.alert("Erro", "Sessão de treino não encontrada");
       return;
     }
-
-    try {
+      console.log(sessionData + " - " + fatigueLevel + " - " + muscleSoreness)
+  
       await createFeedback.mutateAsync({
         workoutSessionId: parseInt(sessionData.id, 10),
         fatigueLevel,
@@ -78,10 +78,8 @@ export default function FeedbackScreen() {
 
       await workoutSessionStorage.clearSession();
       router.replace("/home");
-    } catch (error) {
-      Alert.alert("Erro", "Falha ao enviar feedback. Tente novamente.");
-    }
   };
+
 
   const handleSkip = async () => {
     await workoutSessionStorage.clearSession();

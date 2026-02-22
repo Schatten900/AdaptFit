@@ -3,7 +3,9 @@ import {
   SplitResponse,
   WorkoutDayResponse,
   CreateSplitRequest,
-  UpdateSplitRequest
+  UpdateSplitRequest,
+  TodayStatusResponse,
+  NextWorkoutsResponse
 } from '~/types';
 
 export const splitService = {
@@ -25,6 +27,14 @@ export const splitService = {
 
   getWorkoutForToday(): Promise<WorkoutDayResponse> {
     return api.get('/splits/today');
+  },
+
+  getTodayStatus(): Promise<TodayStatusResponse> {
+    return api.get('/splits/today-status');
+  },
+
+  getNextWorkouts(): Promise<NextWorkoutsResponse> {
+    return api.get('/splits/next-workouts');
   },
 
   create(request: CreateSplitRequest): Promise<void> {

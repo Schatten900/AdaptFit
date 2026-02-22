@@ -31,6 +31,7 @@ export const useWorkoutLoader = (workoutDayId?: number) => {
     const formatted: WorkoutExerciseVM[] =
       workoutQuery.data.exercises.map(ex => ({
         id: String(ex.id),
+        exerciseId: ex.exerciseId,
         name: exerciseMap.get(ex.exerciseId) || `Exercício ${ex.exerciseId}`,
         lastPerformance: "",
         sets: Array.from({ length: ex.sets ?? 1 }).map(() => ({

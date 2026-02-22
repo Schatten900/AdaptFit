@@ -4,11 +4,11 @@ import com.AdaptFit.SistemaFitness.common.exception.NotFoundException;
 import com.AdaptFit.SistemaFitness.common.exception.ValidationException;
 import com.AdaptFit.SistemaFitness.user.User;
 import com.AdaptFit.SistemaFitness.user.UserService;
-import com.AdaptFit.SistemaFitness.workout.dto.CreateWorkoutDayRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.UpdateWorkoutDayRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDayResponse;
-import com.AdaptFit.SistemaFitness.workout.dto.WorkoutExerciseRequest;
-import com.AdaptFit.SistemaFitness.workout.dto.WorkoutExerciseResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.CreateWorkoutDayRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.UpdateWorkoutDayRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.WorkoutDay.WorkoutDayResponse;
+import com.AdaptFit.SistemaFitness.workout.dto.Exercise.WorkoutExerciseRequest;
+import com.AdaptFit.SistemaFitness.workout.dto.Exercise.WorkoutExerciseResponse;
 import com.AdaptFit.SistemaFitness.workout.exercise.WorkoutExercise;
 import com.AdaptFit.SistemaFitness.workout.exercise.WorkoutExercisesRepository;
 import com.AdaptFit.SistemaFitness.workout.exercise.catalog.ExerciseCatalog;
@@ -19,7 +19,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -100,7 +99,7 @@ public class WorkoutDayService {
     public List<WorkoutDayResponse> getAvailableWorkoutDays() {
         User user = userService.getCurrentUser();
 
-        List<WorkoutDay> workoutDays = workoutDayRepository.findByUserIdAndWorkoutIdIsNull(user.getId());
+        List<WorkoutDay> workoutDays = workoutDayRepository.findByUserId(user.getId());
 
         return workoutDays.stream().map(this::mapToResponse).toList();
     }

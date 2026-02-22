@@ -39,6 +39,9 @@ O OpenCode deve:
 - Descobrir padrões focando no próprio repositório;
 - Abrir somente trechos relevantes e comparar estruturas;
 - Evitar copiar/colar código do core.
+- Mantenha a arquitetura por features do proprio repositório.
+- Mantenha a centralização de erros pelo api.ts (frontend) e GlobalException (backend)
+- Utilize React Query para o frontend
 
 ---
 
@@ -46,8 +49,10 @@ O OpenCode deve:
 
 Para a fase selecionada:
 
-- Implementar **logs**, **validação** e **tratamento de erros** conforme o plano;
-- Adicionar **testes mínimos**, porém representativos.
+- Implemente **logs**, **validação** e **tratamento de erros** conforme o plano;
+- SEMPRE adicione **testes mínimos**, porém representativos.
+- SEMPRE mantenha o estilo e arquitetura do repositório.
+- Dê prioridade em centralização de código, a fim de evitar repetição.
 
 ---
 

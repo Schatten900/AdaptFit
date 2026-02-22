@@ -1,12 +1,14 @@
-package com.AdaptFit.SistemaFitness.workout.dto;
+package com.AdaptFit.SistemaFitness.workout.dto.Split;
 
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class CreateSplitRequest {
+public class UpdateSplitRequest {
+
     private String name;
     private String description;
+    private Boolean active;
     private List<SplitWorkoutDayRequest> splitWorkoutDays;
 }
