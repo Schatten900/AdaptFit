@@ -9,3 +9,5 @@ export * from './workoutSplit/nextWorkouts';
 export * from './profile/apiTypes';
 export * from './profile/types';
 export * from './auth/types';
+export * from './preferences/apiTypes';
+export * from './preferences/types';

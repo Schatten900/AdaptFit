@@ -10,11 +10,6 @@ public class WorkoutExerciseResponse {
     private Long id;
 
     private Long exerciseId;
-    private String name;
-    private String description;
-    private String muscleGroup;
-    private String equipment;
-    private Boolean isBodyweight;
 
     private Integer sets;
     private Integer reps;

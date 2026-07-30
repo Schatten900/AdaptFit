@@ -33,6 +33,8 @@ public class ProfileService {
         profile.setGoal(data.getGoal());
         profile.setExperience(data.getExperience());
         profile.setGender(data.getGender());
+        profile.setDaysPerWeek(data.getDaysPerWeek());
+        profile.setSessionDuration(data.getSessionDuration());
 
         return profileRepository.save(profile);
     }

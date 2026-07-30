@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "exercise_catalog")
@@ -22,14 +23,14 @@ public class ExerciseCatalog {
     @Column(length = 500)
     private String description;
 
-    @Column(name = "muscle_group", length = 100)
-    private String muscleGroup;
+    @Column(name = "primary_muscle", length = 100)
+    private String primaryMuscle;
 
-    @Column(length = 255)
-    private String equipment;
+    @Column(name = "secondary_muscles", columnDefinition = "json")
+    private String secondaryMuscles;
 
     @Column(name = "is_bodyweight")
-    private Boolean isBodyweight;
+    private Boolean isBodyweight = false;
 
     @Column(name = "created_at")
     private Date createdAt;

@@ -125,6 +125,18 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- QDRANT (using REST API) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- JACKSON FOR JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
         <!-- TESTES (UM SÓ) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

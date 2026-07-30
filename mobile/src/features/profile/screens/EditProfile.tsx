@@ -26,6 +26,8 @@ interface FormData {
   height: number;
   age: number;
   gender: string;
+  daysPerWeek: number;
+  sessionDuration: number;
 }
 
 export default function EditProfileScreen() {
@@ -40,6 +42,8 @@ export default function EditProfileScreen() {
     height: 170,
     age: 25,
     gender: '',
+    daysPerWeek: 3,
+    sessionDuration: 45,
   });
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,6 +59,8 @@ export default function EditProfileScreen() {
         height: profile?.height || 170,
         age: profile?.age || 25,
         gender: profile?.gender || '',
+        daysPerWeek: profile?.daysPerWeek || 3,
+        sessionDuration: profile?.sessionDuration || 45,
       });
     }
   }, [apiProfile]);
@@ -124,6 +130,8 @@ export default function EditProfileScreen() {
     { id: 'weight', title: 'What is your weight?', type: 'slider' as const, min: 40, max: 150, unit: 'kg' },
     { id: 'height', title: 'What is your height?', type: 'slider' as const, min: 140, max: 220, unit: 'cm' },
     { id: 'age', title: 'How old are you?', type: 'slider' as const, min: 15, max: 90, unit: 'years' },
+    { id: 'daysPerWeek', title: 'How many days per week?', type: 'slider' as const, min: 1, max: 7, unit: 'days' },
+    { id: 'sessionDuration', title: 'Session duration?', type: 'slider' as const, min: 15, max: 120, unit: 'min' },
   ];
 
   const nextStep = async () => {
@@ -138,6 +146,8 @@ export default function EditProfileScreen() {
         weight: data.weight,
         height: data.height,
         age: data.age,
+        daysPerWeek: data.daysPerWeek,
+        sessionDuration: data.sessionDuration,
       };
 
       await updateProfile(formData);

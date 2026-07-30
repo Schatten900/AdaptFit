@@ -1,0 +1,1332 @@
+[
+  {
+    "id": 1,
+    "nome": "Agachamento Livre",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Glúteos", "Isquiotibiais", "Panturrilhas"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["lesao_joelho", "dor_lombar"],
+    "tags": ["pernas", "quadriceps", "gluteos", "composto", "barra", "agachamento"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "6-12",
+      "descanso": "90-120s",
+      "intensidade": "alta"
+    },
+    "descricao": "Exercício composto essencial para o desenvolvimento de membros inferiores."
+  },
+  {
+    "id": 2,
+    "nome": "Supino Reto com Barra",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros", "Tríceps", "Core"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra", "Banco"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "triceps", "composto", "barra", "supino"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "6-10",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Exercício fundamental para o ganho de força e massa muscular no peitoral."
+  },
+  {
+    "id": 3,
+    "nome": "Remada Curvada",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps", "Ombros", "Core"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["costas", "biceps", "composto", "barra", "remada"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício composto focado na espessura e força das costas."
+  },
+  {
+    "id": 4,
+    "nome": "Levantamento Terra",
+    "musculo_principal": "Posterior de Coxa",
+    "musculos_secundarios": ["Glúteos", "Quadríceps", "Core", "Costas"],
+    "nivel": "avancado",
+    "equipamentos": ["Barra"],
+    "tipo": "legs",
+    "objetivos": ["forca", "hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["posterior", "gluteos", "composto", "barra", "terra"],
+    "prescricao": {
+      "series": "3-5",
+      "repeticoes": "3-6",
+      "descanso": "120s",
+      "intensidade": "muito alta"
+    },
+    "descricao": "Um dos exercícios multiarticulares mais completos para a cadeia posterior."
+  },
+  {
+    "id": 5,
+    "nome": "Flexão de Braços",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros", "Tríceps", "Core"],
+    "nivel": "iniciante",
+    "equipamentos": ["Peso Corporal"],
+    "tipo": "push",
+    "objetivos": ["resistencia", "hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "triceps", "bodyweight", "flexao", "calistenia"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-20",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício clássico de empurrar utilizando o peso corporal."
+  },
+  {
+    "id": 6,
+    "nome": "Puxada na Frente",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps", "Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina", "Polia"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["costas", "biceps", "maquina", "puxada", "pulldown"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício guiado ideal para o desenvolvimento da largura das dorsais."
+  },
+  {
+    "id": 7,
+    "nome": "Desenvolvimento com Halteres",
+    "musculo_principal": "Ombros",
+    "musculos_secundarios": ["Tríceps"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["ombros", "triceps", "halteres", "desenvolvimento", "overhead"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício focado na porção anterior e lateral dos ombros."
+  },
+  {
+    "id": 8,
+    "nome": "Rosca Direta com Barra",
+    "musculo_principal": "Bíceps",
+    "musculos_secundarios": ["Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Barra"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["biceps", "isolado", "barra", "rosca"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "O exercício construtor mais tradicional para isolamento de bíceps."
+  },
+  {
+    "id": 9,
+    "nome": "Tríceps na Polia",
+    "musculo_principal": "Tríceps",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["triceps", "isolado", "cabo", "polia", "pushdown"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício de isolamento mecânico contínuo para o tríceps."
+  },
+  {
+    "id": 10,
+    "nome": "Agachamento com Halteres",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Glúteos", "Isquiotibiais"],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["pernas", "quadriceps", "halteres", "agachamento"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-15",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Variação pedagógica e mais segura do agachamento tradicional utilizando halteres."
+  },
+  {
+    "id": 11,
+    "nome": "Prancha Abdominal",
+    "musculo_principal": "Core",
+    "musculos_secundarios": ["Ombros", "Glúteos"],
+    "nivel": "iniciante",
+    "equipamentos": ["Peso Corporal"],
+    "tipo": "core",
+    "objetivos": ["resistencia", "estabilidade"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["core", "isometrico", "bodyweight", "prancha", "abdomen"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "20-60s",
+      "descanso": "30-60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Exercício isométrico excelente para estabilização do core e proteção lombar."
+  },
+  {
+    "id": 12,
+    "nome": "Leg Press",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Glúteos", "Isquiotibiais"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["pernas", "maquina", "quadriceps", "legpress"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "10-15",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício em máquina estável focado na prensa mecânica de membros inferiores."
+  },
+  {
+    "id": 13,
+    "nome": "Cadeira Flexora",
+    "musculo_principal": "Isquiotibiais",
+    "musculos_secundarios": ["Glúteos"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["posterior", "isolado", "maquina", "flexora"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Isolamento da musculatura posterior da coxa em posição sentada."
+  },
+  {
+    "id": 14,
+    "nome": "Peck Deck Fly",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros"],
+    "nivel": "intermediario",
+    "equipamentos": ["Maquina"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "isolado", "maquina", "voador", "peckdeck"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício em máquina guiada focado em adução e isolamento peitoral."
+  },
+  {
+    "id": 15,
+    "nome": "Barra Fixa",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps", "Antebraços"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "pull",
+    "objetivos": ["forca", "hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["costas", "bodyweight", "composto", "pullup", "calistenia"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "6-12",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Exercício calistênico multiarticular completo para puxar verticalmente."
+  },
+  {
+    "id": 16,
+    "nome": "Abdominal Crunch",
+    "musculo_principal": "Core",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Peso Corporal"],
+    "tipo": "core",
+    "objetivos": ["resistencia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["core", "abdomen", "bodyweight", "crunch"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "15-20",
+      "descanso": "30-60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Movimento básico e localizado para a parede abdominal anterior."
+  },
+  {
+    "id": 17,
+    "nome": "Panturrilha em Pé",
+    "musculo_principal": "Panturrilha",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": [],
+    "tags": ["panturrilha", "isolado", "maquina", "gemeos"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-20",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Trabalho isolado para a porção dos gêmeos (gastrocnêmios) com pernas estendidas."
+  },
+  {
+    "id": 18,
+    "nome": "Rosca Martelo",
+    "musculo_principal": "Bíceps",
+    "musculos_secundarios": ["Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["biceps", "halteres", "antebraco", "martelo"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Variação de rosca com pegada neutra ideal para o braquiorradial e bíceps."
+  },
+  {
+    "id": 19,
+    "nome": "Terra Romeno",
+    "musculo_principal": "Posterior de Coxa",
+    "musculos_secundarios": ["Glúteos", "Core"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["posterior", "gluteos", "barra", "romeno", "rdl"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Variação focada na flexão/extensão do quadril mantendo joelhos levemente flexionados."
+  },
+  {
+    "id": 20,
+    "nome": "Elevação Lateral",
+    "musculo_principal": "Ombros",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["ombros", "isolado", "halteres", "lateral"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Exercício focado no desenvolvimento estético da porção lateral do deltoide."
+  },
+  {
+    "id": 21,
+    "nome": "Crucifixo com Halteres",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres", "Banco"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "isolado", "halteres", "crucifixo"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício isolador que alonga e recruta as fibras do peitoral sem auxílio mecânico do tríceps."
+  },
+  {
+    "id": 22,
+    "nome": "Remada Unilateral com Halter",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps", "Core"],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres", "Banco"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["costas", "halteres", "unilateral", "remada", "serrote"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Remada unilateral (conhecida como serrote) que reduz o estresse na lombar."
+  },
+  {
+    "id": 23,
+    "nome": "Afundo",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Glúteos", "Isquiotibiais"],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["pernas", "unilateral", "quadriceps", "gluteos", "afundo"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício dinâmico unilateral essencial para correção de assimetrias em pernas."
+  },
+  {
+    "id": 24,
+    "nome": "Stiff",
+    "musculo_principal": "Posterior de Coxa",
+    "musculos_secundarios": ["Glúteos", "Eretores da Espinha"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["posterior", "barra", "stiff", "pernas"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Alongamento e contração sob carga para a região dos isquiotibiais."
+  },
+  {
+    "id": 25,
+    "nome": "Pullover",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Costas", "Tríceps"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres", "Banco"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "halteres", "costas", "pullover"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício de transição biomecânica trabalhando sinergicamente peito e grande dorsal."
+  },
+  {
+    "id": 26,
+    "nome": "Remada Sentada no Cabo",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps", "Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["costas", "cabo", "composto", "remada", "polia"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Remada horizontal que confere tensão muscular uniforme em todo o arco do movimento."
+  },
+  {
+    "id": 27,
+    "nome": "Elevação de Panturrilha Sentado",
+    "musculo_principal": "Panturrilha",
+    "musculos_secundarios": ["Sóleo"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": [],
+    "tags": ["panturrilha", "isolado", "maquina", "soleo"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-20",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Foco principal no músculo sóleo da panturrilha com os joelhos flectidos a 90 graus."
+  },
+  {
+    "id": 28,
+    "nome": "Rosca Concentrada",
+    "musculo_principal": "Bíceps",
+    "musculos_secundarios": ["Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["biceps", "isolado", "halteres", "concentrada"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Isolamento estrito do bíceps eliminando qualquer impulso do tronco."
+  },
+  {
+    "id": 29,
+    "nome": "Tríceps Testa",
+    "musculo_principal": "Tríceps",
+    "musculos_secundarios": [],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["triceps", "isolado", "barra", "testa"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício focado na porção longa e medial do tríceps com barra ou halteres."
+  },
+  {
+    "id": 30,
+    "nome": "Agachamento Sumo",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Glúteos", "Adutores"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra", "Halteres"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["pernas", "gluteos", "composto", "barra", "sumo", "adutores"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Variação de agachamento com pernas afastadas focando adutores e glúteos."
+  },
+  {
+    "id": 31,
+    "nome": "Prancha Lateral",
+    "musculo_principal": "Core",
+    "musculos_secundarios": ["Ombros", "Oblíquos"],
+    "nivel": "iniciante",
+    "equipamentos": ["Peso Corporal"],
+    "tipo": "core",
+    "objetivos": ["resistencia", "estabilidade"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["core", "isometrico", "bodyweight", "obliquos", "prancha"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "20-40s",
+      "descanso": "30-60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Isometria lateral focada na ativação dos oblíquos e estabilizadores."
+  },
+  {
+    "id": 32,
+    "nome": "Remada na Máquina",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["costas", "maquina", "composto", "remada"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Remada horizontal guiada em máquina, ideal para iniciantes controlarem a postura."
+  },
+  {
+    "id": 33,
+    "nome": "Abdominal Bicicleta",
+    "musculo_principal": "Core",
+    "musculos_secundarios": ["Oblíquos"],
+    "nivel": "iniciante",
+    "equipamentos": ["Peso Corporal"],
+    "tipo": "core",
+    "objetivos": ["resistencia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["core", "abdomen", "bodyweight", "bicicleta", "obliquos"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "15-20",
+      "descanso": "30-60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Exercício abdominal dinâmico com rotação de tronco sincronizada."
+  },
+  {
+    "id": 34,
+    "nome": "Elevação Pélvica",
+    "musculo_principal": "Glúteos",
+    "musculos_secundarios": ["Posterior de Coxa", "Core"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra", "Banco"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["gluteos", "barra", "composto", "elevacao_pelvica", "hipthrust"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Movimento de extensão máxima de quadril focado em hipertrofia de glúteos."
+  },
+  {
+    "id": 35,
+    "nome": "Elevação de Panturrilha em Pé (Peso Corporal)",
+    "musculo_principal": "Panturrilha",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Peso Corporal"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia", "resistencia"],
+    "restricoes": [],
+    "tags": ["panturrilha", "bodyweight", "isolado", "gemeos"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "15-25",
+      "descanso": "45-60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Trabalho básico para panturrilha que pode ser feito em degraus ou solo."
+  },
+  {
+    "id": 36,
+    "nome": "Face Pull",
+    "musculo_principal": "Ombros",
+    "musculos_secundarios": ["Trapézio", "Costas"],
+    "nivel": "intermediario",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia", "reabilitacao"],
+    "restricoes": [],
+    "tags": ["ombros", "posterior", "cabo", "postura", "facepull"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Exercício focado na porção posterior dos deltoides e na estabilização escapular."
+  },
+  {
+    "id": 37,
+    "nome": "Supino Reto (Máquina)",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros", "Tríceps"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "maquina", "composto", "supino"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60-90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Supino guiado focado em isolar e estabilizar o empurrão peitoral."
+  },
+  {
+    "id": 38,
+    "nome": "Puxada com Cabo (Glúteos)",
+    "musculo_principal": "Glúteos",
+    "musculos_secundarios": ["Posterior de Coxa"],
+    "nivel": "iniciante",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["gluteos", "cabo", "posterior", "kickback"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Extensão de quadril na polia (coice) para isolamento do glúteo máximo."
+  },
+  {
+    "id": 39,
+    "nome": "Agachamento Búlgaro",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Glúteos", "Core"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres", "Banco"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia", "equilibrio"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["pernas", "unilateral", "gluteos", "equilibrio", "bulgaro"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Agachamento unilateral com o pé traseiro elevado em banco estável."
+  },
+  {
+    "id": 40,
+    "nome": "Rolo Abdominal",
+    "musculo_principal": "Core",
+    "musculos_secundarios": ["Ombros", "Tríceps"],
+    "nivel": "intermediario",
+    "equipamentos": ["Roda Abdominal"],
+    "tipo": "core",
+    "objetivos": ["forca", "estabilidade"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["core", "abdominal", "estabilidade", "roda_abdominal"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "8-12",
+      "descanso": "60s",
+      "intensidade": "alta"
+    },
+    "descricao": "Exercício anti-extensão avançado para o fortalecimento do core interno."
+  },
+  {
+    "id": 41,
+    "nome": "Agachamento de Frente",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Core", "Glúteos"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "legs",
+    "objetivos": ["forca", "hipertrofia"],
+    "restricoes": ["lesao_punho"],
+    "tags": ["pernas", "quadriceps", "barra", "frontsquat"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "5-8",
+      "descanso": "120s",
+      "intensidade": "alta"
+    },
+    "descricao": "Agachamento frontal com barra que gera mais ênfase nos quadríceps e menor estresse lombar."
+  },
+  {
+    "id": 42,
+    "nome": "Remada Cavalinho",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps", "Trapézio"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["costas", "barra", "composto", "cavalinho", "tbar"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Remada com barra em T para ganho de massa na região dorsal interna."
+  },
+  {
+    "id": 43,
+    "nome": "Encolhimento de Ombros",
+    "musculo_principal": "Trapézio",
+    "musculos_secundarios": ["Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres", "Barra"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["trapezio", "isolado", "shrug", "encolhimento"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Elevação vertical controlada das escápulas para isolar os trapézios superiores."
+  },
+  {
+    "id": 44,
+    "nome": "Mesa Flexora",
+    "musculo_principal": "Isquiotibiais",
+    "musculos_secundarios": ["Gastrocnêmio", "Glúteos"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["posterior", "isolado", "maquina", "flexora", "pernas"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício em máquina horizontal isolador para a região posterior de coxa."
+  },
+  {
+    "id": 45,
+    "nome": "Flexão de Punho com Barra",
+    "musculo_principal": "Antebraços",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Barra", "Banco"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["lesao_punho"],
+    "tags": ["antebraco", "isolado", "barra", "pegada"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício de isolamento para os flexores do punho e desenvolvimento do antebraço."
+  },
+  {
+    "id": 46,
+    "nome": "Caminhada do Fazendeiro",
+    "musculo_principal": "Antebraços",
+    "musculos_secundarios": ["Core", "Ombros", "Trapézio"],
+    "nivel": "iniciante",
+    "equipamentos": ["Halteres"],
+    "tipo": "core",
+    "objetivos": ["resistencia", "forca"],
+    "restricoes": [],
+    "tags": ["core", "funcional", "pegada", "antebraco", "farmerswalk"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "20-40m",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Caminhada sob sustentação estática de carga pesada, ideal para força de pegada."
+  },
+  {
+    "id": 47,
+    "nome": "Remada Baixa com Triângulo",
+    "musculo_principal": "Costas",
+    "musculos_secundarios": ["Bíceps", "Ombros", "Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["costas", "cabo", "composto", "remada", "triangulo"],
+    "prescricao": {
+      "series": "4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Puxada horizontal na polia baixa utilizando puxador triângulo para densidade dorsal."
+  },
+  {
+    "id": 48,
+    "nome": "Crucifixo Inverso no Halter",
+    "musculo_principal": "Ombros",
+    "musculos_secundarios": ["Trapézio", "Costas"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["ombros", "posterior", "isolado", "halteres", "crucifixo_inverso"],
+    "prescricao": {
+      "series": "4",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Adução escapular com halteres focada estritamente no deltoide posterior."
+  },
+  {
+    "id": 49,
+    "nome": "Rosca Spider",
+    "musculo_principal": "Bíceps",
+    "musculos_secundarios": ["Antebraços"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra", "Banco"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["biceps", "isolado", "barra", "banco", "spider", "aranha"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Rosca executada com o peito apoiado no banco inclinado para eliminar o balanço corporal."
+  },
+  {
+    "id": 50,
+    "nome": "Rosca Scott com Barra W",
+    "musculo_principal": "Bíceps",
+    "musculos_secundarios": ["Antebraços"],
+    "nivel": "iniciante",
+    "equipamentos": ["Barra", "Banco"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["biceps", "isolado", "barra", "banco", "scott"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "10-12",
+      "descanso": "60-90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Flexão de cotovelos no banco Scott, estabilizando os ombros e focando no pico do bíceps."
+  },
+  {
+    "id": 51,
+    "nome": "Elevação Pélvica na Máquina",
+    "musculo_principal": "Glúteos",
+    "musculos_secundarios": ["Posterior de Coxa", "Core"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["gluteos", "maquina", "isolado", "hipthrust"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "10-12",
+      "descanso": "90s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Variação em máquina da elevação pélvica, oferecendo maior estabilidade e facilidade de setup."
+  },
+  {
+    "id": 52,
+    "nome": "Cadeira Abdutora",
+    "musculo_principal": "Glúteos",
+    "musculos_secundarios": ["Tensor da Fáscia Lata"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia", "estabilidade"],
+    "restricoes": ["lesao_quadril"],
+    "tags": ["pernas", "gluteo_medio", "maquina", "isolado"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício isolador focado na porção lateral do quadril (glúteo médio e mínimo)."
+  },
+  {
+    "id": 53,
+    "nome": "Cadeira Adutora",
+    "musculo_principal": "Adutores da Coxa",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_virilha"],
+    "tags": ["pernas", "adutores", "maquina", "isolado"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício guiado para o fortalecimento da musculatura interna da coxa."
+  },
+  {
+    "id": 54,
+    "nome": "Tríceps Coice no Cabo",
+    "musculo_principal": "Tríceps",
+    "musculos_secundarios": ["Ombros"],
+    "nivel": "intermediario",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["triceps", "isolado", "cabo", "coice"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Extensão de cotovelo para trás na polia, enfatizando o pico de contração do tríceps."
+  },
+  {
+    "id": 55,
+    "nome": "Supino Inclinado com Halteres",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros", "Tríceps"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres", "Banco Inclinado"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "halteres", "composto", "inclinado"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Supino realizado em banco inclinado para direcionar o estímulo à porção clavicular do peitoral."
+  },
+  {
+    "id": 56,
+    "nome": "Crucifixo no Crossover",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros"],
+    "nivel": "intermediario",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "cabo", "isolado", "crossover", "voador"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Adução de braços utilizando cabos, mantendo a tensão constante no peitoral em todo o arco."
+  },
+  {
+    "id": 57,
+    "nome": "Rosca Inversa com Barra",
+    "musculo_principal": "Antebraços",
+    "musculos_secundarios": ["Bíceps"],
+    "nivel": "iniciante",
+    "equipamentos": ["Barra"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["lesao_punho"],
+    "tags": ["antebraco", "biceps", "isolado", "barra", "inversa"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Flexão de cotovelos com pegada pronada, focando no desenvolvimento do braquiorradial."
+  },
+  {
+    "id": 58,
+    "nome": "Extensão de Lombar (Banco Romano)",
+    "musculo_principal": "Eretores da Espinha",
+    "musculos_secundarios": ["Glúteos", "Isquiotibiais"],
+    "nivel": "iniciante",
+    "equipamentos": ["Banco Romano"],
+    "tipo": "core",
+    "objetivos": ["forca", "postura", "reabilitacao"],
+    "restricoes": ["hernia_disco_aguda"],
+    "tags": ["core", "lombar", "postura", "extensao"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "leve"
+    },
+    "descricao": "Extensão de tronco controlada para fortalecimento da região lombar inferior."
+  },
+  {
+    "id": 59,
+    "nome": "Encolhimento com Barra por Trás",
+    "musculo_principal": "Trapézio",
+    "musculos_secundarios": ["Antebraços"],
+    "nivel": "intermediario",
+    "equipamentos": ["Barra"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["trapezio", "barra", "isolado"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Elevação escapular com a barra posicionada atrás do corpo, enfatizando a porção média e superior do trapézio."
+  },
+  {
+    "id": 60,
+    "nome": "Panturrilha no Leg Press",
+    "musculo_principal": "Panturrilha",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": [],
+    "tags": ["panturrilha", "maquina", "isolado", "legpress"],
+    "prescricao": {
+      "series": "4",
+      "repeticoes": "12-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Flexão plantar utilizando a plataforma do aparelho Leg Press, excelente para progressão de carga segura."
+  },
+  {
+    "id": 61,
+    "nome": "Barras Paralelas (Foco Tríceps)",
+    "musculo_principal": "Tríceps",
+    "musculos_secundarios": ["Peito", "Ombros", "Core"],
+    "nivel": "avancado",
+    "equipamentos": ["Barras Paralelas"],
+    "tipo": "push",
+    "objetivos": ["forca", "hipertrofia"],
+    "restricoes": ["lesao_ombro", "lesao_cotovelo"],
+    "tags": ["triceps", "bodyweight", "composto", "paralelas", "calistenia"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "6-10",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Exercício calistênico executado mantendo o tronco verticalizado para isolar e recrutar mais os tríceps."
+  },
+  {
+    "id": 62,
+    "nome": "Barras Paralelas (Foco Peitoral)",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Tríceps", "Ombros", "Core"],
+    "nivel": "avancado",
+    "equipamentos": ["Barras Paralelas"],
+    "tipo": "push",
+    "objetivos": ["forca", "hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "bodyweight", "composto", "paralelas", "calistenia"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "6-10",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Variação de paralelas com o tronco inclinado para a frente e cotovelos ligeiramente abertos para focar na porção inferior do peito."
+  },
+  {
+    "id": 63,
+    "nome": "Remada Alta na Polia",
+    "musculo_principal": "Ombros",
+    "musculos_secundarios": ["Trapézio", "Bíceps"],
+    "nivel": "intermediario",
+    "equipamentos": ["Cabo", "Polia"],
+    "tipo": "pull",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro", "impacto_subacromial"],
+    "tags": ["ombros", "trapezio", "cabo", "remada_alta"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Puxada vertical do cabo em direção ao queixo para trabalhar deltoides laterais e trapézio."
+  },
+  {
+    "id": 64,
+    "nome": "Elevação de Panturrilha Sentado (Burrinho)",
+    "musculo_principal": "Panturrilha",
+    "musculos_secundarios": ["Sóleo"],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": [],
+    "tags": ["panturrilha", "maquina", "isolado", "burrinho"],
+    "prescricao": {
+      "series": "4",
+      "repeticoes": "15-20",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício clássico focado no músculo sóleo da panturrilha com o usuário sentado no aparelho específico (burrinho)."
+  },
+  {
+    "id": 65,
+    "nome": "Tríceps Corda no Cabo",
+    "musculo_principal": "Tríceps",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Cabo", "Polia", "Corda"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_cotovelo"],
+    "tags": ["triceps", "isolado", "cabo", "corda"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Extensão de tríceps na polia alta usando o acessório corda, permitindo uma maior abertura dos braços no final do movimento para contração máxima."
+  },
+  {
+    "id": 66,
+    "nome": "Tríceps Francês com Halter",
+    "musculo_principal": "Tríceps",
+    "musculos_secundarios": ["Ombros"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres", "Banco"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro", "impacto_subacromial"],
+    "tags": ["triceps", "isolado", "halteres", "frances", "porcao_longa"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Extensão de cotovelos realizada acima da cabeça, gerando um forte alongamento e foco na porção longa do tríceps."
+  },
+  {
+    "id": 67,
+    "nome": "Crucifixo Inclinado com Halteres",
+    "musculo_principal": "Peito",
+    "musculos_secundarios": ["Ombros"],
+    "nivel": "intermediario",
+    "equipamentos": ["Halteres", "Banco Inclinado"],
+    "tipo": "push",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["lesao_ombro"],
+    "tags": ["peito", "isolado", "halteres", "inclinado"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "10-12",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Abertura lateral dos braços realizada em banco inclinado, focando no isolamento e alongamento da porção superior do peitoral."
+  },
+  {
+    "id": 68,
+    "nome": "Cadeira Extensora",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": [],
+    "nivel": "iniciante",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia"],
+    "restricoes": ["condromalacia_patelar_aguda", "lesao_joelho"],
+    "tags": ["pernas", "quadriceps", "maquina", "isolado", "extensora"],
+    "prescricao": {
+      "series": "4",
+      "repeticoes": "10-15",
+      "descanso": "60s",
+      "intensidade": "moderada"
+    },
+    "descricao": "Exercício isolador fundamental em máquina para extensão do joelho e ativação total das quatro cabeças do quadríceps."
+  },
+  {
+    "id": 69,
+    "nome": "Agachamento Hack",
+    "musculo_principal": "Quadríceps",
+    "musculos_secundarios": ["Glúteos", "Isquiotibiais"],
+    "nivel": "intermediario",
+    "equipamentos": ["Maquina"],
+    "tipo": "legs",
+    "objetivos": ["hipertrofia", "forca"],
+    "restricoes": ["lesao_joelho"],
+    "tags": ["pernas", "quadriceps", "maquina", "composto", "hack"],
+    "prescricao": {
+      "series": "3-4",
+      "repeticoes": "8-12",
+      "descanso": "90s",
+      "intensidade": "alta"
+    },
+    "descricao": "Agachamento guiado em máquina inclinada que permite grande amplitude e foco nas coxas com menor demanda de estabilização do core."
+  },
+  {
+    "id": 70,
+    "nome": "Abdominal Infra na Barra (Elevando Pernas)",
+    "musculo_principal": "Core",
+    "musculos_secundarios": ["Flexores do Quadril"],
+    "nivel": "avancado",
+    "equipamentos": ["Barra"],
+    "tipo": "core",
+    "objetivos": ["forca", "hipertrofia"],
+    "restricoes": ["dor_lombar"],
+    "tags": ["core", "abdomen", "bodyweight", "infra", "pendurado"],
+    "prescricao": {
+      "series": "3",
+      "repeticoes": "8-12",
+      "descanso": "60s",
+      "intensidade": "alta"
+    },
+    "descricao": "Exercício avançado para o abdômen onde o usuário fica pendurado na barra fixa e eleva as pernas, focando na porção inferior (infra) do reto abdominal."
+  }
+]

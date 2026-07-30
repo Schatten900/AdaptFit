@@ -18,6 +18,8 @@ interface FormData {
   height: number;
   age: number;
   gender: string;
+  daysPerWeek: number;
+  sessionDuration: number;
 }
 
 export default function PersonalDataScreen() {
@@ -45,14 +47,16 @@ export default function PersonalDataScreen() {
     weight: 70,
     height: 170,
     age: 25,
-    gender: ''
+    gender: '',
+    daysPerWeek: 3,
+    sessionDuration: 45,
   });
 
 
   useEffect(() => {
     if (profile && !redirectedRef.current) {
       redirectedRef.current = true;
-      router.replace('/home');
+      router.replace('/edit-preferences');
     }
   }, [profile]);
 
@@ -99,6 +103,8 @@ export default function PersonalDataScreen() {
     { id: 'weight', title: 'What is your weight?', type: 'slider' as const, min: 40, max: 150, unit: 'kg' },
     { id: 'height', title: 'What is your height?', type: 'slider' as const, min: 140, max: 220, unit: 'cm' },
     { id: 'age', title: 'How old are you?', type: 'slider' as const, min: 15, max: 90, unit: 'years' },
+    { id: 'daysPerWeek', title: 'How many days per week?', type: 'slider' as const, min: 1, max: 7, unit: 'days' },
+    { id: 'sessionDuration', title: 'Session duration?', type: 'slider' as const, min: 15, max: 120, unit: 'min' },
   ];
 
   const nextStep = async () => {
@@ -118,10 +124,12 @@ export default function PersonalDataScreen() {
         weight: data.weight,
         height: data.height,
         age: data.age,
+        daysPerWeek: data.daysPerWeek,
+        sessionDuration: data.sessionDuration,
       };
 
       await setProfile(formData);
-      router.replace('/home');
+      router.replace('/edit-preferences');
     }
   };
 

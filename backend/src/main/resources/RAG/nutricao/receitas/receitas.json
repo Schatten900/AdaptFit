@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "001",
+    "nome": "Salada de Repolho Crocante",
+    "macros": { "calorias": 85, "proteina": 2, "carbo": 11, "gordura": 4 },
+    "micros": { "fibras": 3, "sodio": 80, "acucar": 5 },
+    "porcao": { "peso_g": 150, "descricao": "1 tigela pequena" },
+    "classificacao": {
+      "dietas": ["vegetarian", "gluten_free", "low_calorie"],
+      "refeicao": ["acompanhamento", "jantar"],
+      "papel": "acompanhamento",
+      "contexto": ["cutting", "emagrecimento"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": true },
+    "preparo": { "tempo_min": 10, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["leve", "baixo carbo", "salada", "fibra", "refeicao leve"] }
+  },
+
+  {
+    "id": "002",
+    "nome": "Sopa de Feijão Preto com Presunto Magro",
+    "macros": { "calorias": 231, "proteina": 23, "carbo": 20, "gordura": 7 },
+    "micros": { "fibras": 8, "sodio": 450, "acucar": 2 },
+    "porcao": { "peso_g": 300, "descricao": "1 prato fundo" },
+    "classificacao": {
+      "dietas": ["gluten_free", "high_protein"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "refeicao_completa",
+      "contexto": ["manutencao", "hipertrofia"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 25, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["rico em proteina", "sopa", "saciedade", "fibra"] }
+  },
+
+  {
+    "id": "003",
+    "nome": "Tofu com Tomate e Coentro",
+    "macros": { "calorias": 411, "proteina": 25, "carbo": 26, "gordura": 26 },
+    "micros": { "fibras": 5, "sodio": 120, "acucar": 6 },
+    "porcao": { "peso_g": 250, "descricao": "1 prato médio" },
+    "classificacao": {
+      "dietas": ["vegan", "vegetarian", "low_carb"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["hipertrofia", "low_carb"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": true },
+    "preparo": { "tempo_min": 20, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["proteina vegetal", "vegano", "baixo carbo", "tofu"] }
+  },
+
+  {
+    "id": "004",
+    "nome": "Bowl de Frango Grelhado e Quinoa",
+    "macros": { "calorias": 450, "proteina": 42, "carbo": 35, "gordura": 12 },
+    "micros": { "fibras": 6, "sodio": 200, "acucar": 3 },
+    "porcao": { "peso_g": 350, "descricao": "1 bowl completo" },
+    "classificacao": {
+      "dietas": ["high_protein", "balanced"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "refeicao_completa",
+      "contexto": ["hipertrofia", "pos_treino"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 25, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["pos treino", "rico em proteina", "refeicao completa"] }
+  },
+
+  {
+    "id": "005",
+    "nome": "Ovos no Purgatório (Shakshuka Simples)",
+    "macros": { "calorias": 307, "proteina": 28, "carbo": 12, "gordura": 18 },
+    "micros": { "fibras": 3, "sodio": 220, "acucar": 6 },
+    "porcao": { "peso_g": 250, "descricao": "1 frigideira pequena" },
+    "classificacao": {
+      "dietas": ["low_carb", "vegetarian"],
+      "refeicao": ["cafe_da_manha", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["low_carb", "cutting"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 15, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["ovo", "proteico", "baixo carbo", "rapido"] }
+  },
+
+  {
+    "id": "006",
+    "nome": "Iogurte Grego com Maçã e Canela",
+    "macros": { "calorias": 180, "proteina": 18, "carbo": 22, "gordura": 2 },
+    "micros": { "fibras": 3, "sodio": 70, "acucar": 12 },
+    "porcao": { "peso_g": 200, "descricao": "1 pote" },
+    "classificacao": {
+      "dietas": ["vegetarian", "high_protein"],
+      "refeicao": ["lanche", "sobremesa"],
+      "papel": "lanche",
+      "contexto": ["pos_treino", "manutencao"]
+    },
+    "restricoes": { "gluten": false, "lactose": true, "vegano": false },
+    "preparo": { "tempo_min": 5, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["lanche rapido", "proteina", "doce saudavel"] }
+  },
+
+  {
+    "id": "007",
+    "nome": "Fettuccine Integral com Lagostim",
+    "macros": { "calorias": 600, "proteina": 32, "carbo": 45, "gordura": 31 },
+    "micros": { "fibras": 5, "sodio": 300, "acucar": 3 },
+    "porcao": { "peso_g": 350, "descricao": "1 prato grande" },
+    "classificacao": {
+      "dietas": ["high_protein"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "refeicao_completa",
+      "contexto": ["bulking", "hipertrofia"]
+    },
+    "restricoes": { "gluten": true, "lactose": true, "vegano": false },
+    "preparo": { "tempo_min": 30, "dificuldade": "media", "praticidade": 3 },
+    "embedding_helper": { "tags": ["alto carbo", "energia", "massa", "bulking"] }
+  },
+
+  {
+    "id": "008",
+    "nome": "Ratatouille Express de Frigideira",
+    "macros": { "calorias": 110, "proteina": 4, "carbo": 15, "gordura": 5 },
+    "micros": { "fibras": 4, "sodio": 90, "acucar": 7 },
+    "porcao": { "peso_g": 200, "descricao": "1 prato pequeno" },
+    "classificacao": {
+      "dietas": ["vegan", "vegetarian", "low_calorie"],
+      "refeicao": ["acompanhamento", "jantar"],
+      "papel": "acompanhamento",
+      "contexto": ["cutting", "emagrecimento"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": true },
+    "preparo": { "tempo_min": 20, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["vegetais", "leve", "baixo caloria"] }
+  },
+
+  {
+    "id": "009",
+    "nome": "Creme de Baunilha Proteico",
+    "macros": { "calorias": 220, "proteina": 26, "carbo": 8, "gordura": 10 },
+    "micros": { "fibras": 2, "sodio": 150, "acucar": 3 },
+    "porcao": { "peso_g": 120, "descricao": "1 taça pequena" },
+    "classificacao": {
+      "dietas": ["high_protein", "low_carb"],
+      "refeicao": ["lanche", "sobremesa"],
+      "papel": "lanche",
+      "contexto": ["pos_treino", "cutting"]
+    },
+    "restricoes": { "gluten": false, "lactose": true, "vegano": false },
+    "preparo": { "tempo_min": 2, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["whey", "proteico", "doce fit", "rapido"] }
+  },
+
+  {
+    "id": "010",
+    "nome": "Costeletas de Porco com Crosta de Mostarda",
+    "macros": { "calorias": 389, "proteina": 42, "carbo": 12, "gordura": 18 },
+    "micros": { "fibras": 1, "sodio": 400, "acucar": 2 },
+    "porcao": { "peso_g": 250, "descricao": "2 costeletas médias" },
+    "classificacao": {
+      "dietas": ["high_protein"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["hipertrofia", "low_carb"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 25, "dificuldade": "media", "praticidade": 3 },
+    "embedding_helper": { "tags": ["carne", "proteina alta", "low carb"] }
+  },
+  {
+    "id": "011",
+    "nome": "Asinhas de Frango Assadas com Páprica",
+    "macros": { "calorias": 450, "proteina": 38, "carbo": 2, "gordura": 32 },
+    "micros": { "fibras": 0, "sodio": 500, "acucar": 0 },
+    "porcao": { "peso_g": 250, "descricao": "6 asinhas médias" },
+    "classificacao": {
+      "dietas": ["low_carb", "cetogenica"],
+      "refeicao": ["jantar", "lanche"],
+      "papel": "fonte_proteina",
+      "contexto": ["low_carb", "bulking"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 35, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["frango", "crocante", "alto gordura", "proteico"] }
+  },
+  {
+    "id": "012",
+    "nome": "Muffins Energéticos de Aveia",
+    "macros": { "calorias": 180, "proteina": 8, "carbo": 30, "gordura": 4 },
+    "micros": { "fibras": 4, "sodio": 120, "acucar": 10 },
+    "porcao": { "peso_g": 80, "descricao": "2 muffins pequenos" },
+    "classificacao": {
+      "dietas": ["vegetarian", "high_fiber"],
+      "refeicao": ["cafe_da_manha", "lanche"],
+      "papel": "fonte_carbo",
+      "contexto": ["energia", "pre_treino"]
+    },
+    "restricoes": { "gluten": true, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 30, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["aveia", "energia", "doce", "fibra"] }
+  },
+  {
+    "id": "013",
+    "nome": "Sopa Verde de Espinafre e Frango",
+    "macros": { "calorias": 190, "proteina": 24, "carbo": 12, "gordura": 4 },
+    "micros": { "fibras": 3, "sodio": 300, "acucar": 3 },
+    "porcao": { "peso_g": 300, "descricao": "1 prato fundo" },
+    "classificacao": {
+      "dietas": ["high_protein", "low_carb"],
+      "refeicao": ["jantar", "entrada"],
+      "papel": "refeicao_leve",
+      "contexto": ["cutting", "jantar_leve"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 15, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["sopa", "leve", "proteico", "baixo carbo"] }
+  },
+  {
+    "id": "014",
+    "nome": "Waffles de Abóbora Proteicos",
+    "macros": { "calorias": 191, "proteina": 10, "carbo": 15, "gordura": 9 },
+    "micros": { "fibras": 3, "sodio": 150, "acucar": 5 },
+    "porcao": { "peso_g": 120, "descricao": "1 waffle médio" },
+    "classificacao": {
+      "dietas": ["vegetarian", "low_carb", "gluten_free"],
+      "refeicao": ["cafe_da_manha"],
+      "papel": "refeicao_leve",
+      "contexto": ["manutencao", "low_carb"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 15, "dificuldade": "media", "praticidade": 4 },
+    "embedding_helper": { "tags": ["abobora", "proteico", "waffle fit"] }
+  },
+  {
+    "id": "015",
+    "nome": "Espetinho de Frango Satay (Light)",
+    "macros": { "calorias": 210, "proteina": 32, "carbo": 6, "gordura": 8 },
+    "micros": { "fibras": 1, "sodio": 400, "acucar": 2 },
+    "porcao": { "peso_g": 180, "descricao": "2 espetinhos" },
+    "classificacao": {
+      "dietas": ["high_protein"],
+      "refeicao": ["lanche", "almoco"],
+      "papel": "fonte_proteina",
+      "contexto": ["hipertrofia", "pos_treino"]
+    },
+    "restricoes": { "gluten": true, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 20, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["frango", "proteico", "lanche fit"] }
+  },
+  {
+    "id": "016",
+    "nome": "Feijoada Fit (Cortes Magros)",
+    "macros": { "calorias": 420, "proteina": 45, "carbo": 28, "gordura": 14 },
+    "micros": { "fibras": 10, "sodio": 600, "acucar": 3 },
+    "porcao": { "peso_g": 350, "descricao": "1 prato médio" },
+    "classificacao": {
+      "dietas": ["high_protein"],
+      "refeicao": ["almoco"],
+      "papel": "refeicao_completa",
+      "contexto": ["hipertrofia", "manutencao"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 60, "dificuldade": "media", "praticidade": 2 },
+    "embedding_helper": { "tags": ["tradicional", "proteico", "feijao", "brasileiro"] }
+  },
+  {
+    "id": "017",
+    "nome": "Panqueca Proteica de Pasta de Amendoim",
+    "macros": { "calorias": 310, "proteina": 28, "carbo": 20, "gordura": 12 },
+    "micros": { "fibras": 3, "sodio": 200, "acucar": 8 },
+    "porcao": { "peso_g": 180, "descricao": "2 panquecas médias" },
+    "classificacao": {
+      "dietas": ["high_protein"],
+      "refeicao": ["cafe_da_manha"],
+      "papel": "refeicao_completa",
+      "contexto": ["pos_treino", "hipertrofia"]
+    },
+    "restricoes": { "gluten": false, "lactose": true, "vegano": false },
+    "preparo": { "tempo_min": 10, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["panqueca", "whey", "energia", "proteico"] }
+  },
+  {
+    "id": "018",
+    "nome": "Filé Mignon com Crosta de Ervas",
+    "macros": { "calorias": 265, "proteina": 35, "carbo": 2, "gordura": 12 },
+    "micros": { "fibras": 0, "sodio": 250, "acucar": 0 },
+    "porcao": { "peso_g": 150, "descricao": "1 filé médio" },
+    "classificacao": {
+      "dietas": ["high_protein", "low_carb"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["hipertrofia", "low_carb"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 20, "dificuldade": "media", "praticidade": 3 },
+    "embedding_helper": { "tags": ["carne", "proteico", "gourmet"] }
+  },
+  {
+    "id": "019",
+    "nome": "Brochettes de Cordeiro e Vegetais",
+    "macros": { "calorias": 310, "proteina": 28, "carbo": 8, "gordura": 18 },
+    "micros": { "fibras": 2, "sodio": 220, "acucar": 3 },
+    "porcao": { "peso_g": 200, "descricao": "2 espetos médios" },
+    "classificacao": {
+      "dietas": ["paleo", "low_carb"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["low_carb", "manutencao"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 25, "dificuldade": "media", "praticidade": 3 },
+    "embedding_helper": { "tags": ["cordeiro", "grelhado", "proteico"] }
+  },
+  {
+    "id": "020",
+    "nome": "Salmão com Crosta de Gergelim",
+    "macros": { "calorias": 420, "proteina": 34, "carbo": 5, "gordura": 28 },
+    "micros": { "fibras": 1, "sodio": 350, "acucar": 2 },
+    "porcao": { "peso_g": 180, "descricao": "1 filé médio" },
+    "classificacao": {
+      "dietas": ["low_carb", "pescetariano"],
+      "refeicao": ["jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["omega3", "hipertrofia"]
+    },
+    "restricoes": { "gluten": true, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 20, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["salmao", "omega3", "proteico", "gordura boa"] }
+  },
+  {
+    "id": "021",
+    "nome": "Ceviche de Tilápia Express",
+    "macros": { "calorias": 140, "proteina": 26, "carbo": 6, "gordura": 2 },
+    "micros": { "fibras": 1, "sodio": 200, "acucar": 2 },
+    "porcao": { "peso_g": 200, "descricao": "1 tigela média" },
+    "classificacao": {
+      "dietas": ["low_carb", "paleo", "gluten_free"],
+      "refeicao": ["entrada", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["cutting", "refeicao_leve"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 15, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["peixe", "leve", "proteico", "refrescante"] }
+  },
+  {
+    "id": "022",
+    "nome": "Omelete de Claras com Espinafre",
+    "macros": { "calorias": 160, "proteina": 22, "carbo": 3, "gordura": 6 },
+    "micros": { "fibras": 2, "sodio": 180, "acucar": 1 },
+    "porcao": { "peso_g": 180, "descricao": "1 omelete média" },
+    "classificacao": {
+      "dietas": ["high_protein", "low_carb"],
+      "refeicao": ["cafe_da_manha", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["cutting", "manutencao"]
+    },
+    "restricoes": { "gluten": false, "lactose": true, "vegano": false },
+    "preparo": { "tempo_min": 10, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["ovo", "proteico", "leve", "baixo carbo"] }
+  },
+  {
+    "id": "023",
+    "nome": "Arroz de Couve-Flor com Camarão",
+    "macros": { "calorias": 210, "proteina": 28, "carbo": 9, "gordura": 7 },
+    "micros": { "fibras": 3, "sodio": 300, "acucar": 2 },
+    "porcao": { "peso_g": 250, "descricao": "1 prato médio" },
+    "classificacao": {
+      "dietas": ["low_carb", "gluten_free"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "refeicao_completa",
+      "contexto": ["cutting", "low_carb"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 15, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["camarão", "low carb", "proteico"] }
+  },
+  {
+    "id": "024",
+    "nome": "Sobrecoxa de Frango com Ervas e Laranja",
+    "macros": { "calorias": 320, "proteina": 34, "carbo": 8, "gordura": 16 },
+    "micros": { "fibras": 1, "sodio": 350, "acucar": 4 },
+    "porcao": { "peso_g": 250, "descricao": "2 sobrecoxas médias" },
+    "classificacao": {
+      "dietas": ["paleo", "gluten_free"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "fonte_proteina",
+      "contexto": ["manutencao", "hipertrofia"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 45, "dificuldade": "media", "praticidade": 3 },
+    "embedding_helper": { "tags": ["frango", "assado", "proteico"] }
+  },
+  {
+    "id": "025",
+    "nome": "Tacos de Alface com Patinho Moído",
+    "macros": { "calorias": 240, "proteina": 32, "carbo": 7, "gordura": 9 },
+    "micros": { "fibras": 2, "sodio": 280, "acucar": 2 },
+    "porcao": { "peso_g": 220, "descricao": "4 tacos pequenos" },
+    "classificacao": {
+      "dietas": ["low_carb", "paleo"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "refeicao_completa",
+      "contexto": ["cutting", "low_carb"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 20, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["carne", "low carb", "wrap fit"] }
+  },
+  {
+    "id": "026",
+    "nome": "Smoothie de Whey com Frutas Vermelhas",
+    "macros": { "calorias": 210, "proteina": 24, "carbo": 18, "gordura": 3 },
+    "micros": { "fibras": 3, "sodio": 120, "acucar": 10 },
+    "porcao": { "peso_g": 300, "descricao": "1 copo grande" },
+    "classificacao": {
+      "dietas": ["high_protein"],
+      "refeicao": ["lanche", "cafe_da_manha"],
+      "papel": "lanche",
+      "contexto": ["pos_treino"]
+    },
+    "restricoes": { "gluten": false, "lactose": true, "vegano": false },
+    "preparo": { "tempo_min": 5, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["whey", "rapido", "shake", "proteico"] }
+  },
+  {
+    "id": "027",
+    "nome": "Abóbora Assada com Mel e Nozes",
+    "macros": { "calorias": 185, "proteina": 3, "carbo": 26, "gordura": 9 },
+    "micros": { "fibras": 4, "sodio": 50, "acucar": 12 },
+    "porcao": { "peso_g": 200, "descricao": "1 prato pequeno" },
+    "classificacao": {
+      "dietas": ["vegetarian", "paleo"],
+      "refeicao": ["lanche", "acompanhamento"],
+      "papel": "fonte_carbo",
+      "contexto": ["energia", "manutencao"]
+    },
+    "restricoes": { "gluten": false, "lactose": false, "vegano": false },
+    "preparo": { "tempo_min": 30, "dificuldade": "facil", "praticidade": 4 },
+    "embedding_helper": { "tags": ["doce natural", "energia", "vegetal"] }
+  },
+  {
+    "id": "028",
+    "nome": "Espetinho de Queijo Coalho e Tomate",
+    "macros": { "calorias": 190, "proteina": 14, "carbo": 6, "gordura": 12 },
+    "micros": { "fibras": 1, "sodio": 300, "acucar": 3 },
+    "porcao": { "peso_g": 150, "descricao": "2 espetinhos" },
+    "classificacao": {
+      "dietas": ["vegetarian", "low_carb"],
+      "refeicao": ["lanche"],
+      "papel": "lanche",
+      "contexto": ["manutencao"]
+    },
+    "restricoes": { "gluten": false, "lactose": true, "vegano": false },
+    "preparo": { "tempo_min": 10, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["queijo", "lanche", "proteico"] }
+  },
+  {
+    "id": "029",
+    "nome": "Quibe de Abóbora Vegano",
+    "macros": { "calorias": 215, "proteina": 7, "carbo": 42, "gordura": 2 },
+    "micros": { "fibras": 6, "sodio": 150, "acucar": 5 },
+    "porcao": { "peso_g": 200, "descricao": "1 porção média" },
+    "classificacao": {
+      "dietas": ["vegan", "vegetarian"],
+      "refeicao": ["almoco", "jantar"],
+      "papel": "refeicao_completa",
+      "contexto": ["manutencao"]
+    },
+    "restricoes": { "gluten": true, "lactose": false, "vegano": true },
+    "preparo": { "tempo_min": 45, "dificuldade": "media", "praticidade": 3 },
+    "embedding_helper": { "tags": ["vegano", "fibra", "carbo alto"] }
+  },
+  {
+    "id": "030",
+    "nome": "Cuscuz Marroquino com Vegetais",
+    "macros": { "calorias": 280, "proteina": 8, "carbo": 45, "gordura": 8 },
+    "micros": { "fibras": 5, "sodio": 180, "acucar": 4 },
+    "porcao": { "peso_g": 250, "descricao": "1 prato médio" },
+    "classificacao": {
+      "dietas": ["vegan", "vegetarian"],
+      "refeicao": ["almoco", "acompanhamento"],
+      "papel": "fonte_carbo",
+      "contexto": ["energia", "manutencao"]
+    },
+    "restricoes": { "gluten": true, "lactose": false, "vegano": true },
+    "preparo": { "tempo_min": 10, "dificuldade": "facil", "praticidade": 5 },
+    "embedding_helper": { "tags": ["carbo", "leve", "vegano"] }
+  },
+    {
+      "recipe_id": "031",
+      "nome": "Iscas de Fígado acebolado (Rico em Ferro)",
+      "ingredientes": ["150g de bife de fígado em tiras", "1 cebola grande em rodelas", "1 colher de sopa de vinagre", "Sal e salsinha"],
+      "modo_preparo": "Deixe o fígado no vinagre por 5 min. Grelhe rapidamente em fogo alto para não endurecer. Adicione a cebola e refogue até murchar.",
+      "calorias_por_porcao": 245, "proteina_g": 32, "carboidratos_g": 8, "gorduras_g": 9,
+      "dietas": ["onivoro", "alta_proteina", "paleo"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "032",
+      "nome": "Sanduíche de Atum no Pão Integral",
+      "ingredientes": ["1 lata de atum em água", "1 colher de sopa de iogurte natural (substitui maionese)", "2 fatias de pão integral", "Folhas de alface"],
+      "modo_preparo": "Misture o atum com o iogurte e temperos. Monte o sanduíche com a pasta de atum e a alface crocante.",
+      "calorias_por_porcao": 260, "proteina_g": 28, "carboidratos_g": 22, "gorduras_g": 6,
+      "dietas": ["onivoro", "equilibrada", "lanche_pratico"], "tipo_refeicao": ["lanche", "almoco_rapido"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "033",
+      "nome": "Pudim de Chia com Leite de Coco",
+      "ingredientes": ["2 colheres de sopa de chia", "150ml de leite de coco", "Adoçante natural (opcional)", "Morangos por cima"],
+      "modo_preparo": "Misture a chia com o leite e deixe na geladeira por pelo menos 4 horas (ou uma noite). Sirva com as frutas frescas.",
+      "calorias_por_porcao": 220, "proteina_g": 6, "carboidratos_g": 12, "gorduras_g": 18,
+      "dietas": ["vegano", "sem_gluten", "low-carb"], "tipo_refeicao": ["cafe_da_manha", "sobremesa"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "034",
+      "nome": "Frango ao Curry com Leite de Coco",
+      "ingredientes": ["150g de peito de frango", "100ml de leite de coco light", "1 colher de chá de curry", "Gengibre e alho"],
+      "modo_preparo": "Refogue o frango com alho e gengibre. Adicione o leite de coco e o curry. Deixe reduzir em fogo baixo até o molho engrossar.",
+      "calorias_por_porcao": 310, "proteina_g": 35, "carboidratos_g": 7, "gorduras_g": 14,
+      "dietas": ["onivoro", "sem_laticinios", "low-carb"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 25
+    },
+    {
+      "recipe_id": "035",
+      "nome": "Espaguete de Abobrinha à Bolonhesa",
+      "ingredientes": ["1 abobrinha média", "100g de carne moída (patinho)", "1/2 xícara de molho de tomate caseiro", "Manjericão"],
+      "modo_preparo": "Faça tiras finas da abobrinha. Refogue a carne com o molho. Aqueça a abobrinha rapidamente no molho por apenas 2 minutos para não soltar água.",
+      "calorias_por_porcao": 220, "proteina_g": 26, "carboidratos_g": 10, "gorduras_g": 8,
+      "dietas": ["low-carb", "paleo", "sem_gluten"], "tipo_refeicao": ["jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "036",
+      "nome": "Creme de Couve-Flor e Alho-Poró",
+      "ingredientes": ["300g de couve-flor cozida", "1 talo de alho-poró fatiado", "Caldo de legumes", "1 colher de chá de azeite"],
+      "modo_preparo": "Refogue o alho-poró no azeite. Bata a couve-flor no liquidificador com um pouco de caldo e junte ao refogado. Ferva até ficar cremoso.",
+      "calorias_por_porcao": 120, "proteina_g": 6, "carboidratos_g": 14, "gorduras_g": 5,
+      "dietas": ["vegano", "vegetariano", "baixa_caloria"], "tipo_refeicao": ["jantar_leve", "entrada"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "037",
+      "nome": "Wrap de Couve com Frango e Hummus",
+      "ingredientes": ["2 folhas de couve manteiga (sem o talo duro)", "100g de frango desfiado", "2 colheres de sopa de hummus", "Cenoura ralada"],
+      "modo_preparo": "Passe o hummus na folha de couve, coloque o frango e a cenoura. Enrole como um burrito e prenda com um palito.",
+      "calorias_por_porcao": 245, "proteina_g": 28, "carboidratos_g": 15, "gorduras_g": 9,
+      "dietas": ["onivoro", "low-carb", "sem_gluten"], "tipo_refeicao": ["lanche", "almoco_rapido"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "038",
+      "nome": "Batata Doce com Canela na Airfryer",
+      "ingredientes": ["1 batata doce média", "Fio de óleo de coco", "Canela em pó"],
+      "modo_preparo": "Corte a batata em palitos ou rodelas. Misture com o óleo de coco e canela. Asse na Airfryer a 200°C por 15-20 min até ficar macia.",
+      "calorias_por_porcao": 180, "proteina_g": 2, "carboidratos_g": 38, "gorduras_g": 3,
+      "dietas": ["vegano", "pre_treino", "rico_em_fibras"], "tipo_refeicao": ["acompanhamento", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "039",
+      "nome": "Ovos Cozidos com Paprica e Gergelim",
+      "ingredientes": ["2 ovos", "Páprica defumada", "1 colher de chá de gergelim", "Flor de sal"],
+      "modo_preparo": "Cozinhe os ovos por 7 minutos (gema cremosa). Descasque, corte ao meio e polvilhe a páprica, o gergelim e o sal.",
+      "calorias_por_porcao": 155, "proteina_g": 13, "carboidratos_g": 1, "gorduras_g": 11,
+      "dietas": ["vegetariano", "cetogenica", "low-carb"], "tipo_refeicao": ["cafe_da_manha", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "040",
+      "nome": "Pizza com Massa de Couve-Flor",
+      "ingredientes": ["1 xícara de couve-flor triturada e espremida", "1 ovo", "50g de mussarela light", "Molho de tomate e manjericão"],
+      "modo_preparo": "Misture a couve-flor com o ovo e um pouco de queijo para formar a massa. Pré-asse por 15 min. Coloque o molho, o restante do queijo e asse até derreter.",
+      "calorias_por_porcao": 290, "proteina_g": 22, "carboidratos_g": 12, "gorduras_g": 16,
+      "dietas": ["vegetariano", "low-carb", "sem_gluten"], "tipo_refeicao": ["jantar"], "dificuldade": "Média", "tempo_minimo_min": 35
+    },
+    {
+      "recipe_id": "041",
+      "nome": "Hambúrguer de Patinho no Prato",
+      "ingredientes": ["150g de patinho moído", "1 fatia de queijo branco", "Folhas de alface", "Rodelas de tomate", "Cebola grelhada"],
+      "modo_preparo": "Molde a carne em formato de hambúrguer e grelhe. No final, coloque o queijo para derreter. Sirva sobre uma 'cama' de alface e tomate, sem pão.",
+      "calorias_por_porcao": 310, "proteina_g": 35, "carboidratos_g": 5, "gorduras_g": 14,
+      "dietas": ["onivoro", "low-carb", "alta_proteina"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "042",
+      "nome": "Creme de Abacate com Cacau",
+      "ingredientes": ["1/2 abacate maduro", "1 colher de sopa de cacau em pó 100%", "Adoçante natural a gosto", "1 colher de sopa de nibs de cacau"],
+      "modo_preparo": "Bata o abacate com o cacau e o adoçante no processador até ficar bem liso. Sirva gelado com os nibs por cima para dar crocância.",
+      "calorias_por_porcao": 240, "proteina_g": 4, "carboidratos_g": 12, "gorduras_g": 22,
+      "dietas": ["vegano", "cetogenica", "low-carb"], "tipo_refeicao": ["sobremesa", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "043",
+      "nome": "Espetinho de Peru com Pimentão",
+      "ingredientes": ["150g de peito de peru em cubos", "1/2 pimentão vermelho", "1/2 cebola", "Orégano e limão"],
+      "modo_preparo": "Intercale o peru, o pimentão e a cebola nos palitos. Tempere com limão e orégano. Grelhe até a carne de peru estar bem cozida e dourada.",
+      "calorias_por_porcao": 180, "proteina_g": 32, "carboidratos_g": 6, "gorduras_g": 2,
+      "dietas": ["onivoro", "paleo", "baixa_caloria"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "044",
+      "nome": "Salada de Grão-de-Bico Colorida",
+      "ingredientes": ["1 xícara de grão-de-bico cozido", "Pepino picado", "Tomate cereja", "Azeitonas pretas", "Azeite e salsinha"],
+      "modo_preparo": "Misture todos os ingredientes em uma tigela. Tempere com azeite, sal e bastante salsinha fresca. Pode ser consumida fria ou em temperatura ambiente.",
+      "calorias_por_porcao": 290, "proteina_g": 12, "carboidratos_g": 38, "gorduras_g": 10,
+      "dietas": ["vegano", "vegetariano", "rico_em_fibras"], "tipo_refeicao": ["almoco", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "045",
+      "nome": "Papelote de Peixe com Legumes",
+      "ingredientes": ["1 filé de peixe branco", "Vagem", "Cenoura em palitos", "Limão e ervas finas"],
+      "modo_preparo": "Coloque o peixe e os legumes sobre uma folha de papel manteiga. Tempere, feche o papelote como um envelope e asse por 20 min a 200°C.",
+      "calorias_por_porcao": 210, "proteina_g": 28, "carboidratos_g": 9, "gorduras_g": 6,
+      "dietas": ["pescetariano", "sem_gluten", "baixa_caloria"], "tipo_refeicao": ["jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 25
+    },
+    {
+      "recipe_id": "046",
+      "nome": "Mingau de Aveia Noturno (Overnight Oats)",
+      "ingredientes": ["3 colheres de sopa de aveia", "150ml de leite vegetal", "1 colher de chá de sementes de chia", "Frutas picadas"],
+      "modo_preparo": "Misture a aveia, o leite e a chia num frasco. Deixe no frigorífico durante a noite. De manhã, adicione as frutas e coma frio.",
+      "calorias_por_porcao": 220, "proteina_g": 8, "carboidratos_g": 32, "gorduras_g": 6,
+      "dietas": ["vegano", "rico_em_fibras"], "tipo_refeicao": ["cafe_da_manha"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "047",
+      "nome": "Bolinho de Bacalhau Fit (Sem Fritura)",
+      "ingredientes": ["150g de bacalhau desfiado", "1 batata média cozida e amassada", "Salsinha e cebola", "Azeite"],
+      "modo_preparo": "Misture o bacalhau com a batata e temperos. Molde pequenos bolinhos. Pincele azeite e leve à Airfryer por 15 min até dourar.",
+      "calorias_por_porcao": 240, "proteina_g": 18, "carboidratos_g": 22, "gorduras_g": 7,
+      "dietas": ["onivoro", "sem_gluten"], "tipo_refeicao": ["lanche", "petisco_saudavel"], "dificuldade": "Média", "tempo_minimo_min": 30
+    },
+    {
+      "recipe_id": "048",
+      "nome": "Quinoa com Cogumelos Refogados",
+      "ingredientes": ["1 xícara de quinoa cozida", "200g de cogumelos Paris ou Shimeji", "1 colher de sopa de shoyu", "Cebolinha"],
+      "modo_preparo": "Refogue os cogumelos com shoyu até secar a água. Misture com a quinoa já cozida e finalize com cebolinha fresca.",
+      "calorias_por_porcao": 260, "proteina_g": 11, "carboidratos_g": 38, "gorduras_g": 6,
+      "dietas": ["vegano", "vegetariano", "baixa_caloria"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "049",
+      "nome": "Iogurte com Granola Caseira Low Carb",
+      "ingredientes": ["1 pote de iogurte natural", "2 colheres de sopa de castanhas e sementes", "Coco ralado sem açúcar"],
+      "modo_preparo": "Misture as castanhas e o coco (pode tostar levemente antes). Coloque sobre o iogurte. Adicione gotas de stevia se desejar.",
+      "calorias_por_porcao": 230, "proteina_g": 10, "carboidratos_g": 8, "gorduras_g": 18,
+      "dietas": ["vegetariano", "low-carb"], "tipo_refeicao": ["lanche", "cafe_da_manha"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "050",
+      "nome": "Atum Grelhado com Crosta de Ervas",
+      "ingredientes": ["150g de lombo de atum", "Tomilho e Alecrim", "Azeite", "Sal grosso"],
+      "modo_preparo": "Pressione as ervas no atum. Grelhe em frigideira muito quente por apenas 1-2 min de cada lado para manter o centro rosado.",
+      "calorias_por_porcao": 280, "proteina_g": 38, "carboidratos_g": 1, "gorduras_g": 12,
+      "dietas": ["pescetariano", "paleo", "alta_proteina"], "tipo_refeicao": ["jantar"], "dificuldade": "Média", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "051",
+      "nome": "Lasanha de Berinjela",
+      "ingredientes": ["1 berinjela grande em fatias longas", "150g de carne moída", "Molho de tomate", "100g de queijo cottage"],
+      "modo_preparo": "Grelhe as fatias de berinjela. Monte camadas de berinjela, carne e cottage. Repita e leve ao forno por 15 min para gratinar.",
+      "calorias_por_porcao": 320, "proteina_g": 28, "carboidratos_g": 14, "gorduras_g": 16,
+      "dietas": ["low-carb", "sem_gluten"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Média", "tempo_minimo_min": 40
+    },
+    {
+      "recipe_id": "052",
+      "nome": "Frango Desfiado com Milho e Ricota",
+      "ingredientes": ["150g de frango desfiado", "2 colheres de sopa de milho", "2 colheres de sopa de creme de ricota", "Salsinha"],
+      "modo_preparo": "Misture todos os ingredientes numa panela até aquecer e ficar cremoso. Ótimo para comer puro ou rechear wraps.",
+      "calorias_por_porcao": 210, "proteina_g": 28, "carboidratos_g": 10, "gorduras_g": 6,
+      "dietas": ["onivoro", "alta_proteina"], "tipo_refeicao": ["almoco_rapido", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "053",
+      "nome": "Salada de Espinafre, Nozes e Queijo Feta",
+      "ingredientes": ["2 xícaras de espinafre baby", "30g de queijo feta ou ricota", "5 nozes", "Vinagre balsâmico"],
+      "modo_preparo": "Coloque o espinafre na base, esfarele o queijo por cima e adicione as nozes. Regue com vinagre balsâmico e um fio de azeite.",
+      "calorias_por_porcao": 195, "proteina_g": 7, "carboidratos_g": 6, "gorduras_g": 16,
+      "dietas": ["vegetariano", "low-carb"], "tipo_refeicao": ["jantar_leve", "entrada"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "054",
+      "nome": "Nice Cream de Banana e Cacau",
+      "ingredientes": ["2 bananas congeladas em rodelas", "1 colher de sopa de cacau", "Um pouco de leite vegetal se necessário"],
+      "modo_preparo": "Bata as bananas congeladas no processador com o cacau até obter textura de sorvete cremoso. Coma imediatamente.",
+      "calorias_por_porcao": 190, "proteina_g": 3, "carboidratos_g": 45, "gorduras_g": 2,
+      "dietas": ["vegano", "vegetariano", "sem_laticinios"], "tipo_refeicao": ["sobremesa", "pos_treino"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "055",
+      "nome": "Lombo de Porco Assado com Abacaxi",
+      "ingredientes": ["150g de lombo de porco", "2 fatias de abacaxi", "Hortelã", "Sal e pimenta"],
+      "modo_preparo": "Asse o lombo temperado. Nos últimos 10 minutos, coloque as fatias de abacaxi por cima. Sirva com hortelã picada.",
+      "calorias_por_porcao": 290, "proteina_g": 32, "carboidratos_g": 15, "gorduras_g": 10,
+      "dietas": ["onivoro", "paleo"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Média", "tempo_minimo_min": 40
+    },
+    {
+      "recipe_id": "056",
+      "nome": "Sopa de Abóbora com Gengibre",
+      "ingredientes": ["300g de abóbora cozida", "1 colher de chá de gengibre ralado", "1/2 cebola", "Caldo de legumes"],
+      "modo_preparo": "Bata a abóbora com o caldo e o gengibre. Leve ao fogo com a cebola refogada até ferver e ficar bem cremosa.",
+      "calorias_por_porcao": 140, "proteina_g": 3, "carboidratos_g": 28, "gorduras_g": 2,
+      "dietas": ["vegano", "baixa_caloria", "detox"], "tipo_refeicao": ["jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "057",
+      "nome": "Ovos Mexidos com Tomate e Manjericão",
+      "ingredientes": ["2 ovos", "1 tomate italiano picado", "Folhas de manjericão", "Sal e fio de azeite"],
+      "modo_preparo": "Refogue o tomate rapidamente no azeite. Adicione os ovos batidos e mexa em fogo baixo até o ponto desejado. Finalize com manjericão.",
+      "calorias_por_porcao": 170, "proteina_g": 13, "carboidratos_g": 4, "gorduras_g": 12,
+      "dietas": ["vegetariano", "low-carb"], "tipo_refeicao": ["cafe_da_manha", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "058",
+      "nome": "Esparguete Integral com Pesto de Manjericão",
+      "ingredientes": ["80g de esparguete integral", "1 colher de sopa de molho pesto caseiro", "Tomate cereja"],
+      "modo_preparo": "Cozinhe a massa. Misture o pesto e os tomates cereja cortados ao meio. Se necessário, use uma colher da água do cozimento para soltar o molho.",
+      "calorias_por_porcao": 320, "proteina_g": 10, "carboidratos_g": 48, "gorduras_g": 12,
+      "dietas": ["vegetariano", "rico_em_fibras"], "tipo_refeicao": ["almoco"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "059",
+      "nome": "Frango Cítrico com Alecrim",
+      "ingredientes": ["150g de peito de frango", "Suco de 1/2 limão e 1/2 laranja", "1 ramo de alecrim", "Alho"],
+      "modo_preparo": "Grelhe o frango. Quando estiver quase pronto, despeje os sumos cítricos e o alecrim na frigideira. Deixe reduzir até criar uma crosta saborosa.",
+      "calorias_por_porcao": 190, "proteina_g": 35, "carboidratos_g": 5, "gorduras_g": 3,
+      "dietas": ["onivoro", "paleo", "baixa_caloria"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "060",
+      "nome": "Crepioca Fit",
+      "ingredientes": ["1 ovo", "1 colher de sopa de goma de tapioca", "1 colher de sopa de queijo cottage", "Sal"],
+      "modo_preparo": "Bata bem o ovo com a tapioca. Cozinhe numa frigideira antiaderente como uma omelete. Recheie com o cottage e dobre.",
+      "calorias_por_porcao": 180, "proteina_g": 14, "carboidratos_g": 15, "gorduras_g": 7,
+      "dietas": ["vegetariano", "sem_gluten"], "tipo_refeicao": ["cafe_da_manha", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "061",
+      "nome": "Coxinhas de Frango com Ervas e Limão",
+      "ingredientes": ["4 coxas de frango sem pele", "Suco de 1 limão siciliano", "Tomilho fresco", "Alho amassado", "Azeite"],
+      "modo_preparo": "Marine o frango no limão, alho e tomilho por 15 min. Leve ao forno ou Airfryer a 180°C por 30 minutos, virando na metade, até dourar bem.",
+      "calorias_por_porcao": 280, "proteina_g": 32, "carboidratos_g": 3, "gorduras_g": 14,
+      "dietas": ["onivoro", "low-carb", "paleo"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 45
+    },
+    {
+      "recipe_id": "062",
+      "nome": "Arroz Integral com Lentilha e Cebola",
+      "ingredientes": ["1/2 xícara de arroz integral cozido", "1/2 xícara de lentilha cozida", "1 cebola fatiada", "1 colher de chá de azeite"],
+      "modo_preparo": "Caramelize a cebola no azeite em fogo baixo. Misture o arroz e a lentilha já cozidos, ajuste o sal e finalize com a cebola por cima.",
+      "calorias_por_porcao": 245, "proteina_g": 11, "carboidratos_g": 42, "gorduras_g": 4,
+      "dietas": ["vegano", "vegetariano", "rico_em_fibras"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "063",
+      "nome": "Poke de Salmão Low Carb",
+      "ingredientes": ["120g de salmão cru em cubos", "Pepino japonês fatiado", "1/2 abacate", "Rabanete", "Shoyu light e gengibre"],
+      "modo_preparo": "Em um bowl, coloque o pepino como base. Adicione o salmão, o abacate e o rabanete. Regue com o shoyu misturado ao gengibre ralado.",
+      "calorias_por_porcao": 380, "proteina_g": 26, "carboidratos_g": 10, "gorduras_g": 28,
+      "dietas": ["pescetariano", "low-carb", "omega-3"], "tipo_refeicao": ["almoco", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "064",
+      "nome": "Couve-Flor Assada Inteira com Páprica",
+      "ingredientes": ["1 couve-flor média", "2 colheres de sopa de azeite", "Páprica defumada", "Curry", "Sal"],
+      "modo_preparo": "Pincele a couve-flor com a mistura de azeite e temperos. Leve ao forno coberta com papel alumínio por 20 min, retire o papel e asse por mais 15 min até dourar.",
+      "calorias_por_porcao": 150, "proteina_g": 6, "carboidratos_g": 18, "gorduras_g": 8,
+      "dietas": ["vegano", "vegetariano", "low-carb"], "tipo_refeicao": ["acompanhamento", "jantar_leve"], "dificuldade": "Média", "tempo_minimo_min": 45
+    },
+    {
+      "recipe_id": "065",
+      "nome": "Espetinho de Camarão com Manga",
+      "ingredientes": ["120g de camarões grandes", "1/2 manga firmes em cubos", "Suco de limão", "Pimenta dedo-de-moça"],
+      "modo_preparo": "Intercale camarão e manga nos espetos. Grelhe rapidamente (2 min por lado) para o camarão não endurecer e a manga caramelizar levemente.",
+      "calorias_por_porcao": 190, "proteina_g": 24, "carboidratos_g": 18, "gorduras_g": 2,
+      "dietas": ["pescetariano", "paleo", "sem_gluten"], "tipo_refeicao": ["almoco", "petisco_saudavel"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "066",
+      "nome": "Torta de Caneca de Frango",
+      "ingredientes": ["1 ovo", "2 colheres de sopa de frango desfiado", "1 colher de sopa de farelo de aveia", "1 colher de chá de fermento"],
+      "modo_preparo": "Misture tudo em uma caneca. Leve ao micro-ondas por 2 a 3 minutos. Desenforme e sirva com uma salada verde.",
+      "calorias_por_porcao": 210, "proteina_g": 22, "carboidratos_g": 9, "gorduras_g": 8,
+      "dietas": ["onivoro", "alta_proteina", "pratico"], "tipo_refeicao": ["lanche", "jantar_rapido"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "067",
+      "nome": "Salada de Quinoa com Grão-de-Bico",
+      "ingredientes": ["1/2 xícara de quinoa cozida", "1/2 xícara de grão-de-bico", "Pimentão vermelho picado", "Hortelã", "Limão"],
+      "modo_preparo": "Misture todos os ingredientes. A hortelã traz um frescor que combina com a quinoa e o grão-de-bico. Sirva gelado.",
+      "calorias_por_porcao": 280, "proteina_g": 13, "carboidratos_g": 45, "gorduras_g": 5,
+      "dietas": ["vegano", "vegetariano", "rico_em_fibras"], "tipo_refeicao": ["almoco", "acompanhamento"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "068",
+      "nome": "Bife de Patinho com Brócolis no Vapor",
+      "ingredientes": ["150g de bife de patinho", "1 xícara de brócolis", "Alho frito", "Azeite"],
+      "modo_preparo": "Grelhe o bife ao seu ponto preferido. Cozinhe o brócolis no vapor por apenas 5 min para manter a cor e crocância. Finalize o brócolis com alho e azeite.",
+      "calorias_por_porcao": 310, "proteina_g": 38, "carboidratos_g": 6, "gorduras_g": 12,
+      "dietas": ["onivoro", "low-carb", "alta_proteina"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "069",
+      "nome": "Suco Verde Revigorante",
+      "ingredientes": ["2 folhas de couve", "1 rodela de abacaxi", "Hortelã", "Gengibre", "200ml de água"],
+      "modo_preparo": "Bata tudo no liquidificador e beba sem coar para aproveitar as fibras da couve e do abacaxi.",
+      "calorias_por_porcao": 85, "proteina_g": 2, "carboidratos_g": 19, "gorduras_g": 0,
+      "dietas": ["vegano", "detox", "baixa_caloria"], "tipo_refeicao": ["cafe_da_manha", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "070",
+      "nome": "Peito de Frango Recheado com Espinafre",
+      "ingredientes": ["1 peito de frango grande", "1/2 xícara de espinafre refogado", "1 colher de sopa de ricota", "Palitos de dente"],
+      "modo_preparo": "Abra o peito de frango ao meio (estilo borboleta). Recheie com espinafre e ricota. Prenda com palitos e grelhe ou asse até cozinhar bem.",
+      "calorias_por_porcao": 280, "proteina_g": 42, "carboidratos_g": 4, "gorduras_g": 8,
+      "dietas": ["onivoro", "alta_proteina", "low-carb"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Média", "tempo_minimo_min": 30
+    },
+    {
+      "recipe_id": "071",
+      "nome": "Lentilha Ensopada com Cenoura",
+      "ingredientes": ["1 xícara de lentilha", "1 cenoura em cubos", "Cebola e alho", "Cominho e louro"],
+      "modo_preparo": "Refogue cebola e alho. Adicione a lentilha, cenoura e temperos. Cubra com água e cozinhe até a lentilha estar macia e o caldo engrossar.",
+      "calorias_por_porcao": 220, "proteina_g": 14, "carboidratos_g": 36, "gorduras_g": 1,
+      "dietas": ["vegano", "vegetariano", "rico_em_fibras"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 30
+    },
+    {
+      "recipe_id": "072",
+      "nome": "Chips de Abobrinha Crocante",
+      "ingredientes": ["1 abobrinha média", "Parmesão ralado (opcional)", "Azeite", "Orégano"],
+      "modo_preparo": "Fatie a abobrinha bem fina. Disponha em uma forma, pincele azeite e polvilhe orégano. Asse em fogo baixo até ficarem crocantes.",
+      "calorias_por_porcao": 95, "proteina_g": 4, "carboidratos_g": 8, "gorduras_g": 6,
+      "dietas": ["vegetariano", "low-carb", "baixa_caloria"], "tipo_refeicao": ["lanche", "acompanhamento"], "dificuldade": "Fácil", "tempo_minimo_min": 40
+    },
+    {
+      "recipe_id": "073",
+      "nome": "Batata Doce Recheada com Frango e Ricota",
+      "ingredientes": ["1 batata doce média", "100g de frango desfiado", "1 colher de sopa de creme de ricota", "Salsinha"],
+      "modo_preparo": "Asse a batata inteira com casca. Abra ao meio, dê uma leve amassada no miolo e misture com o frango e a ricota. Volte ao forno por 5 min.",
+      "calorias_por_porcao": 320, "proteina_g": 26, "carboidratos_g": 38, "gorduras_g": 7,
+      "dietas": ["onivoro", "equilibrada", "pos_treino"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 45
+    },
+    {
+      "recipe_id": "074",
+      "nome": "Peixe com Crosta de Castanhas",
+      "ingredientes": ["1 filé de peixe branco", "2 colheres de sopa de castanhas do Pará picadas", "Raspas de limão", "Azeite"],
+      "modo_preparo": "Tempere o peixe. Pressione as castanhas picadas sobre o filé formando uma crosta. Asse por 15-20 min a 180°C.",
+      "calorias_por_porcao": 290, "proteina_g": 26, "carboidratos_g": 5, "gorduras_g": 19,
+      "dietas": ["pescetariano", "low-carb", "paleo"], "tipo_refeicao": ["jantar"], "dificuldade": "Média", "tempo_minimo_min": 25
+    },
+    {
+      "recipe_id": "075",
+      "nome": "Salada de Macarrão Integral com Atum",
+      "ingredientes": ["1 xícara de macarrão integral cozido", "1 lata de atum", "Milho", "Ervilha", "Iogurte natural para dar liga"],
+      "modo_preparo": "Misture tudo em uma tigela grande. O iogurte substitui a maionese com menos gordura e mais proteína. Sirva gelado.",
+      "calorias_por_porcao": 340, "proteina_g": 28, "carboidratos_g": 42, "gorduras_g": 6,
+      "dietas": ["onivoro", "equilibrada"], "tipo_refeicao": ["almoco_rapido", "lanche_pos_treino"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "076",
+      "nome": "Espetinho de Frango com Abacaxi",
+      "ingredientes": ["150g de peito de frango", "Cubos de abacaxi", "Cebola roxa", "Páprica doce"],
+      "modo_preparo": "Monte os espetos alternando frango, abacaxi e cebola. Grelhe até o frango dourar. A acidez do abacaxi ajuda a amaciar a fibra do frango.",
+      "calorias_por_porcao": 210, "proteina_g": 32, "carboidratos_g": 12, "gorduras_g": 3,
+      "dietas": ["onivoro", "paleo"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "077",
+      "nome": "Bolinho de Grão-de-Bico (Falafel de Forno)",
+      "ingredientes": ["1 xícara de grão-de-bico cozido", "Alho", "Coentro", "Cominho", "Azeite"],
+      "modo_preparo": "Processe o grão-de-bico com os temperos (não vire purê, deixe pedacinhos). Molde bolinhas e asse até ficarem firmes e douradas.",
+      "calorias_por_porcao": 190, "proteina_g": 9, "carboidratos_g": 28, "gorduras_g": 6,
+      "dietas": ["vegano", "vegetariano", "sem_gluten"], "tipo_refeicao": ["lanche", "entrada"], "dificuldade": "Média", "tempo_minimo_min": 35
+    },
+    {
+      "recipe_id": "078",
+      "nome": "Carne Moída com Vagem e Cenoura",
+      "ingredientes": ["150g de patinho moído", "1/2 xícara de vagem picada", "1/2 cenoura ralada", "Cebola e alho"],
+      "modo_preparo": "Refogue a carne com cebola. Quando secar a água, adicione a vagem e a cenoura. Tampe e deixe cozinhar no próprio vapor dos legumes por 5 min.",
+      "calorias_por_porcao": 260, "proteina_g": 32, "carboidratos_g": 9, "gorduras_g": 10,
+      "dietas": ["onivoro", "low-carb", "alta_proteina"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "079",
+      "nome": "Chia Jam de Morango (Geleia Fit)",
+      "ingredientes": ["1 xícara de morangos picados", "1 colher de sopa de chia", "1 colher de chá de mel ou stevia"],
+      "modo_preparo": "Cozinhe os morangos em fogo baixo até desmanchar. Desligue, misture a chia e o adoçante. Deixe esfriar para a chia absorver o líquido e virar geléia.",
+      "calorias_por_porcao": 75, "proteina_g": 2, "carboidratos_g": 12, "gorduras_g": 2,
+      "dietas": ["vegano", "vegetariano", "sem_gluten"], "tipo_refeicao": ["acompanhamento", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "080",
+      "nome": "Mocktail de Melancia e Gengibre",
+      "ingredientes": ["2 fatias de melancia sem semente", "1 pedaço pequeno de gengibre", "Hortelã", "Água com gás"],
+      "modo_preparo": "Bata a melancia com gengibre e hortelã. Coe se preferir. Complete o copo com água com gás e gelo. Um drink refrescante e funcional.",
+      "calorias_por_porcao": 60, "proteina_g": 1, "carboidratos_g": 14, "gorduras_g": 0,
+      "dietas": ["vegano", "detox", "sem_alcool"], "tipo_refeicao": ["bebida"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "081",
+      "nome": "Moqueca de Peixe Light",
+      "ingredientes": ["150g de filé de peixe branco", "1/2 xícara de leite de coco light", "Pimentão colorido em rodelas", "Tomate e cebola", "Azeite de dendê (só um fio)"],
+      "modo_preparo": "Em uma panela, faça camadas de cebola, pimentão, tomate e peixe. Regue com o leite de coco e o dendê. Cozinhe em fogo baixo com a panela tampada por 15 min.",
+      "calorias_por_porcao": 290, "proteina_g": 26, "carboidratos_g": 10, "gorduras_g": 16,
+      "dietas": ["pescetariano", "sem_laticinios", "low-carb"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Média", "tempo_minimo_min": 25
+    },
+    {
+      "recipe_id": "082",
+      "nome": "Frango Xadrez Fitness",
+      "ingredientes": ["150g de peito de frango em cubos", "Pimentão verde e vermelho", "Cebola em cubos grandes", "Amendoim torrado", "Shoyu light"],
+      "modo_preparo": "Refogue o frango até dourar. Adicione os vegetais e refogue rapidamente para ficarem crocantes. Finalize com o shoyu e salpique o amendoim.",
+      "calorias_por_porcao": 310, "proteina_g": 35, "carboidratos_g": 12, "gorduras_g": 14,
+      "dietas": ["onivoro", "alta_proteina"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "083",
+      "nome": "Berinjela Recheada com Carne Moída",
+      "ingredientes": ["1 berinjela média", "100g de patinho moído", "Molho de tomate", "Queijo parmesão ralado"],
+      "modo_preparo": "Corte a berinjela ao meio e retire parte do miolo. Refogue a carne com o miolo picado e molho. Recheie a berinjela, polvilhe queijo e asse por 25 min.",
+      "calorias_por_porcao": 280, "proteina_g": 24, "carboidratos_g": 15, "gorduras_g": 12,
+      "dietas": ["low-carb", "sem_gluten"], "tipo_refeicao": ["jantar"], "dificuldade": "Média", "tempo_minimo_min": 40
+    },
+    {
+      "recipe_id": "084",
+      "nome": "Salada de Macarrão de Feijão (Konjac)",
+      "ingredientes": ["1 pacote de macarrão konjac ou de feijão", "Atum em lata", "Azeitonas", "Cenoura ralada", "Azeite e ervas"],
+      "modo_preparo": "Lave o macarrão conforme a embalagem. Misture com o atum, cenoura e azeitonas. Tempere generosamente com azeite e ervas secas.",
+      "calorias_por_porcao": 180, "proteina_g": 22, "carboidratos_g": 5, "gorduras_g": 8,
+      "dietas": ["onivoro", "low-carb", "cetogenica"], "tipo_refeicao": ["almoco_rapido", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "085",
+      "nome": "Bolinho de Atum e Batata Doce",
+      "ingredientes": ["1 lata de atum", "1/2 xícara de purê de batata doce", "Salsinha", "1 colher de farelo de aveia"],
+      "modo_preparo": "Misture tudo até formar uma massa moldável. Faça bolinhas e asse na Airfryer por 15 min a 200°C até ficarem firmes e dourados.",
+      "calorias_por_porcao": 240, "proteina_g": 22, "carboidratos_g": 26, "gorduras_g": 4,
+      "dietas": ["onivoro", "equilibrada", "pos_treino"], "tipo_refeicao": ["lanche", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 25
+    },
+    {
+      "recipe_id": "086",
+      "nome": "Estrogonofe de Frango com Iogurte",
+      "ingredientes": ["150g de frango em cubos", "Cochumelos fatiados", "1/2 pote de iogurte natural desnatado", "Mostarda e ketchup zero"],
+      "modo_preparo": "Refogue o frango e os cogumelos. Adicione a mostarda e o ketchup. Desligue o fogo e misture o iogurte (para não talhar) até ficar cremoso.",
+      "calorias_por_porcao": 260, "proteina_g": 36, "carboidratos_g": 8, "gorduras_g": 6,
+      "dietas": ["onivoro", "alta_proteina"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    },
+    {
+      "recipe_id": "087",
+      "nome": "Abobrinha Recheada com Ricota e Ervas",
+      "ingredientes": ["1 abobrinha grande", "100g de ricota esfarelada", "Noz-moscada", "Azeite"],
+      "modo_preparo": "Corte a abobrinha em 'tronquinhos' e remova o centro. Recheie com a ricota temperada com noz-moscada e sal. Asse até a abobrinha ficar macia.",
+      "calorias_por_porcao": 170, "proteina_g": 12, "carboidratos_g": 9, "gorduras_g": 10,
+      "dietas": ["vegetariano", "low-carb", "baixa_caloria"], "tipo_refeicao": ["acompanhamento", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 30
+    },
+    {
+      "recipe_id": "088",
+      "nome": "Tabule de Quinoa",
+      "ingredientes": ["1/2 xícara de quinoa cozida", "Tomate e pepino picadinhos", "Muita salsinha e hortelã", "Suco de limão"],
+      "modo_preparo": "Misture a quinoa com os vegetais e as ervas picadas. Tempere com limão, sal e azeite. Deixe na geladeira por 20 min antes de servir.",
+      "calorias_por_porcao": 210, "proteina_g": 7, "carboidratos_g": 35, "gorduras_g": 5,
+      "dietas": ["vegano", "vegetariano", "sem_gluten"], "tipo_refeicao": ["acompanhamento", "almoco"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "089",
+      "nome": "Creme de Papaia Proteico",
+      "ingredientes": ["1/2 mamão papaia", "1 scoop de whey de baunilha ou morango", "1 colher de sopa de iogurte grego"],
+      "modo_preparo": "Bata o mamão com o whey e o iogurte no liquidificador até ficar cremoso. Sirva em seguida (não guarde, pois o mamão amarga).",
+      "calorias_por_porcao": 220, "proteina_g": 24, "carboidratos_g": 25, "gorduras_g": 3,
+      "dietas": ["vegetariano", "alta_proteina"], "tipo_refeicao": ["lanche", "sobremesa"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "090",
+      "nome": "Peixe Assado com Crosta de Maionese Light",
+      "ingredientes": ["1 filé de peixe", "1 colher de sopa de maionese light", "Alho-poró picado", "Páprica"],
+      "modo_preparo": "Passe uma camada fina de maionese sobre o peixe, cubra com o alho-poró e páprica. Asse por 20 min. A maionese mantém o peixe suculento.",
+      "calorias_por_porcao": 230, "proteina_g": 26, "carboidratos_g": 4, "gorduras_g": 11,
+      "dietas": ["pescetariano", "low-carb"], "tipo_refeicao": ["jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 25
+    },
+    {
+      "recipe_id": "091",
+      "nome": "Omelete de Forno com Legumes",
+      "ingredientes": ["3 ovos", "Seleta de legumes (cenoura, ervilha, milho)", "1/2 cebola picada", "Fermento em pó"],
+      "modo_preparo": "Bata os ovos com uma pitada de fermento. Misture os legumes. Coloque em um refratário e asse por 20 min até inflar e dourar.",
+      "calorias_por_porcao": 240, "proteina_g": 20, "carboidratos_g": 12, "gorduras_g": 14,
+      "dietas": ["vegetariano", "equilibrada"], "tipo_refeicao": ["jantar", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 25
+    },
+    {
+      "recipe_id": "092",
+      "nome": "Salpicão de Frango Fit",
+      "ingredientes": ["150g de frango desfiado", "Cenoura ralada", "Maçã picada", "Iogurte natural", "Uvas passas (opcional)"],
+      "modo_preparo": "Misture o frango, a cenoura e a maçã. Use o iogurte para dar a cremosidade do salpicão tradicional. Tempere com sal e limão.",
+      "calorias_por_porcao": 260, "proteina_g": 32, "carboidratos_g": 18, "gorduras_g": 6,
+      "dietas": ["onivoro", "alta_proteina"], "tipo_refeicao": ["almoco", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "093",
+      "nome": "Panqueca de Espinafre (Sem Farinha)",
+      "ingredientes": ["1 ovo", "1 punhado de espinafre", "1 colher de sopa de queijo cottage", "Sal"],
+      "modo_preparo": "Bata o ovo e o espinafre no liquidificador. Cozinhe a massa na frigideira. Recheie com o cottage e enrole.",
+      "calorias_por_porcao": 160, "proteina_g": 15, "carboidratos_g": 3, "gorduras_g": 9,
+      "dietas": ["vegetariano", "low-carb", "cetogenica"], "tipo_refeicao": ["cafe_da_manha", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "094",
+      "nome": "Grão-de-Bico Crocante (Snack)",
+      "ingredientes": ["1 xícara de grão-de-bico cozido e seco", "Azeite", "Páprica e Cominho"],
+      "modo_preparo": "Misture o grão-de-bico com azeite e temperos. Leve ao forno ou Airfryer a 200°C por 20-30 min, mexendo as vezes, até ficar crocante como amendoim.",
+      "calorias_por_porcao": 180, "proteina_g": 8, "carboidratos_g": 24, "gorduras_g": 5,
+      "dietas": ["vegano", "vegetariano", "rico_em_fibras"], "tipo_refeicao": ["lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 30
+    },
+    {
+      "recipe_id": "095",
+      "nome": "Wrap de Folha de Acelga com Carne",
+      "ingredientes": ["2 folhas grandes de acelga", "100g de carne moída refogada", "Pimentão e cebola"],
+      "modo_preparo": "Passe as folhas de acelga rapidamente em água quente para murchar. Recheie com a carne e vegetais, enrole e sirva.",
+      "calorias_por_porcao": 210, "proteina_g": 24, "carboidratos_g": 6, "gorduras_g": 10,
+      "dietas": ["onivoro", "low-carb", "paleo"], "tipo_refeicao": ["lanche", "jantar_rapido"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "096",
+      "nome": "Mousse de Limão Fit",
+      "ingredientes": ["1 pote de iogurte grego zero", "Suco de 1 limão", "1 colher de sopa de leite em pó desnatado", "Adoçante"],
+      "modo_preparo": "Misture tudo vigorosamente com um garfo ou batedor manual até ficar espesso. Deixe na geladeira por 30 min antes de consumir.",
+      "calorias_por_porcao": 140, "proteina_g": 12, "carboidratos_g": 14, "gorduras_g": 2,
+      "dietas": ["vegetariano", "baixa_caloria"], "tipo_refeicao": ["sobremesa"], "dificuldade": "Fácil", "tempo_minimo_min": 5
+    },
+    {
+      "recipe_id": "097",
+      "nome": "Iscas de Frango com Gergelim",
+      "ingredientes": ["150g de peito de frango em tiras", "Gergelim", "Mel (fiozinho)", "Shoyu light"],
+      "modo_preparo": "Grelhe o frango com shoyu. Quando dourar, adicione o gergelim e o mel. Mexa bem para o gergelim grudar nas iscas e servir.",
+      "calorias_por_porcao": 260, "proteina_g": 35, "carboidratos_g": 7, "gorduras_g": 9,
+      "dietas": ["onivoro", "alta_proteina"], "tipo_refeicao": ["almoco", "lanche"], "dificuldade": "Fácil", "tempo_minimo_min": 15
+    },
+    {
+      "recipe_id": "098",
+      "nome": "Caldinho de Feijão com Couve fatiada",
+      "ingredientes": ["1 xícara de feijão batido", "Couve manteiga fatiada bem fina", "Alho frito"],
+      "modo_preparo": "Aqueça o caldo de feijão temperado. Coloque a couve crua no fundo da tigela e jogue o caldo fervendo por cima. Finalize com alho frito.",
+      "calorias_por_porcao": 160, "proteina_g": 9, "carboidratos_g": 22, "gorduras_g": 4,
+      "dietas": ["vegano", "vegetariano", "sem_gluten"], "tipo_refeicao": ["entrada", "jantar_leve"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "099",
+      "nome": "Banana Assada com Queijo e Canela",
+      "ingredientes": ["1 banana", "1 fatia de queijo minas padrão ou canastra", "Canela em pó"],
+      "modo_preparo": "Corte a banana ao meio (comprimento). Coloque o queijo por cima e polvilhe canela. Leve ao forno ou Airfryer por 5-8 min até o queijo derreter.",
+      "calorias_por_porcao": 210, "proteina_g": 7, "carboidratos_g": 30, "gorduras_g": 8,
+      "dietas": ["vegetariano", "sem_gluten"], "tipo_refeicao": ["lanche", "sobremesa"], "dificuldade": "Fácil", "tempo_minimo_min": 10
+    },
+    {
+      "recipe_id": "100",
+      "nome": "Arroz de Couve-Flor com Frango e Curcuma",
+      "ingredientes": ["2 xícaras de couve-flor picada (tipo arroz)", "100g de frango em cubos", "Cúrcuma (açafrão)", "Ervilhas frescas"],
+      "modo_preparo": "Refogue o frango com a cúrcuma. Adicione a couve-flor e as ervilhas. Refogue por 5 min. Fica com cor de arroz de festa, mas é low carb.",
+      "calorias_por_porcao": 240, "proteina_g": 28, "carboidratos_g": 12, "gorduras_g": 7,
+      "dietas": ["onivoro", "low-carb", "alta_proteina"], "tipo_refeicao": ["almoco", "jantar"], "dificuldade": "Fácil", "tempo_minimo_min": 20
+    }
+
+]

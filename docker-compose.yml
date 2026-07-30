@@ -19,6 +19,28 @@ services:
       timeout: 20s
       retries: 10
 
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: adaptfit-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: adaptfit-ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
   backend:
     build:
       context: ./backend
@@ -29,14 +51,23 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/adaptfit?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: adaptfit
       SPRING_DATASOURCE_PASSWORD: adaptfit
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQLDialect
       SPRING_PROFILES_ACTIVE: dev
+      RAG_QDRANT_ENABLED: "true"
+      RAG_QDRANT_URL: "http://qdrant:6333"
+      RAG_EMBEDDING_URL: "http://ollama:11434"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "8080:8080"
     depends_on:
       mysql:
         condition: service_healthy
+      ollama:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
 
 volumes:
   mysql_data:
+  qdrant_data:
+  ollama_data:

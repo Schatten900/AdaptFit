@@ -2,10 +2,8 @@ export interface ExerciseResponse {
   id: number;
   name: string;
   description?: string;
-  muscleGroup: string;
-  equipment?: string;
+  primaryMuscle: string;
+  secondaryMuscles?: string[];
   isBodyweight: boolean;
-  videoUrl?: string;
-  imageUrl?: string;
   createdAt?: string;
 }

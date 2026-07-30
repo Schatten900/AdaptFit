@@ -7,7 +7,11 @@ export const transformApiToForm = (apiProfile: ApiProfile): ProfileFormData => (
     goal: apiProfile.goal ?? null,
     experience: apiProfile.experience ?? null,
     gender: apiProfile.gender ?? null,
+    daysPerWeek: apiProfile.daysPerWeek ?? 3,
+    sessionDuration: apiProfile.sessionDuration ?? 45,
 });
+
+export const mapApiProfileToForm = transformApiToForm;
 
 export const transformFormToApi = (formData: ProfileFormData): Partial<ApiProfile> => ({
     weight: formData.weight ?? undefined,
@@ -16,6 +20,8 @@ export const transformFormToApi = (formData: ProfileFormData): Partial<ApiProfil
     goal: formData.goal ?? undefined,
     experience: formData.experience ?? undefined,
     gender: formData.gender ?? undefined,
+    daysPerWeek: formData.daysPerWeek,
+    sessionDuration: formData.sessionDuration,
 });
 
 export const formatGoal = (goal: string | null | undefined): string => {
@@ -24,6 +30,7 @@ export const formatGoal = (goal: string | null | undefined): string => {
         'FAT_LOSS': 'Perda de Gordura',
         'MUSCLE_GAIN': 'Ganho de Massa',
         'ENDURANCE': 'Resistência',
+        'STRENGTH': 'Força',
     };
     return goalMap[goal] || goal;
 };
@@ -42,17 +49,3 @@ export const calculateBMI = (weight: number | null | undefined, height: number |
     if (!weight || !height || height <= 0) return null;
     return Number((weight / Math.pow(height / 100, 2)).toFixed(1));
 };
-
-
-export function mapApiProfileToForm(
-  api: ApiProfile
-): ProfileFormData {
-  return {
-    weight: api.weight ?? null,
-    height: api.height ?? null,
-    age: api.age ?? null,
-    goal: api.goal ?? null,          
-    experience: api.experience ?? null,
-    gender: api.gender ?? null,
-  };
-}

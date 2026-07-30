@@ -7,6 +7,8 @@ export interface ProfileFormData {
   goal: GoalType | null;
   experience: ExperienceLevel | null;
   gender: Gender | null;
+  daysPerWeek: number;
+  sessionDuration: number;
 }
 
 export interface ProfileFormDataInput {

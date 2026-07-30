@@ -134,6 +134,13 @@ export default function HomeScreen() {
       border: true,
     },
     {
+      label: "Preferências",
+      icon: "settings-outline",
+      route: "/edit-preferences",
+      color: "#00E0A4",
+      border: true,
+    },
+    {
       label: "Encerrar Sessão",
       icon: "exit-outline",
       color: "#00E0A4",

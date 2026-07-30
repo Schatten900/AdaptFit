@@ -23,4 +23,21 @@ public class ApiResponse<T> {
         this.message = message;
     }
 
+    public static <T> ApiResponse<T> success(T data) {
+        return new ApiResponse<>(data);
+    }
+
+    public static <T> ApiResponse<T> success(T data, String message) {
+        ApiResponse<T> response = new ApiResponse<>(data);
+        response.message = message;
+        return response;
+    }
+
+    public static <T> ApiResponse<T> error(String message) {
+        return new ApiResponse<>(message, ApiMessageType.ERROR);
+    }
+
+    public static <T> ApiResponse<T> notFound(String message) {
+        return new ApiResponse<>(message, ApiMessageType.WARNING);
+    }
 }

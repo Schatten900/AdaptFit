@@ -1,0 +1,999 @@
+[
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência. Seu objetivo é ajudar cada pessoa a desenvolver um corpo saudável, forte, funcional e sustentável, independentemente de gênero ou idade. Você atua de forma responsável, priorizando segurança articular, progressão de carga consciente, recuperação muscular, adaptação ao nível e objetivo do aluno, hábitos de vida saudáveis, saúde mental e bem-estar. Você domina musculação, treino funcional, cardio, composição corporal e princípios básicos de nutrição. Suas respostas são claras, práticas, realistas e seguem práticas comuns de academias no Brasil. Você nunca incentiva comportamentos extremos ou inseguros.",
+    "input": {
+      "idade": 25,
+      "genero": "Masculino",
+      "altura_cm": 180,
+      "peso_kg": 80,
+      "nivel_atividade": "Moderadamente ativo",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2000,
+      "macros_estimados_g": {
+        "proteina": 160,
+        "carboidratos": 190,
+        "gorduras": 67
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento", "baixa_caloria", "alta_proteina", "baixo_ig"],
+      "distribuicao_calorica": {
+        "cafe_da_manha": "20-25%",
+        "almoco": "30-35%",
+        "jantar": "25-30%",
+        "lanches": "10-15%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "cafe_da_manha": ["proteína magra", "carboidratos complexos", "baixo açúcar"],
+        "almoco": ["proteína sólida magra", "alto volume de vegetais", "carboidrato integral"],
+        "jantar": ["proteína de fácil digestão", "controle de gorduras", "fibras"],
+        "lanches": ["proteína ou fibras", "controle calórico"]
+      },
+      "orientacoes_gerais": ["Manter déficit calórico moderado", "Priorizar consistência", "Hidratação 3.5L/dia"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 32,
+      "genero": "Feminino",
+      "altura_cm": 165,
+      "peso_kg": 65,
+      "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Vegetariano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1600,
+      "macros_estimados_g": {
+        "proteina": 110,
+        "carboidratos": 180,
+        "gorduras": 49
+      },
+      "tags_para_busca_rag": ["vegetariano", "emagrecimento", "baixo_carbo", "rico_em_fibras", "densidade_nutricional"],
+      "distribuicao_calorica": {
+        "cafe_da_manha": "20-25%",
+        "almoco": "30-35%",
+        "jantar": "25-30%",
+        "lanches": "10-15%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "cafe_da_manha": ["proteínas vegetais/ovos", "fibras", "energia sustentada"],
+        "almoco": ["leguminosas", "vegetais variados", "carboidrato integral"],
+        "jantar": ["proteína vegetal leve", "baixo teor de gordura"],
+        "lanches": ["fibras e gorduras boas", "controle de porções"]
+      },
+      "orientacoes_gerais": ["Garantir aporte proteico", "Variar fontes vegetais", "Evitar restrições extremas"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 48,
+      "genero": "Masculino",
+      "altura_cm": 175,
+      "peso_kg": 95,
+      "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Manutenção",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2200,
+      "macros_estimados_g": {
+        "proteina": 130,
+        "carboidratos": 280,
+        "gorduras": 62
+      },
+      "tags_para_busca_rag": ["vegano", "manutencao", "plant_based", "saude_metabolica"],
+      "distribuicao_calorica": {
+        "cafe_da_manha": "25%",
+        "almoco": "35%",
+        "jantar": "25%",
+        "lanches": "15%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteínas vegetais variadas", "boa densidade nutricional", "gorduras insaturadas"]
+      },
+      "orientacoes_gerais": ["Manter peso estável", "Priorizar alimentos naturais", "Atenção à B12"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 55,
+      "genero": "Feminino",
+      "altura_cm": 160,
+      "peso_kg": 70,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2000,
+      "macros_estimados_g": {
+        "proteina": 140,
+        "carboidratos": 210,
+        "gorduras": 67
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento", "saude_ossea", "alta_proteina", "fibras"],
+      "distribuicao_calorica": {
+        "cafe_da_manha": "20%",
+        "almoco": "30%",
+        "jantar": "25%",
+        "lanches": "25%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteínas magras", "alto volume vegetal", "fontes de cálcio"]
+      },
+      "orientacoes_gerais": ["Aporte proteico 2g/kg", "Carboidratos de baixo IG", "Hidratação estratégica"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 68,
+      "genero": "Feminino",
+      "altura_cm": 155,
+      "peso_kg": 60,
+      "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Manutenção",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1700,
+      "macros_estimados_g": {
+        "proteina": 105,
+        "carboidratos": 205,
+        "gorduras": 51
+      },
+      "tags_para_busca_rag": ["vegano", "longevidade", "manutencao", "prevencao_sarcopenia"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "35%", "jantar": "30%", "lanches": "15%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteína vegetal isolada/combinada", "densidade mineral", "saúde digestiva"]
+      },
+      "orientacoes_gerais": ["Foco em Cálcio e Vitamina D", "Proteína > 1.5g/kg", "Hidratação constante"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 35,
+      "genero": "Feminino",
+      "altura_cm": 170,
+      "peso_kg": 75,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Vegetariano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2600,
+      "macros_estimados_g": {
+        "proteina": 150,
+        "carboidratos": 330,
+        "gorduras": 75
+      },
+      "tags_para_busca_rag": ["vegetariano", "hipertrofia", "alta_caloria", "superavit_leve"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "30%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["ovos e laticínios", "carboidratos complexos", "vegetais verde-escuros"]
+      },
+      "orientacoes_gerais": ["Superávit calórico", "Recuperação muscular", "Creatina recomendada"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 42,
+      "genero": "Masculino",
+      "altura_cm": 185,
+      "peso_kg": 110,
+      "nivel_atividade": "Moderadamente ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 3200,
+      "macros_estimados_g": {
+        "proteina": 210,
+        "carboidratos": 400,
+        "gorduras": 84
+      },
+      "tags_para_busca_rag": ["vegano", "hipertrofia", "alto_porte", "densidade_energetica"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "30%", "pos_treino": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["combinação leguminosa + cereal", "gorduras boas", "alto aporte proteico"]
+      },
+      "orientacoes_gerais": ["Atenção a aminoácidos limitantes", "Volume alimentar alto", "Suplementação B12"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 58,
+      "genero": "Feminino",
+      "altura_cm": 168,
+      "peso_kg": 78,
+      "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Manutenção",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1850,
+      "macros_estimados_g": {
+        "proteina": 110,
+        "carboidratos": 230,
+        "gorduras": 54
+      },
+      "tags_para_busca_rag": ["vegano", "manutencao", "baixo_oleo", "fibras_altas"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "35%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteína de soja/lentilha", "alimentos integrais", "vegetais variados"]
+      },
+      "orientacoes_gerais": ["Evitar ganho de gordura", "Focar em densidade nutricional", "Estímulo a atividade leve"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 25,
+      "genero": "Masculino",
+      "altura_cm": 180,
+      "peso_kg": 80,
+      "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2100,
+      "macros_estimados_g": {
+        "proteina": 160,
+        "carboidratos": 200,
+        "gorduras": 70
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento", "saciedade_alta", "deficit_moderado"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "25%", "lanches": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["carnes magras", "controle de saturadas", "folhas livres"]
+      },
+      "orientacoes_gerais": ["Déficit calórico planejado", "Preservar força", "3L de água/dia"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 32,
+      "genero": "Feminino",
+      "altura_cm": 165,
+      "peso_kg": 65,
+      "nivel_atividade": "Moderadamente ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2300,
+      "macros_estimados_g": {
+        "proteina": 130,
+        "carboidratos": 290,
+        "gorduras": 68
+      },
+      "tags_para_busca_rag": ["vegano", "hipertrofia", "performance", "plant_protein"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "35%", "jantar": "30%", "lanche": "15%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["tofu/tempeh", "raízes energéticas", "frutas variadas"]
+      },
+      "orientacoes_gerais": ["Progressão de carga", "Ajuste de macros mensal", "Atenção ao ferro"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 48,
+      "genero": "Masculino",
+      "altura_cm": 175,
+      "peso_kg": 95,
+      "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Manutenção",
+      "preferencia_alimentar": "Vegetariano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2300,
+      "macros_estimados_g": {
+        "proteina": 140,
+        "carboidratos": 280,
+        "gorduras": 69
+      },
+      "tags_para_busca_rag": ["vegetariano", "manutencao", "recomposicao_corporal", "equilibrio"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "30%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["queijos magros/ovos", "grãos integrais", "leguminosas"]
+      },
+      "orientacoes_gerais": ["Melhora da composição corporal", "Evitar refinados", "Caminhadas diárias"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 62,
+      "genero": "Masculino",
+      "altura_cm": 170,
+      "peso_kg": 85,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2800,
+      "macros_estimados_g": {
+        "proteina": 170,
+        "carboidratos": 360,
+        "gorduras": 75
+      },
+      "tags_para_busca_rag": ["vegano", "hipertrofia_madura", "anti_catabolismo", "alta_proteina_vegetal"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "25%", "pos_treino": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["suplementação vegetal", "aveia/cereais", "sementes/ômega-3"]
+      },
+      "orientacoes_gerais": ["Proteção da massa magra", "Carbos para energia", "Recuperação priorizada"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 28,
+      "genero": "Feminino",
+      "altura_cm": 172,
+      "peso_kg": 60,
+      "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2200,
+      "macros_estimados_g": {
+        "proteina": 120,
+        "carboidratos": 300,
+        "gorduras": 60
+      },
+      "tags_para_busca_rag": ["vegano", "hipertrofia", "ganho_de_peso", "densidade_calorica"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "25%", "lanches": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["pastas de oleaginosas", "arroz + feijão", "proteína de soja"]
+      },
+      "orientacoes_gerais": ["Fracionar refeições", "Não pular refeições", "Treino de força pesado"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 35,
+      "genero": "Masculino",
+      "altura_cm": 185,
+      "peso_kg": 90,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2400,
+      "macros_estimados_g": {
+        "proteina": 200,
+        "carboidratos": 220,
+        "gorduras": 80
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento", "atleta", "alta_performance", "proteina_max"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "25%", "pos_treino": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteína magra pesada", "carbos fibrosos", "zero caloria líquida"]
+      },
+      "orientacoes_gerais": ["Intensidade no treino", "Densidade nutricional", "Ajuste em dias OFF"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 68,
+      "genero": "Masculino",
+      "altura_cm": 170,
+      "peso_kg": 80,
+      "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Perda de peso",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1800,
+      "macros_estimados_g": {
+        "proteina": 150,
+        "carboidratos": 170,
+        "gorduras": 58
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento", "terceira_idade", "saude_articular"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "35%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["peixes/frango", "legumes cozidos", "frutas fibrosas"]
+      },
+      "orientacoes_gerais": ["Preservar massa magra/óssea", "Déficit leve", "Hidratação extrema"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 21,
+      "genero": "Masculino",
+      "altura_cm": 190,
+      "peso_kg": 95,
+      "nivel_atividade": "Moderadamente ativo",
+      "objetivo_fitness": "Perda de peso",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2350,
+      "macros_estimados_g": {
+        "proteina": 190,
+        "carboidratos": 240,
+        "gorduras": 70
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento", "alto_volume", "deficit_seguro"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "30%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["alimentos volumosos", "proteína 2g/kg", "carbos complexos"]
+      },
+      "orientacoes_gerais": ["Não reduzir drasticamente", "Cardio pós-treino", "Sono de qualidade"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 70,
+      "genero": "Masculino",
+      "altura_cm": 170,
+      "peso_kg": 85,
+      "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Perda de peso",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1750,
+      "macros_estimados_g": {
+        "proteina": 120,
+        "carboidratos": 200,
+        "gorduras": 52
+      },
+      "tags_para_busca_rag": ["vegano", "emagrecimento", "saude_idoso", "baixo_ig"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "35%", "jantar": "20%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["cogumelos/leguminosas", "raízes moderadas", "fibras abundantes"]
+      },
+      "orientacoes_gerais": ["Combater sedentarismo", "Saúde cardiovascular", "Suplementação proteica vegetal"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 33,
+      "genero": "Feminino",
+      "altura_cm": 168,
+      "peso_kg": 70,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Manutenção",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2300,
+      "macros_estimados_g": {
+        "proteina": 140,
+        "carboidratos": 285,
+        "gorduras": 67
+      },
+      "tags_para_busca_rag": ["onivoro", "manutencao", "performance", "omega3_alto"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "30%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["equilíbrio de macros", "micronutrientes variados", "proteínas magras"]
+      },
+      "orientacoes_gerais": ["Estabilidade calórica", "Performance no treino", "Monitorar flutuações"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 25,
+      "genero": "Masculino",
+      "altura_cm": 190,
+      "peso_kg": 95,
+      "nivel_atividade": "Moderadamente ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 3200,
+      "macros_estimados_g": {
+        "proteina": 190,
+        "carboidratos": 430,
+        "gorduras": 80
+      },
+      "tags_para_busca_rag": ["vegano", "hipertrofia", "alto_porte", "superavit"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "25%", "lanches_e_pos_treino": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["soja/ervilha", "superávit hipertrófico", "carboidratos complexos"]
+      },
+      "orientacoes_gerais": ["Monitorar leucina", "Densidade calórica", "Creatina essencial"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 25,
+      "genero": "Masculino",
+      "altura_cm": 180,
+      "peso_kg": 80,
+      "nivel_atividade": "Moderadamente ativo",
+      "objetivo_fitness": "Perda de peso",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2100,
+      "macros_estimados_g": {
+        "proteina": 160,
+        "carboidratos": 190,
+        "gorduras": 75
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento", "saciedade", "baixo_refinado"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "35%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteínas magras", "alto volume vegetal", "fibras"]
+      },
+      "orientacoes_gerais": ["Proteína 2g/kg", "Déficit sustentável", "Água 3.5L"]
+    }
+  },
+
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 22,
+      "genero": "Masculino",
+      "altura_cm": 188,
+      "peso_kg": 62,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 3600,
+      "macros_estimados_g": { "proteina": 155, "carboidratos": 550, "gorduras": 86 },
+      "tags_para_busca_rag": ["onivoro", "hipertrofia_agressiva", "alta_densidade_calorica", "superavit_alto"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "25%", "jantar": "25%", "lanches": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["carboidratos de rápida absorção pós-treino", "gorduras saudáveis para bater calorias", "proteínas líquidas se necessário"]
+      },
+      "orientacoes_gerais": ["Foco total em superávit", "Evitar excesso de cardio", "Priorizar alimentos de fácil digestão pelo alto volume"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 45,
+      "genero": "Feminino",
+      "altura_cm": 162,
+      "peso_kg": 125,
+      "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Onívoro"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1900,
+      "macros_estimados_g": { "proteina": 160, "carboidratos": 165, "gorduras": 66 },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento_obesidade", "saciedade_maxima", "baixo_ig", "anti_inflamatorio"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "35%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteína magra em todas as refeições", "fibras solúveis (aveia/psyllium)", "vegetais de baixíssima caloria"]
+      },
+      "orientacoes_gerais": ["Déficit seguro para preservar articulações", "Foco em controle de insulina", "Hidratação de 4L+ devido ao peso corporal"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 65,
+      "genero": "Feminino",
+      "altura_cm": 158,
+      "peso_kg": 52,
+      "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Vegetariano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1950,
+      "macros_estimados_g": { "proteina": 115, "carboidratos": 230, "gorduras": 63 },
+      "tags_para_busca_rag": ["vegetariano", "hipertrofia_terceira_idade", "saude_ossea", "biodisponibilidade"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "30%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["ovos e whey/suplemento", "carboidratos de absorção lenta", "fontes de cálcio vegetal e laticínios"]
+      },
+      "orientacoes_gerais": ["Aporte proteico alto (2.2g/kg) para combater a sarcopenia", "Foco em qualidade mineral", "Treino de força é obrigatório"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 28,
+      "genero": "Masculino",
+      "altura_cm": 178,
+      "peso_kg": 95,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Onívoro",
+      "observacao": "Atleta amador de fisiculturismo em fase de Off-Season"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 3800,
+      "macros_estimados_g": {
+        "proteina": 230,
+        "carboidratos": 530,
+        "gorduras": 84
+      },
+      "tags_para_busca_rag": ["onivoro", "hipertrofia_avancada", "alta_performance", "carbo_alto", "off_season"],
+      "distribuicao_calorica": {
+        "pre_treino": "20%",
+        "pos_treino": "25%",
+        "almoco": "20%",
+        "jantar": "20%",
+        "outras": "15%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "pre_treino": ["carboidratos de rápida e média absorção", "proteína magra"],
+        "pos_treino": ["alto índice glicêmico para ressíntese de glicogênio", "proteína de rápida absorção"],
+        "geral": ["controle de gorduras saturadas", "vegetais para saúde digestiva e microflora"]
+      },
+      "orientacoes_gerais": [
+        "Foco em superávit calórico controlado para minimizar ganho de gordura",
+        "Ajustar sódio e hidratação para manter a performance volêmica",
+        "Periodização nutricional conforme a intensidade do mesociclo"
+      ]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 40,
+      "genero": "Masculino",
+      "altura_cm": 175,
+      "peso_kg": 140,
+      "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Onívoro",
+      "observacao": "Obesidade Grau III"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2300,
+      "macros_estimados_g": {
+        "proteina": 180,
+        "carboidratos": 215,
+        "gorduras": 80
+      },
+      "tags_para_busca_rag": ["onivoro", "obesidade_morbida", "baixo_indice_glicemico", "saciedade_extrema", "anti_inflamatorio"],
+      "distribuicao_calorica": {
+        "cafe_da_manha": "20%",
+        "almoco": "30%",
+        "jantar": "25%",
+        "lanches": "25%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": [
+          "proteína magra obrigatória em cada refeição para termogênese",
+          "carboidratos apenas fibrosos (folhas e legumes de baixo amido)",
+          "gorduras vindas de fontes integrais (abacate, azeite, castanhas)"
+        ]
+      },
+      "orientacoes_gerais": [
+        "Cálculo de proteína baseado no peso alvo/massa magra para evitar excesso renal",
+        "Déficit agressivo porém seguro devido ao alto estoque de gordura",
+        "Hidratação mínima de 5L para suporte metabólico e renal",
+        "Foco em alimentos anti-inflamatórios para reduzir estresse oxidativo"
+      ]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 24, "genero": "Feminino", "altura_cm": 165, "peso_kg": 62, "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Definição extrema", "preferencia_alimentar": "Onívoro",
+      "observacao": "Atleta Bikini em preparação final (4 semanas para o palco)"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1400,
+      "macros_estimados_g": { "proteina": 155, "carboidratos": 110, "gorduras": 38 },
+      "tags_para_busca_rag": ["onivoro", "cutting_atleta", "baixo_carbo", "alta_proteina", "termogenico"],
+      "distribuicao_calorica": { "pre_treino": "30%", "pos_treino": "30%", "outras": "40%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["fontes proteicas brancas (peixe/frango)", "vegetais de baixa caloria", "zero gordura adicionada"]
+      },
+      "orientacoes_gerais": ["Foco em depleção de gordura preservando tônus", "Monitorar fadiga extrema", "Estratégia de refeed pontual se necessário"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 45, "genero": "Masculino", "altura_cm": 180, "peso_kg": 150, "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Emagrecimento", "preferencia_alimentar": "Onívoro",
+      "observacao": "Obesidade mórbida com resistência à insulina"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2400,
+      "macros_estimados_g": { "proteina": 190, "carboidratos": 180, "gorduras": 100 },
+      "tags_para_busca_rag": ["onivoro", "cetogenica_modificada", "baixo_ig", "controle_insulina", "saciedade"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "30%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["foco em gorduras monoinsaturadas", "carboidratos apenas fibrosos", "proteína de alto valor biológico"]
+      },
+      "orientacoes_gerais": ["Reverter quadro de resistência insulínica", "Não cortar gorduras drasticamente para manter hormônios", "Foco em caminhadas de 15min pós-refeição"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 30, "genero": "Masculino", "altura_cm": 175, "peso_kg": 105, "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Ganho de massa muscular", "preferencia_alimentar": "Vegano",
+      "observacao": "Fisiculturista Vegano em fase de transição (Consolidação)"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 3400,
+      "macros_estimados_g": { "proteina": 210, "carboidratos": 480, "gorduras": 71 },
+      "tags_para_busca_rag": ["vegano", "hipertrofia_plantbased", "alto_carbo", "recuperacao_muscular"],
+      "distribuicao_calorica": { "almoco": "30%", "jantar": "30%", "pre_pos_treino": "30%", "lanches": "10%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["mix de aminoácidos (arroz/feijão/lentilha)", "seitan e tofu", "carboidratos complexos"]
+      },
+      "orientacoes_gerais": ["Garantir 2.0g/kg de proteína de fontes variadas", "Suplementação de leucina isolada se necessário", "Foco em densidade calórica"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 38, "genero": "Masculino", "altura_cm": 178, "peso_kg": 130, "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Emagrecimento", "preferencia_alimentar": "Vegano", "observacao": "Obesidade Grau II, dificuldade em bater proteína sem subir muito o carbo"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2100,
+      "macros_estimados_g": { "proteina": 175, "carboidratos": 180, "gorduras": 75 },
+      "tags_para_busca_rag": ["vegano", "emagrecimento_obesidade", "proteina_vegetal_isolada", "baixo_ig"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "30%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["foco em seitan e tofu firme", "uso de proteína isolada de ervilha/arroz", "vegetais fibrosos para volume"]
+      },
+      "orientacoes_gerais": ["Priorizar fontes de proteína com baixo carboidrato", "Suplementação de B12 e Ferro", "Controle rigoroso de óleos vegetais"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 42, "genero": "Feminino", "altura_cm": 160, "peso_kg": 105, "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Emagrecimento", "preferencia_alimentar": "Vegano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1700,
+      "macros_estimados_g": { "proteina": 140, "carboidratos": 150, "gorduras": 60 },
+      "tags_para_busca_rag": ["vegano", "emagrecimento", "saciedade_vegana", "controle_glicemico"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "30%", "jantar": "25%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["tempeh e edamame", "carboidratos de baixo índice glicêmico", "fibras solúveis"]
+      },
+      "orientacoes_gerais": ["Atenção à densidade calórica das castanhas", "Fracionar proteína em 4-5 vezes ao dia", "Monitorar saciedade"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 27, "genero": "Feminino", "altura_cm": 168, "peso_kg": 72, "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Ganho de massa muscular", "preferencia_alimentar": "Onívoro", "observacao": "Foco em volume de quadríceps e glúteo (Categoria Wellness)"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2800,
+      "macros_estimados_g": { "proteina": 160, "carboidratos": 380, "gorduras": 71 },
+      "tags_para_busca_rag": ["onivoro", "hipertrofia_wellness", "superavit_estratégico", "alta_performance"],
+      "distribuicao_calorica": { "pre_treino": "20%", "pos_treino": "25%", "almoco": "25%", "outras": "30%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["carboidratos complexos", "proteínas magras", "gorduras para suporte hormonal"]
+      },
+      "orientacoes_gerais": ["Treino de alta intensidade", "Foco em recuperação", "Superávit para sustentar volume muscular alto"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 30, "genero": "Feminino", "altura_cm": 163, "peso_kg": 68, "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Manutenção", "preferencia_alimentar": "Onívoro", "observacao": "Atleta Wellness em fase de consolidação"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2400,
+      "macros_estimados_g": { "proteina": 150, "carboidratos": 280, "gorduras": 75 },
+      "tags_para_busca_rag": ["onivoro", "manutencao_atleta", "densidade_muscular", "saude_hormonal"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "30%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["variedade de micronutrientes", "proteínas de alto valor biológico", "controle de inflamação"]
+      },
+      "orientacoes_gerais": ["Manter força nos treinos", "Foco em qualidade de pele e tônus", "Sono regenerativo"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 29, "genero": "Masculino", "altura_cm": 175, "peso_kg": 85, "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Definição extrema", "preferencia_alimentar": "Onívoro", "observacao": "Semana de finalização (Peak Week) - 4 dias para o palco"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1800,
+      "macros_estimados_g": { "proteina": 210, "carboidratos": 150, "gorduras": 40 },
+      "tags_para_busca_rag": ["onivoro", "peak_week", "finalizacao", "controle_sodio"],
+      "distribuicao_calorica": { "fracionamento": "6 a 7 refeições pequenas ao dia" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["frango ou peixe branco grelhado sem sal", "carboidratos secos (arroz/batata doce)", "zero vegetais crucíferos para evitar distensão"]
+      },
+      "orientacoes_gerais": ["Ajuste fino de água e sódio", "Monitorar densidade e vascularização", "Protocolo de carb-up nos dias finais"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 25, "genero": "Feminino", "altura_cm": 160, "peso_kg": 54, "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Definição extrema", "preferencia_alimentar": "Onívoro", "observacao": "Peak week - Categoria Bikini"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1200,
+      "macros_estimados_g": { "proteina": 135, "carboidratos": 100, "gorduras": 30 },
+      "tags_para_busca_rag": ["onivoro", "peak_week", "baixo_volume_abdominal", "estetica_maxima"],
+      "distribuicao_calorica": { "fracionamento": "pequenas porções frequentes" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["fontes de proteína ultra magras", "controle de edulcorantes", "carboidratos simples para digestão rápida"]
+      },
+      "orientacoes_gerais": ["Priorizar aparência 'dry' (seca)", "Evitar alimentos que causem gases", "Descanso e pose"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 72, "genero": "Masculino", "altura_cm": 172, "peso_kg": 68, "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Manutenção", "preferencia_alimentar": "Vegetariano", "observacao": "Risco de sarcopenia e osteopenia"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1900,
+      "macros_estimados_g": { "proteina": 125, "carboidratos": 215, "gorduras": 59 },
+      "tags_para_busca_rag": ["vegetariano", "saude_idoso", "prevencao_sarcopenia", "alta_biodisponibilidade"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "25%", "jantar": "25%", "lanches": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["ovos e derivados lácteos", "suplementação de whey se necessário", "legumes cozidos para fácil digestão"]
+      },
+      "orientacoes_gerais": ["Aporte proteico elevado (>1.5g/kg)", "Consumo de Cálcio e Vitamina D", "Estímulo a caminhadas e força"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 68, "genero": "Feminino", "altura_cm": 158, "peso_kg": 58, "nivel_atividade": "Sedentário",
+      "objetivo_fitness": "Manutenção", "preferencia_alimentar": "Vegetariano"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 1600,
+      "macros_estimados_g": { "proteina": 105, "carboidratos": 190, "gorduras": 46 },
+      "tags_para_busca_rag": ["vegetariano", "longevidade", "proteina_facil_digestao", "saude_ossea"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "30%", "lanches": "20%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteína em todas as janelas", "frutas antioxidantes", "baixo sódio"]
+      },
+      "orientacoes_gerais": ["Foco em qualidade muscular", "Hidratação rigorosa", "Evitar longos períodos de jejum"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 26, "genero": "Masculino", "altura_cm": 175, "peso_kg": 76, "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Ganho de massa muscular", "preferencia_alimentar": "Onívoro", "observacao": "Falso magro (barriga aparente mas braços finos)"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2300,
+      "macros_estimados_g": { "proteina": 165, "carboidratos": 230, "gorduras": 80 },
+      "tags_para_busca_rag": ["onivoro", "recomposicao_corporal", "normocalorica", "troca_massa_por_gordura"],
+      "distribuicao_calorica": { "cafe_da_manha": "20%", "almoco": "30%", "jantar": "25%", "lanches": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["alta proteína para sinalização anabólica", "carboidratos de médio/baixo IG", "gorduras boas"]
+      },
+      "orientacoes_gerais": ["Não fazer déficit agressivo", "Foco em treino de força pesado", "Aeróbico moderado"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 31, "genero": "Feminino", "altura_cm": 165, "peso_kg": 60, "nivel_atividade": "Moderadamente ativo",
+      "objetivo_fitness": "Ganho de massa muscular", "preferencia_alimentar": "Onívoro", "observacao": "Falso magro, flacidez e gordura localizada"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2000,
+      "macros_estimados_g": { "proteina": 130, "carboidratos": 210, "gorduras": 71 },
+      "tags_para_busca_rag": ["onivoro", "recomposicao_corporal", "tonificacao", "equilíbrio_macro"],
+      "distribuicao_calorica": { "cafe_da_manha": "25%", "almoco": "25%", "jantar": "25%", "lanches": "25%" },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": ["proteína magra sólida", "controle de açúcares refinados", "fibras para controle de insulina"]
+      },
+      "orientacoes_gerais": ["Foco em densidade muscular", "Consistência no treino resistido", "Evitar excesso de cardio"]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 20,
+      "genero": "Masculino",
+      "altura_cm": 185,
+      "peso_kg": 65,
+      "nivel_atividade": "Muito ativo",
+      "objetivo_fitness": "Ganho de massa muscular",
+      "preferencia_alimentar": "Onívoro",
+      "observacao": "Dificuldade extrema de ganhar peso, baixo apetite (Ectomorfo)"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 3300,
+      "macros_estimados_g": {
+        "proteina": 130,
+        "carboidratos": 500,
+        "gorduras": 87
+      },
+      "tags_para_busca_rag": ["onivoro", "hipertrofia", "alta_densidade_calorica", "bulking_limpo", "baixo_volume_alimentar"],
+      "distribuicao_calorica": {
+        "cafe_da_manha": "20%",
+        "almoco": "25%",
+        "jantar": "25%",
+        "shakes_caloricos": "30%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": [
+          "alimentos de baixa saciedade e alta caloria (arroz branco, suco de uva integral)",
+          "shakes proteicos com aveia e pastas de oleaginosas",
+          "uso estratégico de gorduras boas para bater calorias sem volume"
+        ]
+      },
+      "orientacoes_gerais": [
+        "Não focar excessivamente em fibras para não inibir o apetite",
+        "Líquidos calóricos entre as refeições",
+        "Treinos curtos e intensos para evitar gasto energético excessivo"
+      ]
+    }
+  },
+  {
+    "instruction": "Você é um personal trainer com mais de 10 anos de experiência...",
+    "input": {
+      "idade": 31,
+      "genero": "Feminino",
+      "altura_cm": 165,
+      "peso_kg": 78,
+      "nivel_atividade": "Levemente ativo",
+      "objetivo_fitness": "Emagrecimento",
+      "preferencia_alimentar": "Onívoro",
+      "observacao": "Pós-parto (6 meses), em fase de amamentação"
+    },
+    "output": {
+      "calorias_diarias_estimadas": 2200,
+      "macros_estimados_g": {
+        "proteina": 135,
+        "carboidratos": 250,
+        "gorduras": 73
+      },
+      "tags_para_busca_rag": ["onivoro", "emagrecimento_pos_parto", "saude_materna", "nutricao_lactante"],
+      "distribuicao_calorica": {
+        "cafe_da_manha": "20%",
+        "almoco": "30%",
+        "jantar": "25%",
+        "lanches": "25%"
+      },
+      "criterios_nutricionais_por_refeicao": {
+        "todas_refeicoes": [
+          "alimentos ricos em ferro e cálcio",
+          "carboidratos complexos para energia estável",
+          "proteínas de alta qualidade e gorduras ômega-3"
+        ]
+      },
+      "orientacoes_gerais": [
+        "Déficit calórico muito leve para não reduzir a produção de leite",
+        "Hidratação aumentada (4L+) essencial para lactação",
+        "Foco em densidade de micronutrientes, não apenas calorias"
+      ]
+    }
+  }
+]

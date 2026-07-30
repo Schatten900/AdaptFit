@@ -10,11 +10,6 @@ export interface WorkoutExerciseRequest {
 export interface WorkoutExerciseResponse {
   id: number;
   exerciseId: number;
-  name: string;
-  description?: string;
-  muscleGroup?: string;
-  equipment?: string;
-  isBodyweight?: boolean;
   sets?: number;
   reps?: number;
   weight?: number;

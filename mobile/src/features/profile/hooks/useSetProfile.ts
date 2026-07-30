@@ -18,6 +18,8 @@ export const useSetProfile = () => {
         goal: (formData.goal ?? "ENDURANCE") as GoalType,
         experience: (formData.experience ?? "BEGINNER") as ExperienceLevel,
         gender: (formData.gender ?? "OTHER") as Gender,
+        daysPerWeek: formData.daysPerWeek,
+        sessionDuration: formData.sessionDuration,
       };
 
       return profileService.setProfile(apiData);

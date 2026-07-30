@@ -2,13 +2,7 @@ package com.AdaptFit.SistemaFitness.profile;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/profile")
@@ -31,15 +25,27 @@ public class ProfileController {
     }
 
     @PostMapping
-    public ResponseEntity<Profile> createProfile(@RequestBody Profile profile) {
-
-        System.out.println(profile);
+    public ResponseEntity<Profile> createProfile(@RequestBody ProfileRequest request) {
+        Profile profile = mapToEntity(request);
         return ResponseEntity.ok(profileService.createOrUpdateProfile(profile));
     }
 
     @PutMapping
-    public ResponseEntity<Profile> updateProfile(@RequestBody Profile profile) {
-        System.out.println(profile);
+    public ResponseEntity<Profile> updateProfile(@RequestBody ProfileRequest request) {
+        Profile profile = mapToEntity(request);
         return ResponseEntity.ok(profileService.createOrUpdateProfile(profile));
+    }
+
+    private Profile mapToEntity(ProfileRequest request) {
+        Profile profile = new Profile();
+        profile.setWeight(request.getWeight());
+        profile.setHeight(request.getHeight());
+        profile.setAge(request.getAge());
+        profile.setGoal(request.getGoal());
+        profile.setExperience(request.getExperience());
+        profile.setGender(request.getGender());
+        profile.setDaysPerWeek(request.getDaysPerWeek() != null ? request.getDaysPerWeek() : 3);
+        profile.setSessionDuration(request.getSessionDuration() != null ? request.getSessionDuration() : 45);
+        return profile;
     }
 }

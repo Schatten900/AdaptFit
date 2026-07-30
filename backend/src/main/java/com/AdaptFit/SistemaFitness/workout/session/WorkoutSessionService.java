@@ -25,7 +25,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.*;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -120,16 +125,10 @@ public class WorkoutSessionService {
         stats.put("totalSessions", workoutSessionRepository.countByUserId(userId));
         stats.put("totalDurationMinutes", workoutSessionRepository.sumDurationByUserId(userId));
         stats.put("lastSessionDate", workoutSessionRepository.findLastSessionDateByUserId(userId));
-        
-        Calendar cal = Calendar.getInstance();
-        cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
-        Date weekStart = cal.getTime();
-        stats.put("daysTrainedThisWeek", workoutSessionRepository.countSessionsInWeek(userId, weekStart));
-        
+
+        LocalDate weekStart = LocalDate.now().with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY));
+        stats.put("daysTrainedThisWeek", workoutSessionRepository.countSessionsInWeek(userId, java.sql.Date.valueOf(weekStart)));
+
         return stats;
     }
 
@@ -238,7 +237,7 @@ public class WorkoutSessionService {
 
             ExerciseCatalog catalog = exerciseCatalogRepository.findById(entry.getKey()).orElse(null);
             exerciseResponse.setExerciseName(catalog != null ? catalog.getName() : "Exercício");
-            exerciseResponse.setMuscleGroup(catalog != null ? catalog.getMuscleGroup() : "Desconhecido");
+            exerciseResponse.setMuscleGroup(catalog != null ? catalog.getPrimaryMuscle() : "Desconhecido");
 
             List<WorkoutSessionExercise> sets = entry.getValue();
             List<SetPerformedResponse> setResponses = new ArrayList<>();
@@ -271,13 +270,6 @@ public class WorkoutSessionService {
         }
 
         return responses;
-    }
-
-    private <T> T handleCircuitBreakerFallback(Throwable t) {
-        if (t instanceof RuntimeException re) {
-            throw re;
-        }
-        throw new RuntimeException("Serviço temporariamente indisponível", t);
     }
 
     public List<HistoricoResponse> getHistory(String period, String muscleGroup, Long exerciseId, Long workoutId) {
@@ -355,29 +347,24 @@ public class WorkoutSessionService {
     }
 
     private Date[] getDateRange(String period) {
-        Calendar cal = Calendar.getInstance();
-        Date endDate = cal.getTime();
-        
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
-        
+        LocalDate end = LocalDate.now();
+        LocalDate start;
+
         switch (period.toLowerCase()) {
             case "week":
-                cal.add(Calendar.WEEK_OF_YEAR, -1);
+                start = end.minusWeeks(1);
                 break;
             case "month":
-                cal.add(Calendar.MONTH, -1);
+                start = end.minusMonths(1);
                 break;
             case "year":
-                cal.add(Calendar.YEAR, -1);
+                start = end.minusYears(1);
                 break;
             default:
-                cal.add(Calendar.MONTH, -1);
+                start = end.minusMonths(1);
         }
-        
-        return new Date[]{cal.getTime(), endDate};
+
+        return new Date[]{java.sql.Date.valueOf(start), java.sql.Date.valueOf(end)};
     }
 
     private HistoricoResponse mapToHistoricoResponse(WorkoutSession session, String muscleGroupFilter, Long exerciseIdFilter) {
@@ -399,9 +386,9 @@ public class WorkoutSessionService {
         List<ExerciseSummary> exerciseSummaries = exercises.stream()
             .map(ex -> {
                 ExerciseCatalog catalog = exerciseCatalogRepository.findById(ex.getExerciseId()).orElse(null);
-                String muscleGroup = catalog != null ? catalog.getMuscleGroup() : "Desconhecido";
+                String primaryMuscle = catalog != null ? catalog.getPrimaryMuscle() : "Desconhecido";
                 
-                if (muscleGroupFilter != null && !muscleGroupFilter.equalsIgnoreCase(muscleGroup)) {
+                if (muscleGroupFilter != null && !muscleGroupFilter.equalsIgnoreCase(primaryMuscle)) {
                     return null;
                 }
                 
@@ -412,7 +399,7 @@ public class WorkoutSessionService {
                 ExerciseSummary summary = new ExerciseSummary();
                 summary.setExerciseId(ex.getExerciseId());
                 summary.setExerciseName(catalog != null ? catalog.getName() : "Exercício");
-                summary.setMuscleGroup(muscleGroup);
+                summary.setMuscleGroup(primaryMuscle);
                 summary.setSets(ex.getSets());
                 summary.setReps(ex.getReps());
                 summary.setWeight(ex.getWeight() != null ? ex.getWeight().doubleValue() : null);
@@ -441,9 +428,9 @@ public class WorkoutSessionService {
             
             for (WorkoutExercise ex : exercises) {
                 ExerciseCatalog catalog = exerciseCatalogRepository.findById(ex.getExerciseId()).orElse(null);
-                String muscleGroup = catalog != null ? catalog.getMuscleGroup() : "Desconhecido";
+                String primaryMuscle = catalog != null ? catalog.getPrimaryMuscle() : "Desconhecido";
                 
-                if (muscleGroupFilter != null && !muscleGroupFilter.equalsIgnoreCase(muscleGroup)) {
+                if (muscleGroupFilter != null && !muscleGroupFilter.equalsIgnoreCase(primaryMuscle)) {
                     continue;
                 }
                 
@@ -451,9 +438,9 @@ public class WorkoutSessionService {
                     continue;
                 }
                 
-                if (!sessionMuscleGroups.contains(muscleGroup)) {
-                    result.put(muscleGroup, result.getOrDefault(muscleGroup, 0L) + 1);
-                    sessionMuscleGroups.add(muscleGroup);
+                if (!sessionMuscleGroups.contains(primaryMuscle)) {
+                    result.put(primaryMuscle, result.getOrDefault(primaryMuscle, 0L) + 1);
+                    sessionMuscleGroups.add(primaryMuscle);
                 }
             }
         }
@@ -463,49 +450,46 @@ public class WorkoutSessionService {
 
     private List<EvolutionDataPoint> calculateEvolutionData(Long userId, Date startDate, Date endDate, String period, Long exerciseIdFilter, Long workoutIdFilter) {
         List<EvolutionDataPoint> result = new ArrayList<>();
-        
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(startDate);
-        
-        int increment;
-        String dateFormat;
-        
+
+        LocalDate start = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate end = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+        ChronoUnit increment;
+        DateTimeFormatter formatter;
+
         switch (period.toLowerCase()) {
             case "week":
-                increment = Calendar.DAY_OF_WEEK;
-                dateFormat = "EEE";
+                increment = ChronoUnit.DAYS;
+                formatter = DateTimeFormatter.ofPattern("EEE");
                 break;
             case "month":
-                increment = Calendar.WEEK_OF_YEAR;
-                dateFormat = "dd/MM";
+                increment = ChronoUnit.WEEKS;
+                formatter = DateTimeFormatter.ofPattern("dd/MM");
                 break;
             case "year":
-                increment = Calendar.MONTH;
-                dateFormat = "MMM";
+                increment = ChronoUnit.MONTHS;
+                formatter = DateTimeFormatter.ofPattern("MMM");
                 break;
             default:
-                increment = Calendar.WEEK_OF_YEAR;
-                dateFormat = "dd/MM";
+                increment = ChronoUnit.WEEKS;
+                formatter = DateTimeFormatter.ofPattern("dd/MM");
         }
-        
-        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat(dateFormat);
-        
-        while (cal.getTime().before(endDate)) {
-            Calendar weekEnd = (Calendar) cal.clone();
-            weekEnd.add(increment, 1);
-            
-            if (weekEnd.getTime().after(endDate)) {
-                weekEnd.setTime(endDate);
+
+        LocalDate current = start;
+        while (current.isBefore(end)) {
+            LocalDate segmentEnd = current.plus(1, increment);
+            if (segmentEnd.isAfter(end)) {
+                segmentEnd = end;
             }
-            
+
             List<WorkoutSession> sessions;
             if (workoutIdFilter != null) {
                 sessions = workoutSessionRepository.findByUserIdAndWorkoutDayIdAndDateRange(
-                    userId, workoutIdFilter, cal.getTime(), weekEnd.getTime());
+                    userId, workoutIdFilter, java.sql.Date.valueOf(current), java.sql.Date.valueOf(segmentEnd));
             } else {
-                sessions = workoutSessionRepository.findByUserIdAndDateRange(userId, cal.getTime(), weekEnd.getTime());
+                sessions = workoutSessionRepository.findByUserIdAndDateRange(userId, java.sql.Date.valueOf(current), java.sql.Date.valueOf(segmentEnd));
             }
-            
+
             if (exerciseIdFilter != null) {
                 final Long exerciseId = exerciseIdFilter;
                 sessions = sessions.stream()
@@ -515,7 +499,7 @@ public class WorkoutSessionService {
                     })
                     .collect(Collectors.toList());
             }
-            
+
             Long count = (long) sessions.size();
             Long duration = sessions.stream()
                 .mapToLong(s -> s.getDurationMinutes() != null ? s.getDurationMinutes() : 0)
@@ -529,21 +513,21 @@ public class WorkoutSessionService {
             double volume = sessions.stream()
                 .mapToDouble(s -> s.getTotalVolume() != null ? s.getTotalVolume() : 0)
                 .sum();
-            
+
             EvolutionDataPoint point = new EvolutionDataPoint();
-            point.setDate(cal.getTime());
+            point.setDate(java.sql.Date.valueOf(current));
             point.setSessionsCount(count != null ? count.intValue() : 0);
             point.setTotalDuration(duration != null ? duration.intValue() : 0);
             point.setTotalReps(reps);
             point.setTotalWeight(weight);
             point.setTotalVolume(volume);
-            point.setPeriod(sdf.format(cal.getTime()));
-            
+            point.setPeriod(current.format(formatter));
+
             result.add(point);
-            
-            cal.add(increment, 1);
+
+            current = current.plus(1, increment);
         }
-        
+
         return result;
     }
 

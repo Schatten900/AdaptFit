@@ -3,6 +3,7 @@ package com.AdaptFit.SistemaFitness.profile;
 import com.AdaptFit.SistemaFitness.enums.ExperienceLevel;
 import com.AdaptFit.SistemaFitness.enums.Gender;
 import com.AdaptFit.SistemaFitness.enums.GoalType;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -57,6 +58,14 @@ public class Profile {
 
     @Column(name = "updated_at")
     private Date updatedAt;
+
+    @JsonProperty("daysPerWeek")
+    @Column(name = "days_per_week")
+    private int daysPerWeek;
+
+    @JsonProperty("sessionDuration")
+    @Column(name = "session_duration")
+    private int sessionDuration;
 
     @PrePersist
     protected void onCreate() {
