@@ -26,6 +26,7 @@ import java.util.stream.Collectors;
 public class RagController {
 
     private final RagService ragService;
+    private final QdrantSyncService qdrantSyncService;
 
     @GetMapping("/recipes")
     public ResponseEntity<ApiResponse<List<RecipeResponse>>> searchRecipes(
@@ -81,6 +82,12 @@ public class RagController {
                 .collect(Collectors.toList());
 
         return ResponseEntity.ok(ApiResponse.success(responses));
+    }
+
+    @PostMapping("/reindex")
+    public ResponseEntity<ApiResponse<String>> reindex() {
+        qdrantSyncService.syncDataToQdrant(true);
+        return ResponseEntity.ok(ApiResponse.success("Reindexação concluída"));
     }
 
     @GetMapping("/muscle-groups")

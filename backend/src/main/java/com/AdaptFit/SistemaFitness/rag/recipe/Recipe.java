@@ -26,9 +26,9 @@ public class Recipe {
     @Column(nullable = false, length = 255)
     private String nome;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "recipe_ingredientes", joinColumns = @JoinColumn(name = "recipe_id"))
-    @Column(name = "ingrediente", length = 500)
+    @Column(name = "ingrediente")
     private List<String> ingredientes;
 
     @Column(name = "modo_preparo", length = 2000)

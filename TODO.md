@@ -103,27 +103,110 @@ Este documento descreve as tarefas necessárias para implementar o projeto de fo
 
 ---
 
-## FASE 8 — Integração com LLM (Pendente)
+## FASE 8 — Sistema Multiagente (Pendente)
 
-### 8.1 Configuração LLM
+> Consulte `docs/Agentes.md` para a arquitetura detalhada desta fase.
+
+### 8.1 Infraestrutura da LLM
+
 - [x] Configurar Docker do Ollama
-- [x] Implementar cliente HTTP para embeddings (EmbeddingService)
-- [ ] Implementar LlmClient para chat/completion
-- [ ] Configurar fallback para LLM externo (OpenAI/Anthropic)
-
-### 8.2 Agentes de IA
-- [ ] CoachAgent
-- [ ] FatigueAgent
-- [ ] MotivationAgent
-- [ ] ProgressAgent
-- [ ] SafetyAgent
-
-### 8.3 Prompt Builders
-- [ ] CoachPrompt
-- [ ] ProgressionPrompt
-- [ ] PromptBuilder
+- [x] Implementar `EmbeddingService`
+- [ ] Implementar `LlmClient`
+    - Comunicação com Ollama
+    - Configuração de modelo
+    - Temperatura
+    - Timeout
+    - Tratamento de erros
+- [ ] Criar configuração centralizada dos modelos (`LlmProperties`)
 
 ---
+
+### 8.2 Agentes
+
+Implementar os agentes especialistas responsáveis por interpretar e organizar as informações produzidas pelo backend.
+
+- [ ] Implementar `TrainingAgent`
+- [ ] Implementar `NutritionAgent`
+- [ ] Implementar `AgentService` para orquestração dos agentes
+
+---
+
+### 8.3 Context Builders
+
+Implementar os responsáveis por reunir todas as informações determinísticas antes da chamada ao modelo.
+
+#### TrainingContextBuilder
+
+- [ ] Buscar `UserProfile`
+- [ ] Buscar `UserPreferences`
+- [ ] Buscar `WorkoutPlan`
+- [ ] Buscar histórico de treinos
+- [ ] Buscar feedbacks
+- [ ] Buscar `EvolutionLogs`
+- [ ] Consultar `ExerciseRetriever`
+- [ ] Construir `TrainingContext`
+
+#### NutritionContextBuilder
+
+- [ ] Buscar `UserProfile`
+- [ ] Buscar `UserPreferences`
+- [ ] Buscar `NutritionalPlan`
+- [ ] Buscar objetivo e macros
+- [ ] Consultar `RecipeRetriever`
+- [ ] Construir `NutritionContext`
+
+---
+
+### 8.4 RAG Retrievers
+
+Implementar a camada responsável por recuperar documentos relevantes do Qdrant.
+
+- [ ] Implementar `ExerciseRetriever`
+- [ ] Implementar `RecipeRetriever`
+- [ ] Definir filtros semânticos
+- [ ] Implementar fallback para busca vetorial
+
+---
+
+### 8.5 Prompt Builders
+
+Implementar os responsáveis por transformar o contexto em prompts para o modelo.
+
+- [ ] Criar `TrainingPromptBuilder`
+- [ ] Criar `NutritionPromptBuilder`
+
+Cada PromptBuilder deverá gerar:
+
+- [ ] System Prompt
+- [ ] Contexto do usuário
+- [ ] Documentos recuperados pelo RAG
+- [ ] Pergunta do usuário
+- [ ] Instruções de resposta
+
+---
+
+### 8.6 Persistência das decisões
+
+Registrar todas as interações realizadas pelos agentes.
+
+- [ ] Implementar `AiDecisionLogService`
+- [ ] Salvar contexto enviado
+- [ ] Salvar documentos recuperados
+- [ ] Salvar prompt final
+- [ ] Salvar resposta
+- [ ] Salvar modelo utilizado
+- [ ] Salvar temperatura
+- [ ] Salvar latência
+- [ ] Salvar tokens de entrada e saída
+
+---
+
+### 8.7 Endpoints
+
+- [ ] Criar `/ai/training/chat`
+- [ ] Criar `/ai/nutrition/chat`
+- [ ] Validar autenticação
+- [ ] Integrar agentes ao frontend
 
 ## FASE 9 — Assinaturas e Monetização (Pendente)
 

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
+import org.springframework.scheduling.annotation.Async;
 import java.util.*;
 
 @Service
@@ -29,6 +30,15 @@ public class QdrantSyncService {
 
     @PostConstruct
     public void syncDataToQdrant() {
+        asyncSync();
+    }
+
+    @Async
+    public void asyncSync() {
+        syncDataToQdrant(false);
+    }
+
+    public void syncDataToQdrant(boolean forceDelete) {
         if (!qdrantEnabled) {
             log.info("Qdrant sync disabled, skipping...");
             return;
@@ -40,6 +50,11 @@ public class QdrantSyncService {
         }
 
         log.info("Starting Qdrant sync...");
+
+        if (forceDelete) {
+            qdrantService.deleteCollection(QdrantService.EXERCISES_COLLECTION);
+            qdrantService.deleteCollection(QdrantService.RECIPES_COLLECTION);
+        }
         
         try {
             syncExercises();
@@ -64,7 +79,7 @@ public class QdrantSyncService {
             List<Map<String, Object>> points = new ArrayList<>();
 
             for (ExerciseCatalog exercise : exercises) {
-                String id = String.valueOf(exercise.getId());
+                Long id = exercise.getId();
                 String nome = exercise.getName();
                 String musculoPrincipal = exercise.getPrimaryMuscle() != null ? exercise.getPrimaryMuscle() : "";
                 String descricao = exercise.getDescription() != null ? exercise.getDescription() : "";
@@ -111,7 +126,7 @@ public class QdrantSyncService {
             List<Map<String, Object>> points = new ArrayList<>();
 
             for (Recipe recipe : recipes) {
-                String id = recipe.getRecipeId();
+                Long id = recipe.getId();
                 String nome = recipe.getNome();
                 
                 StringBuilder ingredientes = new StringBuilder();

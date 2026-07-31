@@ -45,15 +45,25 @@ public class EmbeddingService {
 
             if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
                 Map<String, Object> body = response.getBody();
-                Object embeddingObj = body.get("embedding");
-                
-                if (embeddingObj instanceof List) {
-                    List<Number> embeddingList = (List<Number>) embeddingObj;
-                    float[] embedding = new float[embeddingList.size()];
-                    for (int i = 0; i < embeddingList.size(); i++) {
-                        embedding[i] = embeddingList.get(i).floatValue();
+                Object embeddingObj = body.get("embeddings");
+
+                if (embeddingObj instanceof List<?> outerList) {
+                    if (!outerList.isEmpty() && outerList.get(0) instanceof List) {
+                        List<List<Number>> nestedList = (List<List<Number>>) outerList;
+                        List<Number> embeddingList = nestedList.get(0);
+                        float[] embedding = new float[embeddingList.size()];
+                        for (int i = 0; i < embeddingList.size(); i++) {
+                            embedding[i] = embeddingList.get(i).floatValue();
+                        }
+                        return embedding;
+                    } else if (outerList.get(0) instanceof Number) {
+                        List<Number> embeddingList = (List<Number>) outerList;
+                        float[] embedding = new float[embeddingList.size()];
+                        for (int i = 0; i < embeddingList.size(); i++) {
+                            embedding[i] = embeddingList.get(i).floatValue();
+                        }
+                        return embedding;
                     }
-                    return embedding;
                 }
             }
 

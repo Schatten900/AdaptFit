@@ -59,9 +59,9 @@ public class QdrantService {
             headers.setContentType(MediaType.APPLICATION_JSON);
             HttpEntity<Map<String, Object>> entity = new HttpEntity<>(request, headers);
 
-            String url = qdrantUrl + "/collections/" + collectionName + "/points";
-            restTemplate.postForObject(url, entity, String.class);
-            log.info("Upserted {} points to {}", points.size(), collectionName);
+            String url = qdrantUrl + "/collections/" + collectionName + "/points?wait=true";
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.PUT, entity, String.class);
+            log.info("Upserted {} points to {}: {}", points.size(), collectionName, response.getStatusCode());
         } catch (Exception e) {
             log.error("Error upserting points to {}: {}", collectionName, e.getMessage());
         }
